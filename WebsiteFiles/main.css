@@ -1,0 +1,25 @@
+/*TYPOGRAPHY*/
+
+/*GOOPER*/
+@font-face {
+font-family: "Gooper Semibold";
+src: url("css/fonts/Gooper0.2-SemiBold.eot");
+src: 
+url("css/fonts/Gooper0.2-SemiBold.woff") format("woff"),
+url("css/fonts/Gooper0.2-SemiBold.otf") format("opentype");
+}
+
+
+.container {
+   display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+h1.soon { 
+    font-size: 7.5vw;
+    font-family: Gooper Semibold;
+    text-align: center;
+}
