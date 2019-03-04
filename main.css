@@ -1,0 +1,232 @@
+/*TYPOGRAPHY*/
+
+/*GOOPER*/
+@font-face {
+font-family: "Gooper Semibold";
+src: url("css/fonts/Gooper0.2-SemiBold.eot");
+src: 
+url("css/fonts/Gooper0.2-SemiBold.woff") format("woff"),
+url("css/fonts/Gooper0.2-SemiBold.otf") format("opentype");
+}
+
+@font-face {
+font-family: "Gooper";
+src: url("css/fonts/Gooper0.2-Regular.eot");
+src: 
+url("css/fonts/Gooper0.2-Regular.woff") format("woff"),
+url("css/fonts/Gooper0.2-Regular.otf") format("opentype");
+}
+
+@font-face {
+font-family: "Gooper Light";
+src: url("css/fonts/Gooper0.2-Light.eot");
+src: 
+url("css/fonts/Gooper0.2-Light.woff") format("woff"),
+url("css/fonts/Gooper0.2-Light.otf") format("opentype");
+}
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400');
+/*testing*/
+
+.bord {
+    border: 2px solid white;
+}
+
+.gb {
+    border: 2px solid blue;
+}
+
+a {
+    color: #6EDDB1;
+}
+/*grid*/ 
+
+.container {
+    background-color: #181818;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 11fr 3fr 2fr;
+    grid-template-rows: repeat(18, 1fr);
+    width: 100vw;
+    height: 100vh;
+}
+
+.header-1 {
+    grid-column: 1/2;
+    grid-row: 1/1;
+    border-bottom: 1px solid white
+}
+
+.main-work {
+    grid-column: 2/4;
+    grid-row: 1/19;
+    overflow: auto;
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: repeat(21, 1fr);
+}
+
+.header-2 {
+    grid-column: 2/3;
+    grid-row: 1/;
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid white;
+    background-color: #181818;
+    
+}
+
+.work-1 {
+    grid-column: 1/2;
+    grid-row: 1/4;
+    background-color: #D8D8D8;
+}
+
+.caption-1 {
+    grid-column: 2/3;
+    grid-row: 1/;
+}
+
+.work-2 {
+    grid-column: 1/2;
+    grid-row: 4/8;
+    background-color: #F26161
+    
+}
+
+.caption-2 {
+    grid-column: 2/3;
+    grid-row: 4/8;
+}
+
+.work-3 {
+    grid-column: 1/2;
+    grid-row: 8/12;
+    background-color: #D8D8D8;
+}
+
+.caption-3 {
+    grid-column: 2/3;
+    grid-row: 8/12;
+}
+
+.work-4 {
+    grid-column: 1/2;
+    grid-row: 12/16;
+    background-color: #F26161
+}
+
+.caption-4 {
+    grid-column: 2/3;
+    grid-row: 12/16;
+}
+
+.work-5 {
+    grid-column: 1/2;
+    grid-row: 16/20;
+    background-color: #D8D8D8;
+}
+
+.caption-5 {
+    grid-column: 2/3;
+    grid-row: 16/20;
+}
+
+.main-1 {
+    grid-column: 1/2;
+    grid-row: 2/16;
+}
+
+.main-2 {
+    grid-column: 1/2;
+    grid-row: 16/19;
+}
+
+/* type */
+
+html {
+    font-size: calc(1em + 1vw);
+    background-color: #181818
+}
+
+.main-copy {
+    width: 72%;
+    padding-top: 4%;
+    padding-left: 8%;
+}
+
+h1 {
+    font-family: Gooper;
+    font-size: 1.7em;
+    color: #FBFBFB;
+}
+
+.iz {
+    font-family: Gooper Semibold;
+    letter-spacing: 2px
+}
+
+.iz:hover .face-1{
+    display:block;
+}
+
+.ge {
+    font-family: Gooper Semibold;
+    letter-spacing: 2px
+}
+
+.ge:hover .face-2{
+    display:block;
+}
+
+.body-copy {
+    width: 50%;
+    padding-left: 8%;
+}
+h2 {
+    font-family: Gooper Light;
+    font-weight:300;
+    font-size: .53em;
+    color: #FBFBFB;
+    line-height: 1.35;
+    letter-spacing: .5px;
+}
+
+.contact {
+    padding-left: 8%;
+    padding-top: 1.7%;
+}
+
+.txt-pad {
+    padding-left: 4.5%;
+}
+
+p {
+    font-family: Source Sans Pro;
+    font-size: .4em;
+    color: #FBFBFB;
+}
+
+/*face*/
+
+.face-1 {
+    display:none;
+    width: 26%;
+    position: absolute;
+    top: 19%;
+    left: 10%;
+    
+}
+
+.face-2 {
+    display:none;
+    width: 22%;
+    position: absolute;
+    top: 19%;
+    left: 20%;
+    
+}
+
