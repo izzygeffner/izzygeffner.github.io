@@ -1,0 +1,39 @@
+@media only screen and (max-width: 1000px) {
+    
+    .container {
+        display: none;
+    }
+    
+    .m-container {
+        display: contents;
+    }
+    
+    .header-1 {
+        border-bottom: 2px solid white;
+    }
+    
+    .name {
+    list-style: none;
+    margin-left: 3vw;
+    margin-right: 6vw;
+    padding-bottom: vw
+    }
+
+    .name li {
+    display: inline;
+    }
+
+
+    #izzy {
+    font-family: Gooper Light;
+    font-size: 1.7em;
+    color: #FBFBFB;
+}
+
+#about {
+    font-family: Gooper Light;
+    font-size: 1.7em;
+    color: #FBFBFB;
+    float: right;
+}
+}
