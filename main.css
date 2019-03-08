@@ -1,319 +1,98 @@
-/*TYPOGRAPHY*/
-
-/*GOOPER*/
-@font-face {
-font-family: "Gooper Semibold";
-src: url("css/fonts/Gooper0.2-SemiBold.eot");
-src: 
-url("css/fonts/Gooper0.2-SemiBold.woff") format("woff"),
-url("css/fonts/Gooper0.2-SemiBold.otf") format("opentype");
-}
-
-@font-face {
-font-family: "Gooper";
-src: url("css/fonts/Gooper0.2-Regular.eot");
-src: 
-url("css/fonts/Gooper0.2-Regular.woff") format("woff"),
-url("css/fonts/Gooper0.2-Regular.otf") format("opentype");
-}
-
-@font-face {
-font-family: "Gooper Light";
-src: url("css/fonts/Gooper0.2-Light.eot");
-src: 
-url("css/fonts/Gooper0.2-Light.woff") format("woff"),
-url("css/fonts/Gooper0.2-Light.otf") format("opentype");
-}
-
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400');
-/*testing*/
-
-.bord {
-    border: 2px solid white;
-}
-
-.gb {
-    border: 2px solid blue;
-}
-
-a {
-    color: #6EDDB1;
-}
-/*grid*/ 
-
-.container {
-    background-color: #181818;
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: 11fr 3fr 2fr;
-    grid-template-rows: repeat(18, 1fr);
-    width: 100vw;
-    height: 100vh;
-}
-
-.header-1 {
-    grid-column: 1/2;
-    grid-row: 1/1;
-    border-bottom: 1px solid white
-}
-
-.main-work {
-    grid-column: 2/4;
-    grid-row: 1/19;
-    overflow: auto;
-}
-
-.work-grid {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    grid-template-rows: repeat(18, 1fr);
-}
-
-.header-2 {
-    grid-column: 2/3;
-    grid-row: 1/;
-    position: sticky;
-    top: 0;
-    border-bottom: 1px solid white;
-    background-color: #181818;
-    z-index: 1;
+<!DOCTYPE html>
+<html>
     
-}
-
-.work-1 {
-    grid-column: 1/2;
-    grid-row: 1/4;
-    background-color: #D8D8D8;
-    background-image:url('images/Portfolio-1.png');
-    background-size: cover;
-/*    opacity: .3;
-    transition: 1s; */
-
-}
-
-/* .work-1:hover ~ .caption-1 {
-    opacity: 1;
-    transition: 1s;
-}
-
-
-.work-1:hover {
-    opacity: 1;
-    transition: 1s;
-}
-
-*/ 
-
-.caption-1 {
-    grid-column: 2/4;
-    grid-row: 1/;
-/*    opacity: .3;
-    transition: 1s; */
-}
-
-.work-2 {
-    grid-column: 1/2;
-    grid-row: 4/7;
-    background-color: #F26161;
-    background-image:url('images/Portfolio-2.png');
-    background-size: cover;
+    <head>
+       <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135608346-1"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'UA-135608346-1');
+            </script>
+            
+            <script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101171777);</script>
+<script async src="//static.getclicky.com/js"></script>
+            
+        <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,300,500,600" rel="stylesheet">
+        
+        
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Izzy Geffner</title>
+        <meta name="description" content="The Work of Izzy Geffner as it Stands Today">
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="mobile_test.css">
+    </head>
     
-}
+    <div class="bg">
+    <div class="container desktop">
+       <div class="header-1"><p></p></div>
+        <div class="main-work">
+            <div class="work-grid">
+                <div class="work-1"></div>
+                <div class="header-2"><p></p></div>
+                <div class="caption-1"><p class="title">A Note on<br> Gentrification</p><p class="type">poster</p></div>
+                <div class="work-2"></div>
+                <div class="caption-2"><p class="title">Space<br> Symposium</p><p class="type">Web</p></div>
+                <div class="work-3"></div>
+                <div class="caption-3"><p class="title">Harmony<br>  &amp; Contrast</p><p class="type">poster</p></div>
+                <div class="work-4"></div>
+                <div class="caption-4"><p class="title">American<br>  Exceptionalism</p><p class="type">motion</p></div>
+                <div class="work-5"></div>
+                <div class="caption-5"><p class="title">Motion<br> Experiments</p><p class="type">motion</p></div>
+                <div class="work-6"></div>
+                <div class="caption-6"><p class="title">Transparency<br> &amp; Reflection</p><p class="type">Identity</p></div>
+                
+            </div>
+        </div>
 
-.caption-2 {
-    grid-column: 2/3;
-    grid-row: 4/7;
+        <div class="main-1">
+           <div class="main-copy">
+            <h1>
+                <span class="iz">Izzy <img class="face-1" src="images/face1.jpg" /></span> <span class="ge">Geffner<img class="face-2" src=images/face2.JPG /></span> is a mutli-disciplinary designer dedicated to crafting the stories from our world. 
+                
+                
+            </h1>
+            </div>
+            <div class="body-copy">
+                <h2>
+                    Before her inevitable end as a space pilgrim, she seeks to embrace the tales of extant world, using an iterative and fluid process based in research to create work with impact.  
+                </h2>
+            </div>
+            <div class="contact">
+                <p><a href="mailto:igeffner@mica.edu" >Get In Touch</a><span class="txt-pad"><a href="links/IzzyGeffner_Resume2019.pdf" target="_blank">Resume</a></span>
+            </div>
+        </div>
+        
+        <div class="main-2">
+            <p class="footer">
+                <a style="text-decoration: none" href="https://www.twitter.com/izfidel" target="_blank">
+                    <img class="icon" src="images/twitter.png" />
+                </a><a style="text-decoration: none" href="https:///www.instagram.com/izzygeffner" target="_blank">
+                    <img class="icon" src="images/instagram.png" />
+                </a>
+            Designed &amp; Developed — Izzy Geffner © 2019
+            </p>
+        </div>
+       
 
-}
-
-.work-3 {
-    grid-column: 1/2;
-    grid-row: 7/10;
-    background-color: #D8D8D8;
-    background-image:url('images/Portfolio-3.png');
-    background-size: cover;
-
-}
-
-.caption-3 {
-    grid-column: 2/3;
-    grid-row: 7/10;
-}
-
-.work-4 {
-    grid-column: 1/2;
-    grid-row: 10/13;
-    background-color: #F26161;
-    background-image:url('images/Portfolio-4.gif');
-    background-size: cover;
-
-}
-
-.caption-4 {
-    grid-column: 2/3;
-    grid-row: 10/13;
-}
-
-.work-5 {
-    grid-column: 1/2;
-    grid-row: 13/16;
-    background-color: #D8D8D8;
-    background-image:url('images/Portfolio-5.gif');
-    background-size: cover;
-
-}
-
-.caption-5 {
-    grid-column: 2/3;
-    grid-row: 13/16;
-}
-
-.work-6 {
-    grid-column: 1/2;
-    grid-row: 16/19;
-    background-color: #F26161;
-    background-image:url('images/Portfolio-6.png');
-    background-size: contain;
-
-}
-
-.caption-6 {
-    grid-column: 2/3;
-    grid-row: 16/19;
-}
-
-
-.main-1 {
-    grid-column: 1/2;
-    grid-row: 2/16;
-    grid-area: "main";
-}
-
-.main-2 {
-    grid-column: 1/2;
-    grid-row: 16/19;
-}
-
-
-/* type */
-
-html {
-    font-size: calc(1em + 1vw);
-    background-color: #181818
-}
-
-.main-copy {
-    width: 72%;
-    padding-top: 4%;
-    padding-left: 8%;
-}
-
-h1 {
-    font-family: Gooper;
-    font-size: 1.7em;
-    color: #FBFBFB;
-}
-
-.iz {
-    font-family: Gooper Semibold;
-    letter-spacing: 2px
-}
-
-.iz:hover .face-1{
-    opacity: 1;
-    transition: .2s;
-}
-
-.ge {
-    font-family: Gooper Semibold;
-    letter-spacing: 2px
-}
-
-.ge:hover .face-2{
-    opacity: 1;
-    transition: .2s;
-}
-
-.body-copy {
-    width: 50%;
-    padding-left: 8%;
-}
-h2 {
-    font-family: Gooper Light;
-    font-weight:300;
-    font-size: .53em;
-    color: #FBFBFB;
-    line-height: 1.35;
-    letter-spacing: .5px;
-}
-
-.contact {
-    padding-left: 8%;
-    padding-top: 1.7%;
-}
-
-.txt-pad {
-    padding-left: 4.5%;
-}
-
-p {
-    font-family: Source Sans Pro, sans-serif;
-    font-size: .4em;
-    color: #FBFBFB;
-}
-
-.title {
-    font-family: Source Sans Pro;
-    font-weight: 200;
-    position: relative;
-    bottom: -60%;
-    padding-left: 13%;
-}
-
-.type {
-    text-transform: uppercase;
-    font-size: .3em;
-    position: relative;
-    padding-left: 13%;
-    bottom: -60%;
-}
-
-.footer {
-    font-size: .3em;
-    font-weight: 200;
-    letter-spacing: 1px;
-    color: #666666;
-    padding-left: 8%;
-    padding-top: 9%;
-}
-
-/*images*/
-.box {
-    overflow: hidden;
-}
-
-.face-1 {
-    opacity: 0;
-    width: 26%;
-    position: absolute;
-    top: 19%;
-    left: 10%;
-    transition: .2s;
-
-}
-
-.face-2 {
-    opacity: 0;
-    width: 22%;
-    position: absolute;
-    top: 19%;
-    left: 20%;
-    transition: .2s;
+    </div>  
     
-}
+     <!-- MOBILE -->
+    <div class="m-container">
+        <div class="header-1">
+           <ul class="name">
+               <li id="izzy">Izzy Geffner</li>
+               <li id="about">About</li>
+           </ul>
 
-.icon {
-    width: 1%;
-    display: inline;
-    padding-right: 1%;
-}
+        </div>
+    </div>
+     
+    </div>
+    
+    <body>
+    
+    </body>
+</html>
