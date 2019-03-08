@@ -24,6 +24,9 @@
         <link rel="stylesheet" href="main.css">
         <link rel="stylesheet" href="mobile_test.css">
     </head>
+    <body>
+    
+    <script src="script.js"></script>
     
     <div class="bg">
     <div class="container desktop">
@@ -81,18 +84,29 @@
     
      <!-- MOBILE -->
     <div class="m-container">
-        <div class="header-1">
+        <div class="header-1" id="header">
            <ul class="name">
                <li id="izzy">Izzy Geffner</li>
-               <li id="about">About</li>
-           </ul>
-
+               <li><button id="about-txt" onclick="change()">About</button></li>
+            </ul>
+        <div class="about" id="aboutBG"></div>
         </div>
     </div>
+    
      
     </div>
     
-    <body>
+    <!--SCRIPT-->
+    <script>
+    
+        var about = document.getElementById("aboutBG");
+
+        function change() {
+            about.setAttribute("id", "aboutEffect");
+        }
+
+        
+    </script>
     
     </body>
 </html>
