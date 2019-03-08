@@ -25,14 +25,16 @@
         width: 100%;
         z-index: 1;
         position: absolute;
+        display: grid;
+        grid-template-rows: 3fr 2fr 1fr;
         
     }
     
     .name {
-    list-style: none;
-    margin-left: 3vw;
-    margin-right: 6vw;
-    padding-bottom: vw
+        list-style: none;
+        margin-left: 3vw;
+        margin-right: 6vw;
+        padding-bottom: vw
     }
 
     .name li {
@@ -54,22 +56,41 @@
 }
     
     #aboutBG {
-        background-color: #D8D8D8;
+        display: none;
         
     }
     
-    #aboutEffect {
-        background-color: teal;
+    #aboutPress {
+        display: contents;
     }
     
-
-/* .header-1:active .about{
+    .main-type {
+        grid-row: 1/2;
+        margin-left: 6vw;
+        margin-right: 6vw;
+    }
     
-    background-color: green;
-} */
+    .second-type {
+        grid-rows: 2/3;
+        margin-left: 6vw;
+        margin-right: 6vw;
+    }
     
-.header-1:focus .about{
+/*TYPE*/
     
-    background-color: green;
-}
+    .main-type h1 {
+        font-family: Gooper;
+        color: #181818;
+        font-size: 4.5em;
+        
+    }
+    
+    .second-type h2 {
+        color: #181818;
+        font-size: 1.4em;
+    }
+    
+    #semibold {
+        font-family: Gooper SemiBold;
+    }
 }
