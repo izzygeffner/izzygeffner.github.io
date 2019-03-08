@@ -1,15 +1,31 @@
 @media only screen and (max-width: 1000px) {
     
+    button {
+        text-decoration: none;
+    }
     .container {
         display: none;
     }
     
     .m-container {
-        display: contents;
+        display: block;
+        height: 100vh;
+        width: 100%;
+        
     }
     
     .header-1 {
         border-bottom: 2px solid white;
+        position: sticky;
+    }
+    
+    .about {
+        background-color: #D8D8D8; 
+        height: 100vh;
+        width: 100%;
+        z-index: 1;
+        position: absolute;
+        
     }
     
     .name {
@@ -30,10 +46,30 @@
     color: #FBFBFB;
 }
 
-#about {
+    #about-txt {
     font-family: Gooper Light;
     font-size: 1.7em;
     color: #FBFBFB;
     float: right;
+}
+    
+    #aboutBG {
+        background-color: #D8D8D8;
+        
+    }
+    
+    #aboutEffect {
+        background-color: teal;
+    }
+    
+
+/* .header-1:active .about{
+    
+    background-color: green;
+} */
+    
+.header-1:focus .about{
+    
+    background-color: green;
 }
 }
