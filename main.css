@@ -1,5 +1,7 @@
 /*TYPOGRAPHY*/
 
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400');
+
 /*GOOPER*/
 @font-face {
 font-family: "Gooper Semibold";
@@ -25,7 +27,6 @@ url("css/fonts/Gooper0.2-Light.woff") format("woff"),
 url("css/fonts/Gooper0.2-Light.otf") format("opentype");
 }
 
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400');
 /*testing*/
 
 .bord {
