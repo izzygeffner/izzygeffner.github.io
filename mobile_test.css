@@ -58,27 +58,44 @@
     #aboutBG {
         position: absolute;
         opacity: 0;
-        transition: 2s;
-        
+
     }
     
     #aboutPress {
-        /* display: contents; */
-      animation: 1s slide-up;
+/*      display: contents; */
+      animation: 1.5s slide-up;
       margin-top:0%;
+      opacity: 1;    
+        
+            
     }
     
     @keyframes slide-up {
       from {
         margin-top: 100vh;
-        height: 300vw; 
       }
 
       to {
         margin-top: 0%;
-        height: 300vw;
       }
     }
+    
+    #aboutReturn {
+      animation: 1.5s slide-down;
+      animation-fill-mode: forwards;
+        
+    }
+    
+    @keyframes slide-down {
+      from {
+        margin-top: 0vh;
+      }
+
+      to {
+        margin-top: 100vh;
+      }
+    }
+    
     
     .main-type {
         grid-row: 1/2;
