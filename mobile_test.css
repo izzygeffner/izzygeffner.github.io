@@ -82,7 +82,7 @@
     }
     
     #aboutReturn {
-      animation: 1.5s slide-down, 10s fade;
+      animation: 1.5s slide-down, 5s fade;
       animation-fill-mode: forwards;
         
     }
