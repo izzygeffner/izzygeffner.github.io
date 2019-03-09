@@ -87,9 +87,9 @@
         <div class="header-1" id="header">
            <ul class="name">
                <li id="izzy">Izzy Geffner</li>
-               <li id="about-txt" onclick="change()">About</li>
+               <li id="about-txt">About</li>
             </ul>
-        <div class="about" id="aboutBG">
+            <div class="about" id="aboutBG">
             <div class="main-type">
                 <h1><span id="semibold">Izzy Geffner</span> is a multi-disciplinary designer dedicated to crafting the stories from our world.</h1>
             </div>
@@ -106,6 +106,38 @@
             </div>
         </div>
         </div>
+        <div class="work">
+            <div class="work1"></div>
+            <div class="caption1">
+                <h3>A Note on <br>Gentrification</h3>
+                <h4><br>poster</h4>
+            </div>
+            <div class="work2"></div>
+            <div class="caption2">
+                <h3>Space <br>Symposium</h3>
+                <h4><br>web</h4>
+            </div>
+            <div class="work3"></div>
+            <div class="caption3">
+                <h3>Harmony <br>&amp; Contrast</h3>
+                <h4><br>Poster</h4>
+            </div>
+            <div class="work4"></div>
+            <div class="caption4">
+                <h3>Motion<br>Exercises</h3>
+                <h4><br>Motion</h4>
+            </div>
+            <div class="work5"></div>
+            <div class="caption5">
+                <h3>American <br>Exceptionalism</h3>
+                <h4><br>motion</h4>
+            </div>
+            <div class="work6"></div>
+            <div class="caption6">
+                <h3>Transparency<br>&amp; Reflection</h3>
+                <h4><br>identity</h4>
+            </div>
+        </div>
     </div>
     
      
@@ -118,18 +150,6 @@
         var button = document.getElementById("about-txt");
         var about = document.getElementById("aboutBG");
         var clickCount = 0;
-        
-        /* if (about === document.getElementById("aboutBG")) {
-
-            function change() {
-                about.setAttribute("id", "aboutPress");
-            }
-        } else   {
-            function changeBack() {
-                about.setAttribute("id", "aboutBG");
-            }
-                
-        } */
         
         button.addEventListener("click", function() {
             clickCount++;
