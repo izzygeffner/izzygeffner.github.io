@@ -1,127 +1,151 @@
-<!DOCTYPE html>
-<html>
+@media only screen and (max-width: 1000px) {
     
-    <head>
-       <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135608346-1"></script>
-            <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', 'UA-135608346-1');
-            </script>
+    button {
+        text-decoration: none;
+    }
+    .container {
+        display: none;
+    }
+    
+    .m-container {
+        display: block;
+        height: 100vh;
+        width: 100%;
+        
+    }
+    
+    .header-1 {
+        border-bottom: 2px solid white;
+        position: sticky;
+    }
+    
+    .about {
+        background-color: #dedede; 
+        height: 100vh;
+        width: 100%;
+        z-index: 1;
+        position: absolute;
+        display: grid;
+        grid-template-rows: 3fr 2fr 1fr;
+        
+    }
+    
+    .name {
+        list-style: none;
+        margin-left: 3vw;
+        margin-right: 6vw;
+        padding-bottom: vw
+    }
+
+    .name li {
+    display: inline;
+    }
+
+
+    #izzy {
+    font-family: Gooper Light;
+    font-size: 1.7em;
+    color: #FBFBFB;
+}
+
+    #about-txt {
+    font-family: Gooper Light;
+    font-size: 1.7em;
+    color: #FBFBFB;
+    float: right;
+}
+    
+    #aboutBG {
+        position: absolute;
+        opacity: 0;
+
+    }
+    
+    #aboutPress {
+/*      display: contents; */
+      animation: 1.5s slide-up;
+      margin-top:0%;
+      opacity: 1;    
+        
             
-            <script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101171777);</script>
-<script async src="//static.getclicky.com/js"></script>
-            
-        <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,300,500,600" rel="stylesheet">
-        
-        
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Izzy Geffner</title>
-        <meta name="description" content="The Work of Izzy Geffner as it Stands Today">
-        <link rel="stylesheet" href="main.css">
-        <link rel="stylesheet" href="mobile_test.css">
-    </head>
-    <body>
+    }
     
-    <script src="script.js"></script>
-    
-    <div class="bg">
-    <div class="container desktop">
-       <div class="header-1"><p></p></div>
-        <div class="main-work">
-            <div class="work-grid">
-                <div class="work-1"></div>
-                <div class="header-2"><p></p></div>
-                <div class="caption-1"><p class="title">A Note on<br> Gentrification</p><p class="type">poster</p></div>
-                <div class="work-2"></div>
-                <div class="caption-2"><p class="title">Space<br> Symposium</p><p class="type">Web</p></div>
-                <div class="work-3"></div>
-                <div class="caption-3"><p class="title">Harmony<br>  &amp; Contrast</p><p class="type">poster</p></div>
-                <div class="work-4"></div>
-                <div class="caption-4"><p class="title">American<br>  Exceptionalism</p><p class="type">motion</p></div>
-                <div class="work-5"></div>
-                <div class="caption-5"><p class="title">Motion<br> Experiments</p><p class="type">motion</p></div>
-                <div class="work-6"></div>
-                <div class="caption-6"><p class="title">Transparency<br> &amp; Reflection</p><p class="type">Identity</p></div>
-                
-            </div>
-        </div>
+    @keyframes slide-up {
+      from {
+        margin-top: 100vh;
+      }
 
-        <div class="main-1">
-           <div class="main-copy">
-            <h1>
-                <span class="iz">Izzy <img class="face-1" src="images/face1.jpg" /></span> <span class="ge">Geffner<img class="face-2" src=images/face2.JPG /></span> is a multi-disciplinary designer dedicated to crafting the stories from our world. 
-                
-                
-            </h1>
-            </div>
-            <div class="body-copy">
-                <h2>
-                    Before her inevitable end as a space pilgrim, she seeks to embrace the tales of extant world, using an iterative and fluid process based in research to create work with impact.  
-                </h2>
-            </div>
-            <div class="contact">
-                <p><a href="mailto:igeffner@mica.edu" >Get In Touch</a><span class="txt-pad"><a href="links/IzzyGeffner_Resume2019.pdf" target="_blank">Resume</a></span>
-            </div>
-        </div>
+      to {
+        margin-top: 0%;
+      }
+    }
+    
+    #aboutReturn {
+      animation: 1.5s slide-down;
+      animation-fill-mode: forwards;
         
-        <div class="main-2">
-            <p class="footer">
-                <a style="text-decoration: none" href="https://www.twitter.com/izfidel" target="_blank">
-                    <img class="icon" src="images/twitter.png" />
-                </a><a style="text-decoration: none" href="https:///www.instagram.com/izzygeffner" target="_blank">
-                    <img class="icon" src="images/instagram.png" />
-                </a>
-            Designed &amp; Developed — Izzy Geffner © 2019
-            </p>
-        </div>
-       
+    }
+    
+    @keyframes slide-down {
+      from {
+        margin-top: 0vh;
+      }
 
-    </div>  
+      to {
+        margin-top: 100vh;
+      }
+    }
     
-     <!-- MOBILE -->
-    <div class="m-container">
-        <div class="header-1" id="header">
-           <ul class="name">
-               <li id="izzy">Izzy Geffner</li>
-               <li><button id="about-txt" onclick="change()">About</button></li>
-            </ul>
-        <div class="about" id="aboutBG">
-            <div class="main-type">
-                <h1><span id="semibold">Izzy Geffner</span> is a multi-disciplinary designer dedicated to crafting the stories from our world.</h1>
-            </div>
-            <div class="second-type">
-                <h2>
-                    Before her inevitable end as a space pilgrim, she seeks to embrace the tales of extant world, using an iterative and fluid process based in research to create work with impact.  
-                </h2>
-            <div class="links">
-                <ul>
-                    <li><a href="mailto:igeffner@mica.edu" >Get In Touch</a><span class="txt-pad"></li>
-                    <li><a href="links/IzzyGeffner_Resume2019.pdf" target="_blank">Resume</a></span></li>
-                </ul>
-            </div>
-            </div>
-        </div>
-        </div>
-    </div>
     
-     
-    </div>
+    .main-type {
+        grid-row: 1/2;
+        margin-left: 6vw;
+        margin-right: 6vw;
+        padding-bottom: 0vh;
+    }
     
-    <!--SCRIPT-->
-    <script>
+    .second-type {
+        grid-rows: 2/3;
+        margin-left: 6vw;
+        margin-right: 6vw;
+        margin-top: -3vh
+    }
     
-        var about = document.getElementById("aboutBG");
-
-        function change() {
-            about.setAttribute("id", "aboutPress");
-        }
-
+/*TYPE*/
+    
+    .main-type h1 {
+        font-family: Gooper;
+        color: #181818;
+        font-size: 4.5em;
+        line-height: 1.05;
         
-    </script>
+    }
     
-    </body>
-</html>
+    .second-type h2 {
+        color: #181818;
+        font-size: 1.4em;
+    }
+    
+    .links ul {
+        padding-left: 0;
+    }
+    
+    .txt-pad {
+        padding-left: 20vw
+    }
+    
+    .links li {
+        list-style: none;
+        display: inline;
+        font-family: Source Sans Pro;
+        font-size: 1.4em;
+    }
+    
+    .links a {
+         color: #F26161;;
+    }
+    
+    #semibold {
+        font-family: Gooper SemiBold;
+    }
+}
