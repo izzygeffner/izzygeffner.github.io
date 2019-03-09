@@ -40,7 +40,8 @@
     .name li {
     display: inline;
     }
-
+    
+    /* ABOUT */ 
 
     #izzy {
     font-family: Gooper Light;
@@ -63,7 +64,7 @@
     
     #aboutPress {
 /*      display: contents; */
-      animation: 1.5s slide-up;
+      animation: 1.5s slide-up;  
       margin-top:0%;
       opacity: 1;    
         
@@ -81,7 +82,7 @@
     }
     
     #aboutReturn {
-      animation: 1.5s slide-down;
+      animation: 1.5s slide-down, 10s fade;
       animation-fill-mode: forwards;
         
     }
@@ -93,6 +94,16 @@
 
       to {
         margin-top: 100vh;
+      }
+    }
+    
+    @keyframes fade {
+      from {
+        opacity: 1;
+      }
+
+      to {
+        opacity: 0;
       }
     }
     
@@ -147,5 +158,105 @@
     
     #semibold {
         font-family: Gooper SemiBold;
+    }
+    
+    /*WORK*/ 
+    
+    .work h3 {
+        display: inline;
+        font-family: Source Sans Pro;
+        font-weight: 300;
+        color: #D8D8D8;
+        float: left;    
+        margin-bottom: 10vw;
+    }
+    
+    .work h4 {
+        display: inline;
+        font-family: Source Sans Pro;
+        font-weight: 400;
+        color: #D8D8D8;
+        text-transform: uppercase;
+        float: right;
+    }
+    
+    .work {
+        margin-top: 5vw;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 10% 1fr 10%;
+        grid-column-gap: 0px;
+    }
+    
+    .work1 {
+        background-image: url(images/Portfolio-1.png);
+        background-size: contain;
+        grid-column: 2/3;
+        width: auto;
+        height: 67vw;
+    }
+    
+    .caption1 {
+        grid-column: 2/3;
+    }
+    
+     .work2 {
+        background-image: url(images/Portfolio-2.png);
+        background-size: contain;
+        grid-column: 2/3;
+        width: auto;
+        height: 67vw;
+    }
+    
+    .caption2 {
+        grid-column: 2/3;
+    }
+    
+    .work3 {
+        background-image: url(images/Portfolio-3.png);
+        background-size: contain;
+        grid-column: 2/3;
+        width: auto;
+        height: 67vw;
+    }
+    
+    .caption3 {
+        grid-column: 2/3;
+    }
+    
+    .work4 {
+        background-image: url(images/Portfolio-4.gif);
+        background-size: contain;
+        grid-column: 2/3;
+        width: auto;
+        height: 67vw;
+    }
+    
+    .caption4 {
+        grid-column: 2/3;
+    }
+    
+    .work5 {
+        background-image: url(images/Portfolio-5.gif);
+        background-size: contain;
+        grid-column: 2/3;
+        width: auto;
+        height: 67vw;
+    }
+    
+    .caption5 {
+        grid-column: 2/3;
+    }
+    
+    .work6 {
+        background-image: url(images/Portfolio-6.png);
+        background-size: contain;
+        grid-column: 2/3;
+        width: auto;
+        height: 67vw;
+    }
+    
+    .caption6 {
+        grid-column: 2/3;
     }
 }
