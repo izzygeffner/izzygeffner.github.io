@@ -42,6 +42,14 @@ url("css/fonts/Gooper0.2-Light.otf") format("opentype");
     color: rgba(255,140,140,.75);
 }
 
+#light {
+    font-weight: 200;
+}
+
+.al-right {
+    text-align: right;
+}
+
 a { 
     font-family: Source Sans Pro;
 }
@@ -80,13 +88,30 @@ a {
 
 h3 {
     font-family: Gooper Light;
-    color: rgba(255,255,255, .7);
+    color: rgba(255,255,255, .5);
     font-size: .75em;
 }
 
 p {
     font-size: .6em;
     font-weight: 300;
+}
+
+.caption {
+    font-family: Work Sans;
+    font-weight: 200;
+    color: rgba(255,255,255, .6);
+    font-size: .3em;
+    line-height: 1.4;
+    letter-spacing: .05em;
+}
+
+h4 {
+    font-family: Work Sans;
+    font-weight: 300;
+    color: rgba(255,255,255, .7);
+    font-size: .75em;  
+    color: rgba(255,140,140,.75);
 }
 /*BUILD*/
 
@@ -158,7 +183,7 @@ body {
 }
 
 .info1-1 {
-    padding-left: 16%;
+    padding-left: 36%;
 }
 
 .info1-2 {
@@ -171,8 +196,8 @@ body {
     border-top: .03em solid rgba(255,255,255, .5);
     border-bottom: .03em solid rgba(255,255,255, .5);
     border-right: .03em solid rgba(255,255,255, .5);
-    padding-left: 16%;
-    padding-right: 30%;
+    padding-left: 36%;
+    padding-right: 20%;
     padding-top: 5%;
     padding-bottom: 5%; 
 
@@ -191,6 +216,7 @@ body {
 .sketchbook {
     display: grid;
     grid-template-columns: 43vw 43vw 43vw;
+    grid-template-rows: auto 3vh;
     height: 40vw;
     overflow-x: scroll;
     overflow-y: hidden;
@@ -218,4 +244,128 @@ body {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+.sk-cap {
+    margin-top: -2em;
+    margin-left: 7%;
+    width: 30%;
+}
+
+.info2 {
+    display: grid;
+    grid-template-columns: 1fr 1.8fr;
+    margin-top: 1em;
+}
+
+.info2-1 {
+    padding-left: 36%;
+}
+
+.info2-3 {
+    grid-column: 1/2;
+    box-sizing: border-box;
+    padding-left: 36%;
+    padding-right: 10%;
+ 
+}
+
+ .info2-4 {
+    box-sizing: border-box;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 5%;
+    padding-right: 15%; 
+}
+
+.spacer {
+    height: 10vh;
+}
+
+.questions {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 3vw 1fr 1fr;
+    padding-right: 12%;
+    padding-left: 12%;
+}
+
+.q-1 {
+    grid-column: 1/4;
+    grid-row: 1/2;
+}
+
+.q-2 {
+    grid-column: 1/2;
+    grid-row: 2/4;
+    border: .03em solid rgba(255,255,255, .5);
+    box-sizing: border-box;
+    padding: 8%
+}
+
+.q-3 {
+    grid-column: 2/3;
+    border-top: .03em solid rgba(255,255,255, .5);
+    border-right: .03em solid rgba(255,255,255, .5);
+    box-sizing: border-box;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.q-4 {
+    grid-column: 3/4;
+    border-top: .03em solid rgba(255,255,255, .5);
+    border-right: .03em solid rgba(255,255,255, .5);
+    box-sizing: border-box;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.q-5 {
+    grid-column: 2/3;
+    border-top: .03em solid rgba(255,255,255, .5);
+    border-right: .03em solid rgba(255,255,255, .5);
+    border-bottom: .03em solid rgba(255,255,255, .5);
+    box-sizing: border-box;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.q-6 {
+    grid-column: 3/4;
+    border-top: .03em solid rgba(255,255,255, .5);
+    border-right: .03em solid rgba(255,255,255, .5);
+    border-bottom: .03em solid rgba(255,255,255, .5);
+    box-sizing: border-box;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+ .q-7 {
+    grid-column: 3/4;
+    padding-top: 5%;
+    padding-left: 8%;
+    padding-right: 5%;
+    
+}
+
+.viz-sketch {
+    display: grid;
+    grid-template-columns: 1fr 1.8fr;
+    grid-template-rows: auto;
+    box-sizing: border-box;
+    padding: 3vw;
+    height: auto;
+}
+
+.viz-1 {
+    grid-column: 1/2;
+}
+
+.viz-1 img {
+    width: 100%;
+}
+
+.viz-2 img{
+    width: 100%;
 }
