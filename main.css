@@ -1,7 +1,5 @@
 /*TYPOGRAPHY*/
 
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400');
-
 /*GOOPER*/
 @font-face {
 font-family: "Gooper Semibold";
@@ -50,7 +48,7 @@ a {
     background-color: #181818;
     overflow: hidden;
     display: grid;
-    grid-template-columns: 11fr 3fr 2fr;
+    grid-template-columns: 2fr 1fr;
     grid-template-rows: repeat(18, 1fr);
     width: 100vw;
     height: 100vh;
@@ -91,6 +89,7 @@ a {
     background-color: #D8D8D8;
     background-image:url('images/Portfolio-1.png');
     background-size: cover;
+    background-position: center;
 /*    opacity: .3;
     transition: 1s; */
 
@@ -122,6 +121,7 @@ a {
     background-color: #F26161;
     background-image:url('images/Portfolio-2.png');
     background-size: cover;
+    background-position: center;
     
 }
 
@@ -137,6 +137,7 @@ a {
     background-color: #D8D8D8;
     background-image:url('images/Portfolio-3.png');
     background-size: cover;
+    background-position: center;
 
 }
 
@@ -151,6 +152,7 @@ a {
     background-color: #F26161;
     background-image:url('images/Portfolio-4.gif');
     background-size: cover;
+    background-position: center;
 
 }
 
@@ -165,6 +167,7 @@ a {
     background-color: #D8D8D8;
     background-image:url('images/Portfolio-5.gif');
     background-size: cover;
+    background-position: center;
 
 }
 
@@ -179,6 +182,7 @@ a {
     background-color: #F26161;
     background-image:url('images/Portfolio-6.png');
     background-size: contain;
+    background-position: center;
 
 }
 
@@ -216,25 +220,43 @@ html {
 h1 {
     font-family: Gooper;
     font-size: 1.7em;
-    color: #FBFBFB;
+/*    color: #FBFBFB; */
+    color:rgba(255,255,255,.8);
 }
 
 .iz {
     font-family: Gooper Semibold;
-    letter-spacing: 2px
+    color:rgba(255,255,255,.9);
+    letter-spacing: 2px;
+    background-size: .5em;
+    box-sizing: border-box;
+/*    border-bottom: 1px solid white; */
+    box-shadow: 
+        inset 0 -.02em white,
+        inset 0 -.01em blue;
+    text-shadow:  2px 7px #181818,
+                  -2px 7px #181818;
 }
 
 .iz:hover .face-1{
+    visibility: visible;
     opacity: 1;
     transition: .2s;
 }
 
 .ge {
     font-family: Gooper Semibold;
-    letter-spacing: 2px
+    letter-spacing: 2px;
+    color:rgba(255,255,255,.9);
+     box-shadow: 
+        inset 0 -.02em white,
+        inset 0 -.01em blue;
+    text-shadow:  2px 7px #181818,
+                  -2px 7px #181818;
 }
 
 .ge:hover .face-2{
+    visibility: visible;
     opacity: 1;
     transition: .2s;
 }
@@ -247,7 +269,7 @@ h2 {
     font-family: Gooper Light;
     font-weight:300;
     font-size: .53em;
-    color: #FBFBFB;
+    color:rgba(255,255,255,.8);
     line-height: 1.35;
     letter-spacing: .5px;
 }
@@ -264,7 +286,8 @@ h2 {
 p {
     font-family: Source Sans Pro, sans-serif;
     font-size: .4em;
-    color: #FBFBFB;
+    color:rgba(255,255,255,.8);;
+    color:rgba(255,255,255,.8);;
 }
 
 .title {
@@ -298,6 +321,7 @@ p {
 }
 
 .face-1 {
+    visibility: hidden;
     opacity: 0;
     width: 26%;
     position: absolute;
@@ -308,6 +332,7 @@ p {
 }
 
 .face-2 {
+    visibility: hidden;
     opacity: 0;
     width: 22%;
     position: absolute;
