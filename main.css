@@ -98,13 +98,13 @@ a {
 .link a {
     display: block;
     height: 100%;
-    background-color: rgba(255,140,140,.75);
+    border: 2px solid white;
     opacity: 0;
     transition: .3s
 }
 
 .link a:hover {
-    opacity: .3;
+    opacity: .9;
 }
 
 /* .work-1:hover ~ .caption-1 {
@@ -291,6 +291,12 @@ h2 {
     padding-top: 1.7%;
 }
 
+.wip {
+    padding-left: 8%;
+    padding-top: 1%;
+    width: 50%;
+}
+
 .txt-pad {
     padding-left: 4.5%;
 }
@@ -299,6 +305,10 @@ p {
     font-family: Source Sans Pro, sans-serif;
     font-size: .4em;
     color:rgba(255,255,255,.8);
+}
+
+.wip p {
+    color: #FC9A9A;
 }
 
 .title {
