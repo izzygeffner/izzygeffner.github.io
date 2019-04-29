@@ -558,3 +558,81 @@ body {
     margin-top: 1vh;
     margin-bottom: 3vh;
 }
+
+/* MOTION EXPIMENTS */
+
+.mo-info1 {
+    grid-column: 1/2;
+    box-sizing: border-box;
+    padding-left: 26%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%; 
+}
+
+.mo {
+    padding-left: 26%;
+}
+
+.gifs {
+   margin-left: 25%;
+    margin-right: 25%;
+    width: 100%; 
+}
+
+.gif-grid {
+    display: grid;
+    grid-column-gap: 1.5vw;
+    grid-row-gap: 1.5vw;
+    grid-template-columns: 130% 95%;
+}
+
+.gif-1 {
+   grid-column: 1/2;
+    width: 100%;
+}
+
+.gif-2 {
+   grid-column: 2/3; 
+    width: 100%;
+}
+
+.gif-34 {
+    grid-column: 1/2;
+}
+
+.gif-3 {
+    width: 47%;
+    margin-right: 1.5vw;
+}
+
+.gif-4 {
+    width: 47%;
+}
+
+.gif-5 {
+    grid-column: 2/3;
+    width: 100%;
+    margin-top: -12vw;
+}
+
+.gifs-2 {
+    display: grid;
+    grid-template-columns: 112% 112%;
+    grid-column-gap: 1.7vw;
+    margin-top: 1.5vw;
+}
+.gif-6 {
+    width: 100%;
+    grid-column: 1/2;
+
+}
+
+.gif-7 {
+    width: 100%;
+    grid-column: 2/3;
+}
+
+.foot a {
+    text-decoration: none;
+}
