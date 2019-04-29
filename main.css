@@ -107,6 +107,19 @@ a {
     opacity: .9;
 }
 
+.link2 a {
+    display: block;
+    height: 100%;
+    border: 2px solid black;
+    opacity: 0;
+    transition: .3s
+}
+
+.link2 a:hover {
+    opacity: .9;
+}
+
+
 /* .work-1:hover ~ .caption-1 {
     opacity: 1;
     transition: 1s;
