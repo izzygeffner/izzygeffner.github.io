@@ -55,8 +55,10 @@ a {
 }
 
 .header a {
-    font-size: .5em;
-    font-weight: 300;
+    font-size: .35em;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
 }
 
 .right {
@@ -635,4 +637,19 @@ body {
 
 .foot a {
     text-decoration: none;
+}
+
+.foot div {
+      transition: .2s;
+}
+
+.foot div:hover {
+    color: #6EDDB1;
+    border: .03em solid #6EDDB1;
+    transition: .2s;
+}
+
+.txt-foot:hover {
+    color: #6EDDB1;
+    transition: .2s;
 }
