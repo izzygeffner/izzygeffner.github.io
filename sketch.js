@@ -43,7 +43,7 @@ function setup() {
     worldObjects.push(ground);
 
     //walls
-    leftWall = Bodies.rectangle(0, 0, 30, height * 2, {isStatic: true});
+    leftWall = Bodies.rectangle(0 - 30, 0, 60, height * 2, {isStatic: true});
     rightWall = Bodies.rectangle(width - 5 , 0, 30, windowHeight * 2, {isStatic: true});
  
     worldObjects.push(leftWall);
@@ -105,22 +105,25 @@ function windowResized() {
 
     circles[2].r = 20;
 
+    Matter.Composite.remove(world, worldObjects[0]);
+    ground = Bodies.rectangle(100, height - 100, windowWidth * 2, 30, {isStatic: true});
+    worldObjects.splice(0, 1, ground);
+    World.add(world, worldObjects[0]);
+
 
     //remove right wall from array
-    Matter.Composite.remove(world, worldObjects[2]);
+   Matter.Composite.remove(world, worldObjects[2]);
 
        //re-draw walls
-       leftWall = Bodies.rectangle(0, 0, 30, height * 2, {isStatic: true});
        rightWall = Bodies.rectangle(width - 5 , 0, 30, windowHeight * 2, {isStatic: true});
   
        //add walls to world 
-       worldObjects.splice(2, 2, rightWall);
+       worldObjects.splice(2, 1, rightWall);
        World.add(world, worldObjects[2]);
        console.log(worldObjects.length);
-  
-    //   Matter.Composite.remove(world, worldObjects[0]);
-    //   ground = Bodies.rectangle(100, height - 100, windowWidth * 2, 30, {isStatic: true});
-    //   worldObjects.splice(0, 0, ground);
+
+
+    console.log(worldObjects.length);
     
  /*   for (var i=0; i < circles.length; i++) {
         circles[i].r = circleArea; */
