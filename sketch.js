@@ -16,7 +16,9 @@ var ground;
 var leftWall;
 var rightWall;
 
-//circle variables
+var worldObjects = [];
+
+//circle variables  
 var area;
 var circleArea;
 
@@ -38,19 +40,24 @@ function setup() {
     
     //ground
     ground = Bodies.rectangle(100, height - 100, windowWidth * 2, 30, {isStatic: true});
-    
+    worldObjects.push(ground);
+
     //walls
     leftWall = Bodies.rectangle(0, 0, 30, height * 2, {isStatic: true});
     rightWall = Bodies.rectangle(width - 5 , 0, 30, windowHeight * 2, {isStatic: true});
-    
+ 
+    worldObjects.push(leftWall);
+    worldObjects.push(rightWall);
+ 
     //add to world
-    World.add(world, [ground, leftWall, rightWall]);
+    World.add(world, worldObjects);
     
     //Circle area responsivity
     area = windowWidth * windowHeight;
-    circleArea = Math.floor(area / 5500);
+    circleArea = Math.floor(area / 6000);
     
     console.log ("circle area = " + circleArea);
+    console.log(worldObjects);
 
     for (var i=0;  i < 50; i++) {
         if(i % 10 == 0) {
@@ -72,7 +79,7 @@ function setup() {
 function draw() {
     background(5);
 
-    mousePressed();
+   // mousePressed();
     
     //render circles
     for (var i=0; i < circles.length; i++) {
@@ -81,9 +88,7 @@ function draw() {
 }
 
 function mousePressed() {
-    fill(255);
-    ellipse(mouseX, mouseY, 20, 20);
-    return false;
+
 }
 
 function changeR() {
@@ -93,12 +98,29 @@ function changeR() {
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
     area = windowWidth * windowHeight;
-    circleArea = Math.floor(area / 5500);
+    circleArea = Math.floor(area / 6000);
     
     console.log ("circle area = " + circleArea);
     //console.log (circles[2].r);
 
     circles[2].r = 20;
+
+
+    //remove right wall from array
+    Matter.Composite.remove(world, worldObjects[2]);
+
+       //re-draw walls
+       leftWall = Bodies.rectangle(0, 0, 30, height * 2, {isStatic: true});
+       rightWall = Bodies.rectangle(width - 5 , 0, 30, windowHeight * 2, {isStatic: true});
+  
+       //add walls to world 
+       worldObjects.splice(2, 2, rightWall);
+       World.add(world, worldObjects[2]);
+       console.log(worldObjects.length);
+  
+    //   Matter.Composite.remove(world, worldObjects[0]);
+    //   ground = Bodies.rectangle(100, height - 100, windowWidth * 2, 30, {isStatic: true});
+    //   worldObjects.splice(0, 0, ground);
     
  /*   for (var i=0; i < circles.length; i++) {
         circles[i].r = circleArea; */
