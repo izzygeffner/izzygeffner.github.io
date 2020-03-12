@@ -1,6 +1,10 @@
 function Circle(x, y, r) {
     //create circle
-    this.body = Bodies.circle(x, y, r);
+    options = {
+        friction: 0.7,
+        restitution: 0.5
+      };
+    this.body = Bodies.circle(x, y, r, options);
     this.r = r;
     //add circle to world
     World.add(world, this.body);
