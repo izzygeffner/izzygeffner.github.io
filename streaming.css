@@ -100,7 +100,8 @@ body {
     grid-row: 3/4;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 25vh 25vh 25vh;
+    grid-template-rows: auto;
+    grid-gap: 0;
 }
 
 /*cards*/
@@ -110,8 +111,10 @@ body {
     padding-left: 1.5em;
     padding-right: 2em;
     padding-bottom: 0;
-    height: 20;
-    display: flex;
+    height: 25vh;
+    margin: 0;
+    position: relative;
+    display: grid;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: stretch;
@@ -121,6 +124,11 @@ body {
 
 .card-left {
     position: relative;
+    grid-column: 1/2;
+}
+
+.card-right {
+    grid-column: 2/3
 }
 
 .break {
@@ -189,11 +197,19 @@ h2 {
     margin-bottom: -3px;
 }
 
+br {
+    display: block;
+    content: "";
+    margin: 1.5vh;
+}
+
 
 h3 {
     letter-spacing: .2px;
     margin-bottom: 0;
     font-size: 1.4em;
+    position: absolute;
+    bottom: 4vh;
 }
 
 .info {
@@ -213,8 +229,8 @@ h3 {
     font-size: .7em;
     letter-spacing: .3px;
     margin-top: .25em;
-    margin-bottom: auto;
-
+    margin-bottom: 0;
+    bottom: 2vh;
 }
 
 .button {
@@ -274,16 +290,18 @@ h3 {
     .title {
         font-size: 4vw;
     }
-
+    
     .cards-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
+
+    
 }
 
-/*MOBILE*/
-
-@media screen and (max-width: 1000px) {
+/*THIN DESKTOP*/
+ 
+@media (max-width: 1000px) {
     .header {
         padding-left: 1.3em;
     }
@@ -295,5 +313,68 @@ h3 {
     .cards-container {
         display: grid;
         grid-template-columns: 100%;
+        border-bottom: 9px solid white;
     }
+    
+
 }
+/*MOBILE*/
+
+@media screen and (max-device-width: 1000px) {
+   
+    .card {
+        padding-top: 2em;
+        padding-left: 2em;
+    }
+    
+    .card-left {
+        padding-right: 2em;
+    }
+    
+     h2 {
+        font-size: 7em;
+    }
+    
+    .long {
+        font-size: 5em;
+        margin-top: 1.5vh;
+    }
+    
+    .info {
+        font-size: 2em;
+        margin-top: .5vh;
+        padding-right: 1.5em;
+    }
+    
+    h3 {
+        font-size: 2.5em;
+    }
+    
+    .locale {
+        font-size: 1.3em;
+        margin-bottom: 0;
+        align-content: flex-end;
+    }
+    
+    .time {
+        font-size: 2.3em;
+        margin-bottom: .2em;
+    }
+    
+    .circle {
+      height: 3.5em;
+      width: 3.5em;
+      border-radius: 50%;
+      border: .1em solid white;
+      margin-right: 1vw;
+    }
+
+    .circle p {
+    font-size: 2em;
+    }
+    
+    .days li {
+    margin-top: 1.2em;
+}
+}
+
