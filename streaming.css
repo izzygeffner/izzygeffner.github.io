@@ -100,8 +100,7 @@ body {
     grid-row: 3/4;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-gap: 0;
+    grid-template-rows: repeat(auto);
 }
 
 /*cards*/
@@ -109,9 +108,8 @@ body {
 .card {
     padding: 1em;
     padding-left: 1.5em;
-    padding-right: 2em;
     padding-bottom: 0;
-    height: 25vh;
+    height: 27vh;
     margin: 0;
     position: relative;
     display: grid;
@@ -200,7 +198,7 @@ h2 {
 br {
     display: block;
     content: "";
-    margin: 1.5vh;
+    margin: 1vh;
 }
 
 
@@ -252,6 +250,10 @@ h3 {
     line-height: -3;
 }
 
+.long {
+    font-size: 2.6vw;
+}
+
 .onNow {
     color: green;
 }
@@ -284,6 +286,23 @@ h3 {
 #comedy {
     background-color: #1E84CA;
 }
+
+/*THIN TABLET*/
+@media (max-width: 1200px) {
+    .cards-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .long {
+        font-size: 2.6em;
+    }
+    
+    br {
+        margin: 1.5vh;
+    }
+}
+
 /*TABLET*/
 
 @media screen and (max-width: 1200px) {
@@ -291,10 +310,7 @@ h3 {
         font-size: 4vw;
     }
     
-    .cards-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
+
 
     
 }
@@ -329,6 +345,7 @@ h3 {
     
     .card-left {
         padding-right: 2em;
+        padding-left: 1.5em;
     }
     
      h2 {
@@ -336,7 +353,7 @@ h3 {
     }
     
     .long {
-        font-size: 5em;
+        font-size: 4.5em;
         margin-top: 1.5vh;
     }
     
@@ -351,7 +368,8 @@ h3 {
     }
     
     .locale {
-        font-size: 1.3em;
+        font-size: 1.6em;
+        letter-spacing: 1.2px;
         margin-bottom: 0;
         align-content: flex-end;
     }
