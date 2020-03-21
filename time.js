@@ -50,5 +50,4 @@ if (hourNow >= startHour && hourNow < endHour) {
 
     
  //   var timeNow = getHours()
-
 // onNow();
