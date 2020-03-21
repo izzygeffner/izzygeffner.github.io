@@ -5,7 +5,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Quaran-streaming</title>
-        <meta name="description" content="Live streaming events to keep your head on">
+        <meta name="description" content="Live streaming events to keep your head on and maker's lights on">
+        <link rel="stylesheet" href="streaming.css">
         <link rel="stylesheet" href="streaming.css">
         
         <link rel="stylesheet" href="https://use.typekit.net/ued2kfq.css">
@@ -57,12 +58,12 @@
                            <p class="formata-light time" id="time">10:00a–11:00p</p>
                            <ul class="days">
                             <li class="circle formata-light on"><p class="S letter">S</p></li>
-                            <li class="circle formata-light on"><p class="M letter">M</p></li> 
+                            <li class="circle formata-light on" id="mon"><p class="M letter">M</p></li> 
                             <li class="circle formata-light on"><p class="T letter">T</p></li>
-                            <div class="break"></div>
-                            <li class="circle formata-light on"><p class="W line-2">W</p></li>
+                            <div class="break" id="mobileRemove"></div>
+                            <li class="circle formata-light on" id="wed"><p class="W line-2">W</p></li>
                             <li class="circle formata-light on"><p class="Th line-2">Th</p></li>
-                            <li class="circle formata-light on"><p class="F line-2">F</p></li>
+                            <li class="circle formata-light on" id="fri"><p class="F line-2">F</p></li>
                             <div class="break"></div>
                             <li class="circle formata-light on"><p class="S line-3">S</p></li>
                         </ul>
@@ -70,8 +71,8 @@
                 </div>
                 <div class="card card-3 mu-live">
                      <div class="card-left">
-                           <h2 class="white formata-reg"><a href="https://www.twitch.tv/quarantv">Budapest  Orchestra</a></h2>
-                           <p class="info formata-reg">Comedy, video art, people chattin' </p>
+                           <h2 class="white formata-reg long"><a href="https://www.twitch.tv/quarantv">Budapest<br>Festival Orchestra</a></h2>
+                           <p class="info formata-reg">Comedy, video art, people chattin' if i were to keep going what would happen </p>
                            <h3 class="white formata-reg">Variety Show</h3>
                             <p class="formata-light locale">Streaming From Baltimore</p>
                        </div>
@@ -82,7 +83,7 @@
                             <li class="circle formata-light on"><p class="M letter">M</p></li> 
                             <li class="circle formata-light on"><p class="T letter">T</p></li>
                             <div class="break"></div>
-                            <li class="circle formata-light on"><p class="W line-2">W</p></li>
+                            <li class="circle formata-light on" id="wed"><p class="W line-2">W</p></li>
                             <li class="circle formata-light on"><p class="Th line-2">Th</p></li>
                             <li class="circle formata-light on"><p class="F line-2">F</p></li>
                             <div class="break"></div>
@@ -101,6 +102,7 @@
                 </div>
             </div>
         </div>
+    <script src="ifMobile.js"></script>
     <script src="time.js"></script>
     </body>
 </html>
