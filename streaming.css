@@ -4,7 +4,7 @@ p {
 }
 
 
-.cards a {
+.cards-container a {
     color: rgba(255,255,255,1);
     display: inline-block;
     text-decoration: none;
@@ -43,7 +43,7 @@ p {
 
 .title {
     display: flex;
-    font-size: 2.5vw;
+    font-size: 3.1vw;
     letter-spacing: 1.px;
     position: relative;
     padding-top: .6em;
@@ -86,7 +86,7 @@ body {
     position: sticky;
     grid-row: 1/2;
     margin: 0;
-    padding-left: 2.5vw;
+    padding-left: 2vw;
     align-items: center;
 }
 
@@ -94,10 +94,9 @@ body {
     position: relative;
     margin: 0px;
     grid-row: 2/3;
-    background-color: rbga(255,255,255,1);
 }
 
-.cards {
+.cards-container {
     grid-row: 3/4;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -110,10 +109,18 @@ body {
     padding: 1em;
     padding-left: 1.5em;
     padding-right: 2em;
+    padding-bottom: 0;
+    height: 20;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: stretch;
+    grid-template-columns: 3fr 1fr;
+}
+
+
+.card-left {
+    position: relative;
 }
 
 .break {
@@ -122,11 +129,11 @@ body {
 }
 
 .circle {
-  height: 1.55em;
-  width: 1.55em;
+  height: 1.6em;
+  width: 1.6em;
   border-radius: 50%;
   border: .034em solid white;
-  margin-right: .25vw;
+  margin-right: .3vw;
 }
 
 .circle p {
@@ -141,6 +148,15 @@ li.circle {
 
 .letter {
     padding-top: .2em;
+}
+
+.line-2 {
+    padding-top: .1em;
+}
+
+.line-3 {
+    padding-top: .035em;
+    padding-right: .04em;
 }
 
 /*card type styling*/
@@ -158,10 +174,8 @@ ul li {
     align-items: center;
 }
 
-.days {
-    margin-top: .4em;
-    margin-bottom: .4em;;
-    
+.days li {
+    margin-top: .45em;
 }
 
 li.on {
@@ -177,17 +191,30 @@ h2 {
 
 
 h3 {
-    float: right;
     letter-spacing: .2px;
+    margin-bottom: 0;
+    font-size: 1.4em;
+}
+
+.info {
+    letter-spacing: .35px;
+    font-size: .85em;
+    margin-bottom: .1em;
+/*    opacity: .7; */
 }
 
 .time {
-    margin-top: 0;
+    margin-top: 1em;
+    margin-bottom: .6em;
 }
 
 .locale {
+    position: absolute;
     font-size: .7em;
     letter-spacing: .3px;
+    margin-top: .25em;
+    margin-bottom: auto;
+
 }
 
 .button {
@@ -209,6 +236,10 @@ h3 {
     line-height: -3;
 }
 
+.onNow {
+    color: green;
+}
+
 #mu-dj {
     background-color: #FF4740;
     text-shadow: 4px 4px #FF4740,
@@ -226,12 +257,16 @@ h3 {
     color: #FF4740;
 }
 
-#misc {
+.mu-live {
     background-color: #1E84CA;
 }
 
+.misc {
+    background-color: #19AB60;
+}
+
 #comedy {
-    background-color: #C5E5B5;
+    background-color: #1E84CA;
 }
 /*TABLET*/
 
@@ -240,7 +275,7 @@ h3 {
         font-size: 4vw;
     }
 
-    .cards {
+    .cards-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
@@ -248,12 +283,16 @@ h3 {
 
 /*MOBILE*/
 
-@media screen and (max-width: 800px) {
-    .title {
-        font-size: 7vw;
+@media screen and (max-width: 1000px) {
+    .header {
+        padding-left: 1.3em;
     }
     
-    .cards {
+    .title {
+        font-size: 8.5vw;
+    }
+    
+    .cards-container {
         display: grid;
         grid-template-columns: 100%;
     }
