@@ -1,0 +1,48 @@
+body {
+    background-color: rgba(0,0,0,5);
+}
+
+.cards {
+    margin-top: 50%;
+    margin-left: 50%;
+}
+
+.card {
+/*    background-color: rgba(255,255,255,1); */
+    position: absolute;
+    height: 51.667vw;
+    width: 34.688vw;
+    transition: all 1s;
+}
+
+
+#card1 {
+    transform: rotate(0deg);
+    background-color: rgba(255,255,255,1);
+}
+
+
+#card2 {
+    transform: rotate(0deg);
+    background-color: rgba(255,255,255,1);
+}
+
+#card3 {
+    transform: rotate(0deg);
+    background-color: rgba(255,255,255,1);
+}
+
+#card4 {
+    transform: rotate(0deg);
+    background-color: rgba(255,255,255,1);
+}
+
+#card5 {
+    transform: rotate(0deg);
+    background-color: rgba(255,255,255,1);
+}
+
+#card6 {
+    transform: rotate(0deg);
+    background-color: rgba(255,255,255,1);
+}
