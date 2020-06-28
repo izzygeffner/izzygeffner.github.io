@@ -22,34 +22,33 @@ body {
 
 .cards {
     position: absolute;
-    justify-content: space-evenly;
-    overflow: scroll;
-    white-space: nowrap;
+/*    justify-content: space-evenly; 
+    overflow: scroll; 
+    white-space: nowrap; */
     width: 100%;
     height: 100%;
     z-index: 3;
 }
-
+/* 
 .scroll-block {
     position: absolute;
     display: flex;
-    width: 130%;
+    width: 100%;
     height: 45%;
     top: 28vh;
-    justify-content: space-between;
+   justify-content: space-between;
     background-color: rgba(0,0,0,0);
-}
+} */
 
 .card {
     background-color: white;
     position: relative;
     display: inline;
- /*   top: 20vh; */
- /*   left: 37vw; */ 
-    height: 100%;
+    top: 25vh;
+    height: 45%;
     width: 33vh;
-    margin-left: 4%;
-    margin-right: 4%;
+    margin-left: 11%;
+/*    margin-right: 4%; */
     transition: all 1s;
 }
 
@@ -190,11 +189,45 @@ body {
 
 
 
+/* MOBILE */
 
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait){ 
 
-/*
-button {
-    background-color: rgba(0,0,0,0);
-    color: rgba(255,255,255,.5);
-    border: none;
-} */
+      body {
+          background-color: ;
+      }
+      
+      .cards {
+        
+      }
+      
+      .card {
+            position: absolute;
+            height: 30vh;
+            width: 20vh;
+            margin-left: 6%;
+            margin-right: 0; 
+            top: 29%;
+      }
+}
+
+/* IPHONE X */ 
+
+ @media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+      
+       body {
+          background-color: ;
+      }
+      
+      .card { 
+          margin-left: 4%;
+      }
+}
