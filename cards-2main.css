@@ -198,7 +198,8 @@ body {
   and (orientation: portrait){ 
 
       body {
-          background-color: ;      }
+          background-color: pink; 
+      }
       
       .cards {
         
@@ -223,7 +224,7 @@ body {
   and (orientation: portrait) { 
       
        body {
-          background-color: ;
+          background-color: hotpink;
       }
       
       .card { 
