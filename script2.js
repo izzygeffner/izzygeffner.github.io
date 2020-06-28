@@ -43,7 +43,7 @@ function makeStack() {
 }
 
 //unfurl
-var button = document.getElementById("unfurl")
+/* var button = document.getElementById("unfurl")
 button.onclick = function() {
     for (i = 0; i < 5; i++) {
         var card = allCards[i];
@@ -54,7 +54,7 @@ button.onclick = function() {
     }
     var scrollbar = document.getElementById("scroll");
     scrollbar.scrollLeft = 100;
-}
+} */
 
 function bgShow (image) {
     var bg = document.getElementById("bg");
