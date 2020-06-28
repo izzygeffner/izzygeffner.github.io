@@ -1,77 +1,232 @@
-let allCards = [];
-var degree = 0;
-
-function cardArray () {
-    for (i = 1; i < 6; i++) {
-        
-        var idTag = "card" + i;
-        var card = document.getElementById(idTag);
-         // testing
-        var cardNum = card.innerHTML;
-        console.log(cardNum); 
-
-        allCards.push(card);
-    }
+.test {
+    border: 1px solid white;
 }
 
-function backgroundColor() {
-    for (i = 0; i < 5; i++) {
-        var r = Math.floor((Math.random() * 255));
-        var g = Math.floor((Math.random() * 255));
-        var b = Math.floor((Math.random() * 255));
+/* SHOW SCROLLBAR 
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+  }
 
-        var randomColor = "rgba(" + r + "," + g + "," + b + ", 1)";
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+*/
 
-        var card = allCards[i];
-        //console.log(card);
-        card.style.backgroundColor = randomColor;
-    }
+body {
+    background-color: rgba(0,0,0,5);
+    padding: 0px;
+    margin: 0px;
 }
 
-function makeStack() {
-    for (i = 0; i < 5; i++) {
-        var card = allCards[i];
 
-        //Align in a stack 
-        card.classList.add("onLoad");
-
-        //Rotate
-        degree = degree + 15;
-        //console.log(degree);
-        card.style.transform = "rotate("+ degree + "deg)";
-    }
+.cards {
+    position: absolute;
+/*    justify-content: space-evenly; 
+    overflow: scroll; 
+    white-space: nowrap; */
+    width: 100%;
+    height: 100%;
+    z-index: 3;
 }
-
-//unfurl
-/* var button = document.getElementById("unfurl")
-button.onclick = function() {
-    for (i = 0; i < 5; i++) {
-        var card = allCards[i];
-
-        console.log("clicked");
-        card.style.transform = "rotate(0deg)";
-        card.classList.remove("onLoad");''
-    }
-    var scrollbar = document.getElementById("scroll");
-    scrollbar.scrollLeft = 100;
+/* 
+.scroll-block {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 45%;
+    top: 28vh;
+   justify-content: space-between;
+    background-color: rgba(0,0,0,0);
 } */
 
-function bgShow (image) {
-    var bg = document.getElementById("bg");
-    console.log(image);
-    bg.classList.add("bg-img");
-    bg.classList.add("img-absolute");
-    bg.classList.add(image);
-    console.log(bg)
+.card {
+    background-color: white;
+    position: relative;
+    display: inline;
+    top: 25vh;
+    height: 45%;
+    width: 33vh;
+    margin-left: 11%;
+/*    margin-right: 4%; */
+    transition: all 1s;
 }
 
-function hide (image) {
-   bg.classList.remove(image);
-   bg.classList.remove("bg-absolute");
+.hover-top:hover {
+    transition: all 1s;
+    z-index: 5;
 }
 
 
-cardArray();
-backgroundColor();
-window.onload = makeStack();
+.card.onLoad {
+    position: absolute;
+    left: 26%;
+}
 
+#card1 {
+    transform: rotate(0deg);
+    background-color: rgba(255,255,255,1);
+}
+
+
+#card2 {
+    transform: rotate(0deg);
+    background-color: rgba(255,255,255,1);
+}
+
+#card3 {
+    transform: rotate(0deg);
+    background-color: rgba(255,255,255,1);
+}
+
+#card4 {
+    transform: rotate(0deg);
+    background-color: rgba(255,255,255,1);
+}
+
+#card5 {
+    transform: rotate(0deg);
+    background-color: rgba(255,255,255,1);
+}
+
+.bg-2 {
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-position: center center;
+    background-image: url("images/Parkway.jpg");
+    background-size: cover;
+    transition: all 1s;
+    -webkit-animation: fadeInFromNone 0.5s ease-out;
+    -moz-animation: fadeInFromNone 0.5s ease-out;
+    -o-animation: fadeInFromNone 0.5s ease-out;
+    animation: fadeInFromNone 0.5s ease-out;
+}
+
+.bg-3 {
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url("images/RadicalMedia.png");
+    background-position: center center;
+    background-size: cover;
+    transition: all 1s;
+    -webkit-animation: fadeInFromNone 0.5s ease-out;
+    -moz-animation: fadeInFromNone 0.5s ease-out;
+    -o-animation: fadeInFromNone 0.5s ease-out;
+    animation: fadeInFromNone 0.5s ease-out;
+}
+
+@-webkit-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+
+
+/* MOBILE */
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait){ 
+
+      body {
+          background-color: ;      }
+      
+      .cards {
+        
+      }
+      
+      .card {
+            position: absolute;
+            height: 46vh;
+            width: 30vh;
+            margin-left: 0%;
+            margin-right: 8%; 
+            top: 29%;
+      }
+}
+
+/* IPHONE X */ 
+
+ @media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+      
+       body {
+          background-color: ;
+      }
+      
+      .card { 
+          margin-left: 0%;
+      }
+}
