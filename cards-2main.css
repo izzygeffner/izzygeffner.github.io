@@ -198,8 +198,7 @@ body {
   and (orientation: portrait){ 
 
       body {
-          background-color: ;
-      }
+          background-color: ;      }
       
       .cards {
         
@@ -207,10 +206,10 @@ body {
       
       .card {
             position: absolute;
-            height: 30vh;
-            width: 20vh;
-            margin-left: 6%;
-            margin-right: 0; 
+            height: 46vh;
+            width: 30vh;
+            margin-left: 0%;
+            margin-right: 8%; 
             top: 29%;
       }
 }
@@ -228,6 +227,6 @@ body {
       }
       
       .card { 
-          margin-left: 4%;
+          margin-left: 0%;
       }
 }
