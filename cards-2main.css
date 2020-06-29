@@ -20,7 +20,8 @@
 @font-face {
 font-family: "Gooper SemiCondensed";  
 src: 
-url("type/GooperSemiCondensed5-Regular.woff") format("woff"),
+url('type/GooperSemiCondensed5-Regular.woff') format("woff"),
+url('type/GooperSemiCondensed5-Regular.woff2') format("woff2"),
 }
 
 .gooper-semiLight {
