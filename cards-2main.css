@@ -22,6 +22,7 @@ font-family: "Gooper SemiCondensed";
 src: 
 url('type/GooperSemiCondensed5-Regular.woff') format("woff"),
 url('type/GooperSemiCondensed5-Regular.woff2') format("woff2"),
+url('type/GooperSemiCondensed5-Regular.otf') format("opentype");
 }
 
 .gooper-semiLight {
@@ -317,6 +318,7 @@ body {
             margin-left: 0%;
             margin-right: 8%; 
             top: 29%;
+            padding: 4%;
       }
       
       /*CARD STYLING */
@@ -324,7 +326,6 @@ body {
       .flexbox {
           width: 100%;
           height: 100%;
-          padding: 4%;
       }
       
       .breakLine {
