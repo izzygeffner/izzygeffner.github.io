@@ -27,7 +27,7 @@ url('type/GooperSemiCondensed5-Regular.otf') format("opentype");
 
 .gooper-semiLight {
     font-family: Gooper SemiCondensed;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 /* FORMA */
@@ -50,6 +50,46 @@ url('type/GooperSemiCondensed5-Regular.otf') format("opentype");
     font-family: forma-djr-text,sans-serif;
     font-weight: 500;
     font-style: normal;
+}
+
+/* FORMA MICRO */
+
+@import url("https://use.typekit.net/qam0qyv.css");
+
+.formaMicro {
+    font-family: forma-djr-micro,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.formaMicro-i {
+    font-family: forma-djr-micro,sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.formaMicroMed {
+    font-family: forma-djr-micro,sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.formaMicroMed-i {
+    font-family: forma-djr-micro,sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.formaMicroBold {
+    font-family: forma-djr-micro,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.formaMicroBold-i {
+    font-family: forma-djr-micro,sans-serif;
+    font-weight: 700;
+    font-style: italic;
 }
 
 .white {
@@ -99,16 +139,26 @@ body {
     height: 100%;
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-content: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-wrap: wrap;
 
+}
+
+.card-head {
+    margin-top: 0;
+    margin-bottom: 3%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .breakLine {
     background-color: rgba(255,255,255,1);
     width: 100%;
-    height: .1%;
+    height: .3%;
 
 }
 
@@ -128,8 +178,9 @@ body {
     background-color: rgba(255,255,255,1);
     width: 100%;
     height: .1%;
+    margin-bottom: 3%
 }
-
+    
 
 /*CARD TYPE*/
 
@@ -145,12 +196,14 @@ body {
     font-size: .8em;
     letter-spacing: .6px;
     margin-top: 0;
+    margin-bottom: 0;
+    display: inline;
 }
 
 .card h3 {
     font-size: 2.5em;
     line-height: 1;
-    margin-top: 6%;
+    margin-top: 5%;
     margin-bottom: 6%;
 }
 
@@ -158,8 +211,8 @@ body {
     font-size: .8em;
     margin-top: 4%;
     margin-right: 15%;
-    line-height: 1.3;
-    flex: 5 auto;
+    line-height: 1.4;
+    flex-grow: 3;
 }
 
 .category {
@@ -167,6 +220,7 @@ body {
     text-transform: uppercase;
     margin-bottom: 0;
     font-size: .2em;
+    letter-spacing: .5px;
 }
 
 #card1 {
@@ -315,9 +369,9 @@ body {
             position: absolute;
             height: 46vh;
             width: 30vh;
-            margin-left: 0%;
+            margin-left: -4%;
             margin-right: 8%; 
-            top: 29%;
+            top: 23%;
             padding: 4%;
       }
       
@@ -350,7 +404,8 @@ body {
       }
       
       .bottomLine {
-            height: .4%;
+            height: .3%;
+            margin-bottom: 0;
       }
       
       .category {
@@ -376,6 +431,36 @@ body {
 }
 
 /*LANDSCAPE*/
+
+/*PIXEL 2*/
+@media screen 
+  and (min-device-width: 412px) 
+  and (max-device-height: 823px) 
+  and (-webkit-min-device-pixel-ratio: 2.5) 
+  and (orientation: landscape) {
+      
+      body {
+          background-color: darkred;
+      }
+      
+      .card {
+        height: 60%;
+        width: 40vh;
+        margin-left: 18vh;
+        margin-top: 17vh;
+        top: 0vh;
+      }
+      
+      /*CARD STYLING */
+      
+      .card h3 {
+          font-size: 6vh;
+      }
+      
+      .description {
+          font-size: 2.6vh;
+      }
+}
 
 
 /*IPHONE 5*/
@@ -404,7 +489,7 @@ body {
       }
       
       .description {
-          font-size: 2.2vh;
+          font-size: 2.5vh;
       }
       
       
@@ -435,21 +520,8 @@ body {
       }
       
       .description {
-          font-size: 2.5vh;
+          font-size: 2.6vh;
       }
       
      
-}
-
-/*PIXEL*/
-@media screen 
-  and (device-width: 360px) 
-  and (device-height: 640px) 
-  and (-webkit-device-pixel-ratio: 2) 
-  and (orientation: landscape) {
-      
-      body {
-          background-color: silver;
-      }
-
 }
