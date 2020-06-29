@@ -13,6 +13,47 @@
 }
 */
 
+/*TYPOGRAPHY*/
+
+/*GOOPER*/
+
+@font-face {
+font-family: "Gooper SemiCondensed";  
+src: 
+url("GooperSemiCondensed5-Regular.woff") format("woff"),
+}
+
+.gooper-semiLight {
+    font-family: Gooper SemiCondensed;
+    font-weight: 400;
+}
+
+/* FORMA */
+
+@import url("https://use.typekit.net/qam0qyv.css");
+
+.formaLight-i {
+    font-family: forma-djr-text,sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.formaLight {
+    font-family: forma-djr-text,sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.formaMed {
+    font-family: forma-djr-text,sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.white {
+    color: rgba(255,255,255,1);
+}
+
 body {
     background-color: rgba(0,0,0,5);
     padding: 0px;
@@ -43,14 +84,32 @@ body {
 .card {
     background-color: white;
     position: relative;
-    display: inline;
     top: 25vh;
     height: 45%;
     width: 33vh;
     margin-left: 11%;
-/*    margin-right: 4%; */
     transition: all 1s;
+    padding: 1em;
+    
 }
+
+.flexbox {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-start;
+    flex-wrap: wrap;
+
+}
+
+.breakLine {
+    background-color: rgba(255,255,255,1);
+    width: 100%;
+    height: .1%;
+
+}
+
 
 .hover-top:hover {
     transition: all 1s;
@@ -61,6 +120,51 @@ body {
 .card.onLoad {
     position: absolute;
     left: 26%;
+}
+
+.bottomLine {
+    background-color: rgba(255,255,255,1);
+    width: 100%;
+    height: .1%;
+}
+
+
+/*CARD TYPE*/
+
+
+.date {
+    font-size: .8em;
+    letter-spacing: .6px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.num {
+    font-size: .8em;
+    letter-spacing: .6px;
+    margin-top: 0;
+}
+
+.card h3 {
+    font-size: 2.5em;
+    line-height: 1;
+    margin-top: 6%;
+    margin-bottom: 6%;
+}
+
+.description {
+    font-size: .8em;
+    margin-top: 4%;
+    margin-right: 15%;
+    line-height: 1.3;
+    flex: 5 auto;
+}
+
+.category {
+    justify-self: flex-end;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    font-size: .2em;
 }
 
 #card1 {
@@ -198,7 +302,7 @@ body {
   and (orientation: portrait){ 
 
       body {
-          background-color: pink; 
+          background-color: ; 
       }
       
       .cards {
@@ -213,6 +317,43 @@ body {
             margin-right: 8%; 
             top: 29%;
       }
+      
+      /*CARD STYLING */
+      
+      .flexbox {
+          width: 100%;
+          height: 100%;
+          padding: 4%;
+      }
+      
+      .breakLine {
+          height: .4%;
+      }
+      
+      .date {
+          font-size: 2vh;
+      }
+      
+      .num {
+          font-size: 2vh;
+      }
+      
+      .card h3 {
+          font-size: 5vh;
+          line-height: 110%;
+      }
+      
+      .description {
+          font-size: 1.7vh;
+      }
+      
+      .bottomLine {
+            height: .4%;
+      }
+      
+      .category {
+          font-size: 1.4vh;
+      }
 }
 
 /* IPHONE X */ 
@@ -224,7 +365,7 @@ body {
   and (orientation: portrait) { 
       
        body {
-          background-color: hotpink;
+          background-color: ;
       }
       
       .card { 
