@@ -1,5 +1,5 @@
 let allCards = [];
-var degree = 0;
+var degree = -45;
 
 function cardArray () {
     for (i = 1; i < 6; i++) {
