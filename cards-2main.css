@@ -20,7 +20,7 @@
 @font-face {
 font-family: "Gooper SemiCondensed";  
 src: 
-url("GooperSemiCondensed5-Regular.woff") format("woff"),
+url("type/GooperSemiCondensed5-Regular.woff") format("woff"),
 }
 
 .gooper-semiLight {
@@ -371,4 +371,55 @@ body {
       .card { 
           margin-left: 0%;
       }
+}
+
+/*LANDSCAPE*/
+
+@media only screen 
+  and (min-device-width: 360px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+    
+         body {
+             background-color: fuchsia;
+         }
+     
+}
+
+/*IPHONE 5*/
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 668px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+      body {
+          background-color: rebeccapurple;
+      }
+      
+      /*CARD STYLING */
+      
+      .card h3 {
+          font-size: 6vh;
+      }
+      
+      .description {
+          font-size: 2.2vh;
+      }
+      
+      
+}
+
+/*PIXEL*/
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 2) 
+  and (orientation: landscape) {
+      
+      body {
+          background-color: silver;
+      }
+
 }
