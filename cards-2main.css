@@ -376,17 +376,6 @@ body {
 
 /*LANDSCAPE*/
 
-@media only screen 
-  and (min-device-width: 360px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: landscape) { 
-    
-         body {
-             background-color: fuchsia;
-         }
-     
-}
 
 /*IPHONE 5*/
 @media only screen 
@@ -397,6 +386,14 @@ body {
 
       body {
           background-color: rebeccapurple;
+      }
+      
+      .card {
+        height: 60%;
+        width: 40vh;
+        margin-left: 18vh;
+        margin-top: 17vh;
+        top: 0vh;
       }
       
       /*CARD STYLING */
@@ -410,6 +407,37 @@ body {
       }
       
       
+}
+
+@media only screen 
+  and (min-device-width: 360px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+    
+         body {
+             background-color: fuchsia;
+         }
+      
+      .card {
+        height: 60%;
+        width: 40vh;
+        margin-left: 18vh;
+        margin-top: 17vh;
+        top: 0vh;
+      }
+      
+      /*CARD STYLING */
+      
+      .card h3 {
+          font-size: 6vh;
+      }
+      
+      .description {
+          font-size: 2.5vh;
+      }
+      
+     
 }
 
 /*PIXEL*/
