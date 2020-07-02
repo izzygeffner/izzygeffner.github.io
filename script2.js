@@ -2,7 +2,7 @@ let allCards = [];
 var degree = -45;
 
 function cardArray () {
-    for (i = 1; i < 6; i++) {
+    for (i = 1; i < 8; i++) {
         
         var idTag = "card" + i;
         var card = document.getElementById(idTag);
@@ -15,7 +15,7 @@ function cardArray () {
 }
 
 function backgroundColor() {
-    for (i = 0; i < 5; i++) {
+    for (i = 0; i < 7; i++) {
         var r = Math.floor((Math.random() * 255));
         var g = Math.floor((Math.random() * 255));
         var b = Math.floor((Math.random() * 255));
@@ -29,7 +29,7 @@ function backgroundColor() {
 }
 
 function makeStack() {
-    for (i = 0; i < 5; i++) {
+    for (i = 0; i < 7; i++) {
         var card = allCards[i];
 
         //Align in a stack 
@@ -74,4 +74,4 @@ function hide (image) {
 cardArray();
 backgroundColor();
 window.onload = makeStack();
-
+console.log(window.innerWidth);
