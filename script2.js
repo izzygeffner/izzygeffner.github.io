@@ -1,5 +1,5 @@
 let allCards = [];
-var degree = -45;
+var degree = -30;
 
 function cardArray () {
     for (i = 1; i < 8; i++) {
@@ -36,7 +36,7 @@ function makeStack() {
         card.classList.add("onLoad");
 
         //Rotate
-        degree = degree + 15;
+        degree = degree + 10;
         //console.log(degree);
         card.style.transform = "rotate("+ degree + "deg)";
     }
@@ -75,3 +75,4 @@ cardArray();
 backgroundColor();
 window.onload = makeStack();
 console.log(window.innerWidth);
+
