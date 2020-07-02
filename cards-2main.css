@@ -201,7 +201,7 @@ body {
 }
 
 .card h3 {
-    font-size: 2.5em;
+    font-size: 2.4em;
     line-height: 1;
     margin-top: 5%;
     margin-bottom: 6%;
@@ -223,29 +223,62 @@ body {
     letter-spacing: .5px;
 }
 
+@media screen and (max-height: 630px)
+    {
+    body {
+     /*   background-color: rosybrown; */
+    }
+        
+    .card-head p {
+        font-size: 1.9vh;
+    }
+    
+    .card h3 {
+        font-size: 6vh;
+    }
+    
+    .description {
+        font-size: 1.9vh;
+    }
+        
+    .category {
+        font-size: 1.3vh;
+        }
+}
+
 #card1 {
-    transform: rotate(0deg);
+    transform: rotate(-45deg);
     background-color: rgba(255,255,255,1);
 }
 
 
 #card2 {
-    transform: rotate(0deg);
+    transform: rotate(-45deg);
     background-color: rgba(255,255,255,1);
 }
 
 #card3 {
-    transform: rotate(0deg);
+    transform: rotate(-45deg);
     background-color: rgba(255,255,255,1);
 }
 
 #card4 {
-    transform: rotate(0deg);
+    transform: rotate(-45deg);
     background-color: rgba(255,255,255,1);
 }
 
 #card5 {
-    transform: rotate(0deg);
+    transform: rotate(-45deg);
+    background-color: rgba(255,255,255,1);
+}
+
+#card6 {
+    transform: rotate(-45deg);
+    background-color: rgba(255,255,255,1);
+}
+
+#card7 {
+    transform: rotate(-45deg);
     background-color: rgba(255,255,255,1);
 }
 
