@@ -52,6 +52,12 @@ url('type/GooperSemiCondensed5-Regular.otf') format("opentype");
     font-style: normal;
 }
 
+.formaReg {
+    font-family: forma-djr-micro,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 /* FORMA MICRO */
 
 @import url("https://use.typekit.net/qam0qyv.css");
@@ -127,8 +133,8 @@ body {
     background-color: white;
     position: relative;
     top: 25vh;
-    height: 45%;
-    width: 33vh;
+    height: 46%;
+    width: 34vh;
     margin-left: 11%;
     transition: all 1s;
     padding: 1em;
@@ -201,18 +207,19 @@ body {
 }
 
 .card h3 {
-    font-size: 2.4em;
+    font-size: 2.6em;
     line-height: 1;
     margin-top: 5%;
     margin-bottom: 6%;
 }
 
 .description {
-    font-size: .8em;
+    font-size: .9em;
     margin-top: 4%;
-    margin-right: 15%;
-    line-height: 1.4;
+    margin-right: 5%;
+    line-height: 1.3;
     flex-grow: 3;
+    letter-spacing: .9px;
 }
 
 .category {
@@ -226,7 +233,7 @@ body {
 @media screen and (max-height: 630px)
     {
     body {
-     /*   background-color: rosybrown; */
+        background-color: rosybrown; 
     }
         
     .card-head p {
@@ -303,6 +310,21 @@ body {
     height: 100%;
     position: absolute;
     background-image: url("images/RadicalMedia.png");
+    background-position: center center;
+    background-size: cover;
+    transition: all 1s;
+    -webkit-animation: fadeInFromNone 0.5s ease-out;
+    -moz-animation: fadeInFromNone 0.5s ease-out;
+    -o-animation: fadeInFromNone 0.5s ease-out;
+    animation: fadeInFromNone 0.5s ease-out;
+}
+
+.bg-4 {
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url("images/solistaglia-test-small.gif");
     background-position: center center;
     background-size: cover;
     transition: all 1s;
@@ -434,6 +456,8 @@ body {
       
       .description {
           font-size: 1.7vh;
+          letter-spacing: 1.3px;
+          line-height: 1.4;
       }
       
       .bottomLine {
@@ -460,6 +484,12 @@ body {
       
       .card { 
           margin-left: 0%;
+      }
+      
+      .description {
+          font-size: 1.8vh;
+          letter-spacing: 2px;
+          
       }
 }
 
