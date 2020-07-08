@@ -613,19 +613,19 @@ body {
   and (orientation: portrait){ 
     
       body {
-          background-color: green; 
+          background-color: ; 
           height: 100%;
           width: 100%;
       }
       
       .head-type {
           position: absolute;
-          height: 60%;
-          width: 100%;
+          height: 95%;
+          width: 96%;
       }
       
       .head-type p {
-          font-size: 7vh;
+          font-size: 6.8vh;
           text-align: left;
       }
       
@@ -634,9 +634,14 @@ body {
             position: absolute;
             height: 47vh;
             width: 30vh;
-            margin-right: 8%; 
-            top: 23%;
+            margin-left: -5%;
+            margin-right: 0%; 
+            top: 20%;
             padding: 4%;
+      }
+      
+      .footer p {
+          font-size: 1vh;
       }
       
       /*CARD STYLING */
