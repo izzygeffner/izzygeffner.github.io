@@ -222,12 +222,65 @@ body {
     letter-spacing: .9px;
 }
 
+.description a {
+    text-decoration: none;
+    font-weight: 400;
+    opacity: 50%;    
+    
+}
+
 .category {
     justify-self: flex-end;
     text-transform: uppercase;
     margin-bottom: 0;
     font-size: .2em;
     letter-spacing: .5px;
+}
+
+/*HEAD TYPE*/
+
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+.head-type {
+    position: absolute;
+    margin: 0;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /*TYPE*/
+    padding: .2em;
+    font-size: 7em;
+    line-height: .9;
+    opacity: .9;
+}
+
+.head-type p {
+    margin: 0;
+}
+
+.col-1 {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.type-name{
+    padding: 0px;
+    margin: 0px;
+    
+}
+
+.type-prep {
+}
+
+
+.type-extra {
+    align-self: flex-end;
+    text-align: right;
 }
 
 @media screen and (max-height: 630px)
@@ -289,6 +342,14 @@ body {
     background-color: rgba(255,255,255,1);
 }
 
+.bg {
+    z-index: 10;
+    width: 50%;
+    height: 50%;
+    background-position: center;
+    background-image: url(images/bg.png);
+}
+
 .bg-2 {
     z-index: 4;
     width: 100%;
@@ -346,6 +407,7 @@ body {
     -webkit-animation: fadeInFromNone 0.5s ease-out;
     -moz-animation: fadeInFromNone 0.5s ease-out;
     -o-animation: fadeInFromNone 0.5s ease-out;
+    -o-animation: fadeInFromNone 0.5s ease-out;
     animation: fadeInFromNone 0.5s ease-out;
 }
 
@@ -369,7 +431,7 @@ body {
     width: 100%;
     height: 100%;
     position: absolute;
-    background-image: url("images/lettering.png");
+    background-image: url("images/lettering-bw.png");
     background-position: center center;
     background-size: cover;
     transition: all 1s;
@@ -461,6 +523,10 @@ body {
           background-color: ; 
       }
       
+      .head-type {
+          height: 100%;
+      }
+      
       .cards {
         
       }
@@ -525,6 +591,11 @@ body {
       
        body {
           background-color: ;
+      }
+      
+       .head-type {
+          height: 100%;
+          width: 100%;
       }
       
       .card { 
