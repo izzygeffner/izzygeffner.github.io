@@ -30,6 +30,7 @@ url('type/GooperSemiCondensed5-Regular.otf') format("opentype");
     font-weight: 500;
 }
 
+
 /* FORMA */
 
 @import url("https://use.typekit.net/qam0qyv.css");
@@ -135,7 +136,7 @@ body {
     top: 25vh;
     height: 46%;
     width: 34vh;
-    margin-left: 11%;
+    margin-left: 41%;
     transition: all 1s;
     padding: 1em;
     
@@ -239,33 +240,52 @@ body {
 
 /*HEAD TYPE*/
 
-.break {
-  flex-basis: 100%;
-  height: 0;
-}
 
 .head-type {
     position: absolute;
-    margin: 0;
+    margin-left: 2;
     height: 95%;
-    display: flex;
+    width: 55%;
+    display: inline-flex;
     flex-direction: column;
-    justify-content: space-between;
-    /*TYPE*/
-    padding: .2em;
-    font-size: 7em;
-    line-height: .9;
-    opacity: .9;
+    align-content: flex-end;
+    justify-content: flex-end;
+    padding: 1em;
+    z-index: 1;
+    transition: 1s;
 }
+
+
+.face1 {
+    position: absolute;
+    height: 60%;
+    margin-left: 40%;
+    opacity: 0;
+}
+
+.face2 {
+    position: absolute;
+    height: 35%;
+    margin-top: 50%;
+    margin-left: 7%;
+    opacity: 0;
+}
+
+
 
 .head-type p {
     margin: 0;
+    font-size: 7em;
+    line-height: .9;
+    opacity: .9;
 }
 
 .col-1 {
     display: flex;
     width: 100%;
     justify-content: space-between;
+    align-self: flex-start;
+    flex: 1;
 }
 
 .type-name{
@@ -283,7 +303,44 @@ body {
     text-align: right;
 }
 
-@media screen and (max-height: 630px)
+
+.footer {
+    position: absolute;
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .5em;
+    margin-left: 1em;
+    margin-right: 1em;
+    bottom: 0;
+    padding: 0px;
+    z-index: 4;
+    
+}
+
+.footer img {
+    height: .7em;
+    margin-right: .2em;
+    margin-left: .2em;
+    padding: 0px;
+    transition: .2s;
+}
+
+.footer img:hover {
+    opacity: 40%;
+    
+}
+
+.footer p {
+    font-size: .5em;
+    opacity: 50%;
+    letter-spacing: 1px;
+    margin-bottom: 0px;
+}
+
+
+@media screen and (max-height: 650px)
     {
     body {
         background-color: rosybrown; 
@@ -304,6 +361,39 @@ body {
     .category {
         font-size: 1.3vh;
         }
+}
+
+@media screen and (max-width: 1210px) {
+    .head-type p {
+        font-size: 8.6vw;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    
+    .head-type {
+        width: 95%;
+        
+    }
+    
+    .footer {
+        width: 95%;
+    }
+    
+    .card {
+        margin-left: 5%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .head-type p {
+        letter-spacing: .3px;
+    }
+    
+    .footer p {
+        letter-spacing: 1.2px;
+        transition: .2s;
+    }
 }
 
 #card1 {
@@ -342,13 +432,16 @@ body {
     background-color: rgba(255,255,255,1);
 }
 
+/*
 .bg {
     z-index: 10;
     width: 50%;
     height: 50%;
     background-position: center;
-    background-image: url(images/bg.png);
+    background-image: url(images/bg.png); 
 }
+
+*/
 
 .bg-2 {
     z-index: 4;
@@ -518,13 +611,17 @@ body {
   and (max-device-width: 480px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait){ 
-
+    
       body {
-          background-color: ; 
+          background-color: green; 
+          height: 100%;
+          width: 100%;
       }
       
       .head-type {
+          position: absolute;
           height: 100%;
+          width: 100%;
       }
       
       .cards {
