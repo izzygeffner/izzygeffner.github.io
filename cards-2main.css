@@ -294,8 +294,6 @@ body {
     
 }
 
-.type-prep {
-}
 
 
 .type-extra {
@@ -620,7 +618,7 @@ body {
       
       .head-type {
           position: absolute;
-          height: 95%;
+          height: 92%;
           width: 96%;
       }
       
@@ -641,7 +639,7 @@ body {
       }
       
       .footer p {
-          font-size: 1vh;
+         font-size: .5vh;
       }
       
       /*CARD STYLING */
