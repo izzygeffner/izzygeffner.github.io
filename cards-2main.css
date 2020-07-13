@@ -251,8 +251,8 @@ body {
     align-content: flex-end;
     justify-content: flex-end;
     padding: 1em;
-    z-index: 1;
     transition: 1s;
+    z-index: 5;
 }
 
 
@@ -294,12 +294,79 @@ body {
     
 }
 
-
-
 .type-extra {
     align-self: flex-end;
-    text-align: right;
+    transition: .5s all;
+    
 }
+
+#intro {
+    transition: .5s all;
+    text-align: right;
+
+}
+
+
+
+@-webkit-keyframes moveLeft {
+    0% {
+        text-align: right;
+    }
+
+
+    100% {
+        text-align: right;
+    }
+}
+
+@-moz-keyframes moveLeft {
+    0% {
+        text-align: right;
+    }
+
+
+    100% {
+        text-align: right;
+    }
+}
+
+@-o-keyframes moveLeft {
+    0% {
+        text-align: right;
+    }
+
+
+    100% {
+        text-align: right;
+    }
+}
+
+@keyframes moveLeft {
+    0% {
+        text-align: right;
+    }
+
+
+    100% {
+        text-align: right;
+    }
+}
+
+.switch {
+    display: inline-block;
+    height: .6em;
+    width: .6em; 
+    background-color: coral;
+    border-radius: 100%;
+    transition: 1s all; 
+    z-index: 10;
+}
+
+#switch:hover {
+    background-color: darkblue;
+}
+
+/* FOOTER */ 
 
 
 .footer {
@@ -313,7 +380,7 @@ body {
     margin-right: 1em;
     bottom: 0;
     padding: 0px;
-    z-index: 4;
+    z-index: 6;
     
 }
 
@@ -639,7 +706,12 @@ body {
       }
       
       .footer p {
-         font-size: .5vh;
+         font-size: 1.2vh;
+         letter-spacing: .7px;
+      }
+
+      .footer img {
+          height: 1.3vh;
       }
       
       /*CARD STYLING */
@@ -667,8 +739,10 @@ body {
       }
       
       .description {
+         font-family: forma-djr-micro,sans-serif;
+         font-weight: 400;
           font-size: 1.7vh;
-          letter-spacing: 1.3px;
+          letter-spacing: .8px;
           line-height: 1.4;
       }
       
@@ -704,6 +778,8 @@ body {
       }
       
       .description {
+        font-family: forma-djr-micro,sans-serif;
+        font-weight: 400;
           font-size: 1.8vh;
           letter-spacing: 2px;
           
