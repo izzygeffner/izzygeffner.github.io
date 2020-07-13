@@ -1,5 +1,6 @@
 let allCards = [];
-var degree = -30;
+var degree = -40;
+
 
 function cardArray () {
     for (i = 1; i < 8; i++) {
@@ -8,7 +9,7 @@ function cardArray () {
         var card = document.getElementById(idTag);
          // testing
         var cardNum = card.innerHTML;
-        console.log(cardNum); 
+        //console.log(cardNum); 
 
         allCards.push(card);
     }
@@ -56,23 +57,105 @@ button.onclick = function() {
     scrollbar.scrollLeft = 100;
 } */
 
-function bgShow (image) {
+function bgShow (image, cardElement) {
+    console.log(cardElement);
     var bg = document.getElementById("bg");
-    console.log(image);
-    bg.classList.add("bg-img");
-    bg.classList.add("img-absolute");
+    var card = document.getElementById(cardElement);
+    var headType = document.getElementById("head-type");
+    //console.log(image);
+    headType.style.zIndex = "0";
     bg.classList.add(image);
-    console.log(bg)
+
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        console.log('true');
+        card.style.zIndex = "10";
+       }
 }
 
-function hide (image) {
+function hide (image, cardElement) {
+    var headType = document.getElementById("head-type");
+    var bg = document.getElementById("bg");
+
    bg.classList.remove(image);
-   bg.classList.remove("bg-absolute");
+   headType.style.zIndex = "5";
+   var card = document.getElementById(cardElement);
+   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    console.log('registed');
+    card.style.zIndex = "";
+   }
 }
+
+function mobileType () {
+    var width = window.innerWidth;
+
+    console.log(width);
+
+    if (width <= 585) {
+        var name = document.getElementById("izzy");
+        name.innerHTML = "Izzy Geffner"
+    } else {
+        var name = document.getElementById("izzy");
+        name.innerHTML = "Izzy<br>Geffner"
+    }
+}
+
+var num = 0;
+let checkNumbers = [-1, -1];
+let mainCopy = ["Should be asleep ", 
+                "Sucker for pinball ",
+                "Abhorent ice skater ",
+                "Buffy the Vampire Slayer fan ",
+                "Dweeb for history "]
+
+function textSwap () {
+    num++; 
+    console.log("click # " + num);
+
+    var type = document.getElementById("intro");
+
+    if (num % 2 == true) {
+       // console.log("count odd");
+        var arrayNum = Math.floor(Math.random() * mainCopy.length);
+
+         //make sure items don't repeat immediately
+       
+        checkNumbers[1] = arrayNum;
+        //testing
+        //console.log('initial: ' + checkNumbers);
+        //console.log("displaying " + arrayNum);
+
+       
+        if (checkNumbers[1] == checkNumbers[0]) {
+            arrayNum = Math.floor(Math.random() * mainCopy.length);
+            
+        }
+
+        checkNumbers[0] = arrayNum;
+       //testing
+       // console.log('following: ' + checkNumbers);
+
+        type.innerHTML = mainCopy[arrayNum] + "<span class='switch' id='switch' onclick='textSwap()'></span>";
+        type.style.animation = "moveLeft 0.5s all";
+        type.style.textAlign = "left";
+     
+    } else {
+        type.innerHTML = "Mutlidisciplinary Designer / Information Maniac <span class='switch' id='switch' onclick='textSwap()'></span>" 
+        type.style.textAlign = "right";
+        type.style.animation = "moveLeft 0.5s all";
+        
+    }
+     
+    
+}
+
+
 
 
 cardArray();
 backgroundColor();
 window.onload = makeStack();
-console.log(window.innerWidth);
+mobileType();
+
+window.addEventListener("resize", mobileType);
+
 
