@@ -22,7 +22,7 @@
         <link rel="stylesheet" href="cards-2main.css">
         <link rel="stylesheet" href="https://use.typekit.net/qam0qyv.css">
     </head>
-    <body class="bg">
+    <body class="bg" id="body">
       
       
       <!--MAIN TYPE--> 
@@ -84,7 +84,7 @@
                 <!--SPACE SYMPOSIUM-->
                 <span class="card hover-top" id="card6"
                    onmouseover="bgShow('bg-6')" onmouseout="hide('bg-6')"
-                    ontouch="bgShow('bg-6', 'card6')" ontouch="hide('bg-6', 'card6')">
+                    ontouchstart="bgShow('bg-6', 'card6')" ontouch="hide('bg-6', 'card6')">
                     <span class="flexbox">
                            <span class="card-head">
                                 <p class="white formaMed date">2019</p>
@@ -133,7 +133,8 @@
                 
                 <!--SOLISTALGIA-->
                 <span class="card hover-top" id="card4"
-                   onmouseover="bgShow('bg-4', 'card4')" onmouseout="hide('bg-4', 'card4')">
+                   onmouseover="bgShow('bg-4', 'card4')" onmouseout="hide('bg-4', 'card4')"
+                   onclick="cardShowHide('bg-4', 'card4')">
                     <span class="flexbox">
                            <span class="card-head">
                                 <p class="white formaMed date">2020</p>
@@ -158,7 +159,7 @@
                 <!--RADICAL MEDIA-->
                 <span class="card hover-top" id="card3" 
                     onmouseover="bgShow('bg-3', 'card3')" onmouseout="hide('bg-3', 'card3')"
-                    ontouch="bgShow('bg-3', 'card3')" ontouch="hide('bg-3', 'card3')">
+                    onclick="cardShowHide('bg-3', 'card3')">
                         <span class="flexbox">
                            <span class="card-head">
                                 <p class="white formaMed date">2020</p>
@@ -172,7 +173,7 @@
                             <div class="breakLine"></div>
                             <!-- break -->
                             <p class="white description formaLight">
-                                A concept driven rebrand built around the line “Never Established,” this brand is designed for award winning production company meets commercial house meets experiential agency, not settling on one specialty but excelling at them all. 
+                                A concept driven rebrand built around the line “Never Established,” this brand is designed for award winning production company never settling on one specialty but excelling at them all. 
 Across their slate, Radical Media’s work is bold, requires attention, and demands to be active. 
 
                             </p>
