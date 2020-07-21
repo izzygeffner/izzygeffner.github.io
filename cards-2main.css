@@ -2,6 +2,11 @@
     border: 1px solid white;
 }
 
+html {
+    height: 100%;
+    width: 100%;
+}
+
 /* SHOW SCROLLBAR 
 ::-webkit-scrollbar {
     -webkit-appearance: none;
@@ -63,6 +68,13 @@ url('type/GooperSemiCondensed5-Regular.otf') format("opentype");
 
 @import url("https://use.typekit.net/qam0qyv.css");
 
+.formaMicroLight {
+    font-family: forma-djr-micro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+
 .formaMicro {
     font-family: forma-djr-micro,sans-serif;
     font-weight: 400;
@@ -105,6 +117,8 @@ url('type/GooperSemiCondensed5-Regular.otf') format("opentype");
 
 body {
     background-color: rgba(0,0,0,5);
+    width: 100%;
+    height: 100%;
     padding: 0px;
     margin: 0px;
 }
@@ -297,58 +311,68 @@ body {
 .type-extra {
     align-self: flex-end;
     transition: .5s all;
+    text-align: right;
     
 }
 
 #intro {
     transition: .5s all;
-    text-align: right;
 
+
+}
+
+.tester {
+    color: goldenrod;
+   text-align: left;
+   -webkit-animation: moveLeft 1s ease-out;
+   -moz-animation: moveLeft 1s ease-out;
+   -o-animation:  moveLeft 1s ease-out;
+    animation: moveLeft 1s ease-out;
+    -webkit-animation-fill-mode: forwards;
 }
 
 
 
 @-webkit-keyframes moveLeft {
-    0% {
+    from {
         text-align: right;
     }
 
 
-    100% {
-        text-align: right;
+    to {
+        text-align: left;
     }
 }
 
 @-moz-keyframes moveLeft {
-    0% {
+    from {
         text-align: right;
     }
 
 
-    100% {
-        text-align: right;
+    to {
+        text-align: left;
     }
 }
 
 @-o-keyframes moveLeft {
-    0% {
+    from {
         text-align: right;
     }
 
 
-    100% {
-        text-align: right;
+    to {
+        text-align: left;
     }
 }
 
 @keyframes moveLeft {
-    0% {
+    from {
         text-align: right;
     }
 
 
-    100% {
-        text-align: right;
+    to {        text-align: left;
     }
 }
 
@@ -408,7 +432,7 @@ body {
 @media screen and (max-height: 650px)
     {
     body {
-        background-color: rosybrown; 
+      /*  background-color: rosybrown; */
     }
         
     .card-head p {
@@ -497,6 +521,11 @@ body {
     background-color: rgba(255,255,255,1);
 }
 
+#card8 {
+    transform: rotate(-45deg);
+    background-color: rgba(255,255,255,1);
+}
+
 /*
 .bg {
     z-index: 10;
@@ -528,7 +557,7 @@ body {
     width: 100%;
     height: 100%;
     position: absolute;
-    background-image: url("images/RadicalMedia.png");
+    background-image: url("images/theTreatment.gif");
     background-position: center center;
     background-size: cover;
     transition: all 1s;
@@ -543,7 +572,7 @@ body {
     width: 100%;
     height: 100%;
     position: absolute;
-    background-image: url("images/solistaglia-test-small.gif");
+    background-image: url("images/worldsFair.png");
     background-position: center center;
     background-size: cover;
     transition: all 1s;
@@ -558,7 +587,7 @@ body {
     width: 100%;
     height: 100%;
     position: absolute;
-    background-image: url("images/worldsFair.png");
+    background-image: url("images/solistaglia-test-small.gif");
     background-position: center center;
     background-size: cover;
     transition: all 1s;
@@ -574,7 +603,7 @@ body {
     width: 100%;
     height: 100%;
     position: absolute;
-    background-image: url("images/SpaceSymposium.png");
+    background-image: url("images/RadicalMedia.gif");
     background-position: center center;
     background-size: cover;
     transition: all 1s;
@@ -585,6 +614,21 @@ body {
 }
 
 .bg-7 {
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url("images/SpaceSymposium.png");
+    background-position: center center;
+    background-size: cover;
+    transition: all 1s;
+    -webkit-animation: fadeInFromNone 0.5s ease-out;
+    -moz-animation: fadeInFromNone 0.5s ease-out;
+    -o-animation: fadeInFromNone 0.5s ease-out;
+    animation: fadeInFromNone 0.5s ease-out;
+}
+
+.bg-8 {
     z-index: 4;
     width: 100%;
     height: 100%;
@@ -678,9 +722,11 @@ body {
   and (orientation: portrait){ 
     
       body {
-          background-color: ; 
+        /*   background-color: pink; */
           height: 100%;
           width: 100%;
+          margin: 0;
+          overflow: hidden;
       }
       
       .head-type {
@@ -765,12 +811,12 @@ body {
   and (orientation: portrait) { 
       
        body {
-          background-color: ;
-      }
-      
+          /* background-color: red; */
+
+       }
        .head-type {
           height: 100%;
-          width: 100%;
+          width: 96%;
       }
       
       .card { 
@@ -781,7 +827,7 @@ body {
         font-family: forma-djr-micro,sans-serif;
         font-weight: 400;
           font-size: 1.8vh;
-          letter-spacing: 2px;
+        /*  letter-spacing: 2px; */
           
       }
 }
@@ -795,9 +841,9 @@ body {
   and (-webkit-min-device-pixel-ratio: 2.5) 
   and (orientation: landscape) {
       
-      body {
+    /*  body {
           background-color: darkred;
-      }
+      } */
       
       .card {
         height: 60%;
@@ -826,9 +872,9 @@ body {
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) {
 
-      body {
+    /*  body {
           background-color: rebeccapurple;
-      }
+      } */
       
       .card {
         height: 60%;
@@ -857,9 +903,9 @@ body {
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: landscape) { 
     
-         body {
+     /*    body {
              background-color: fuchsia;
-         }
+         } */
       
       .card {
         height: 60%;
