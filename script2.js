@@ -4,7 +4,7 @@ var ifMobile = ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/
 
 
 function cardArray () {
-    for (i = 1; i < 8; i++) {
+    for (i = 1; i < 9; i++) {
         
         var idTag = "card" + i;
         var card = document.getElementById(idTag);
@@ -17,21 +17,64 @@ function cardArray () {
 }
 
 function backgroundColor() {
-    for (i = 0; i < 7; i++) {
+    for (i = 0; i < 8; i++) {
         var r = Math.floor((Math.random() * 255));
         var g = Math.floor((Math.random() * 255));
         var b = Math.floor((Math.random() * 255));
 
+        var card = allCards[i];
+
+        var randomNum = Math.floor((Math.random() * 4));
+        //RANDOM COLOR
         var randomColor = "rgba(" + r + "," + g + "," + b + ", 1)";
 
-        var card = allCards[i];
+        //F&A FEST
+        let cFestival = ["#CA4E4E", "#D8687D", "#EC7E51", "#EEB63E"];
+        let cTreatment = ["#0E3443", "#06587E", "#DB7F4C", "#8E7540"];
+        let cFair = ["#1D2642", "#7BA25D", "#9FA677", "#056286"];
+        let cSolistalgia = ["#5F82C1", "#62AAD6", "#2778B6", "#FBAA27"];
+        let cRadical = ["#CD4234", "#132B49", "#CB6699", "#136495"];
+        let cSpace = ["#522455", "#334862", "#DF85B3", "#8D5A9C"];
+
+     
+        
+
+        switch(i) {
+            case 0: 
+                console.log("skipped card 1");
+                card.style.backgroundColor = randomColor;
+                break;
+            case 1: 
+                console.log("card 2 = " + randomNum);
+                card.style.backgroundColor = cFestival[randomNum];
+                break;
+            case 2:
+                console.log("card 3 = " + randomNum);
+                card.style.backgroundColor = cTreatment[randomNum];
+                break;
+            case 3: 
+                card.style.backgroundColor = cFair[randomNum];
+                break;
+            case 4: 
+                card.style.backgroundColor = cSolistalgia[randomNum];
+                break;
+            case 5:
+                card.style.backgroundColor = cRadical[randomNum];
+                break;
+            case 6: 
+                card.style.backgroundColor = cSpace[randomNum];
+                break;
+            case 7: 
+                card.style.backgroundColor = randomColor;
+                break;
+        }
         //console.log(card);
-        card.style.backgroundColor = randomColor;
+        //card.style.backgroundColor = randomColor;
     }
 }
 
 function makeStack() {
-    for (i = 0; i < 7; i++) {
+    for (i = 0; i < 8; i++) {
         var card = allCards[i];
 
         //Align in a stack 
@@ -111,6 +154,7 @@ function cardShowHide(image, cardElement) {
 
     } else {
         bg.classList.remove(image);
+        card.style.zIndex = "0";
     }
 
 
@@ -164,27 +208,12 @@ function textSwap () {
        //testing
        // console.log('following: ' + checkNumbers);
 
-       function typeWriter () {
-           var text = mainCopy[arrayNum];
-           console.log(text);
-           console.log(text.length);
-
-           for (i = 0; i < text.length + 1; i++) {
-               type.innerHTML += text.charAt(i);
-               console.log(text.charAt(i));
-               setTimeout(typeWriter, 1000);
-           }
-
-           type.innerHTML += "<span class='switch' id='switch' onclick='textSwap()'></span>";
-       }
-
-      // typeWriter();
 
        
        //makes HTML Changes
-       // type.innerHTML = mainCopy[arrayNum] + "<span class='switch' id='switch' onclick='textSwap()'></span>";
-       // type.classList.add("tester");
-        //type.style.textAlign = "left";
+        type.innerHTML = mainCopy[arrayNum] + "<span class='switch' id='switch' onclick='textSwap()'></span>";
+       type.style.textAlign = "left";
+     //   type.classList.add("tester");
      
     //change back to original state    
     } else {
