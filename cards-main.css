@@ -1,48 +1,1040 @@
+.test {
+    border: 1px solid white;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+/* SHOW SCROLLBAR 
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+  }
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+*/
+
+/*TYPOGRAPHY*/
+
+/*GOOPER*/
+
+@font-face {
+font-family: "Gooper SemiCondensed";  
+src: 
+url('type/GooperSemiCondensed5-Regular.woff') format("woff"),
+url('type/GooperSemiCondensed5-Regular.woff2') format("woff2"),
+url('type/GooperSemiCondensed5-Regular.otf') format("opentype");
+}
+
+.gooper-semiLight {
+    font-family: Gooper SemiCondensed;
+    font-weight: 500;
+}
+
+
+/* FORMA */
+
+@import url("https://use.typekit.net/qam0qyv.css");
+
+.formaLight-i {
+    font-family: forma-djr-text,sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.formaLight {
+    font-family: forma-djr-text,sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.formaMed {
+    font-family: forma-djr-text,sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.formaReg {
+    font-family: forma-djr-micro,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* FORMA MICRO */
+
+@import url("https://use.typekit.net/qam0qyv.css");
+
+.formaMicroLight {
+    font-family: forma-djr-micro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+.formaMicro {
+    font-family: forma-djr-micro,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.formaMicro-i {
+    font-family: forma-djr-micro,sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.formaMicroMed {
+    font-family: forma-djr-micro,sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.formaMicroMed-i {
+    font-family: forma-djr-micro,sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.formaMicroBold {
+    font-family: forma-djr-micro,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.formaMicroBold-i {
+    font-family: forma-djr-micro,sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.white {
+    color: rgba(255,255,255,1);
+}
+
 body {
     background-color: rgba(0,0,0,5);
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
 }
+
 
 .cards {
-    margin-top: 50%;
-    margin-left: 50%;
+    position: absolute;
+/*    justify-content: space-evenly; 
+    overflow: scroll; 
+    white-space: nowrap; */
+    width: 100%;
+    height: 100%;
+    z-index: 3;
 }
+/* 
+.scroll-block {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 45%;
+    top: 28vh;
+   justify-content: space-between;
+    background-color: rgba(0,0,0,0);
+} */
 
 .card {
-/*    background-color: rgba(255,255,255,1); */
-    position: absolute;
-    height: 51.667vw;
-    width: 34.688vw;
+    background-color: white;
+    position: relative;
+    top: 25vh;
+    height: 46%;
+    width: 34vh;
+    margin-left: 41%;
     transition: all 1s;
+    padding: 1em;
+    
+}
+
+.flexbox {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+}
+
+.card-head {
+    margin-top: 0;
+    margin-bottom: 3%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.breakLine {
+    background-color: rgba(255,255,255,1);
+    width: 100%;
+    height: .3%;
+
 }
 
 
-#card1 {
-    transform: rotate(0deg);
+.hover-top:hover {
+    transition: all 1s;
+    z-index: 5;
+}
+
+
+.card.onLoad {
+    position: absolute;
+    left: 26%;
+}
+
+.bottomLine {
     background-color: rgba(255,255,255,1);
+    width: 100%;
+    height: .1%;
+    margin-bottom: 3%
+}
+    
+
+/*CARD TYPE*/
+
+
+.date {
+    font-size: .8em;
+    letter-spacing: .6px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.num {
+    font-size: .8em;
+    letter-spacing: .6px;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: inline;
+}
+
+.card h3 {
+    font-size: 2.6em;
+    line-height: 1;
+    margin-top: 5%;
+    margin-bottom: 6%;
+}
+
+.description {
+    font-size: .9em;
+    margin-top: 4%;
+    margin-right: 5%;
+    line-height: 1.3;
+    flex-grow: 3;
+    letter-spacing: .9px;
+}
+
+.description a {
+    text-decoration: none;
+    font-weight: 400;
+    opacity: 50%;    
+    
+}
+
+.category {
+    justify-self: flex-end;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    font-size: .2em;
+    letter-spacing: .5px;
+}
+
+/*HEAD TYPE*/
+
+
+.head-type {
+    position: absolute;
+    margin-left: 2;
+    height: 95%;
+    width: 55%;
+    display: inline-flex;
+    flex-direction: column;
+    align-content: flex-end;
+    justify-content: flex-end;
+    padding: 1em;
+    transition: 1s;
+    z-index: 5;
+}
+
+
+.face1 {
+    position: absolute;
+    height: 60%;
+    margin-left: 40%;
+    opacity: 0;
+}
+
+.face2 {
+    position: absolute;
+    height: 35%;
+    margin-top: 50%;
+    margin-left: 7%;
+    opacity: 0;
+}
+
+
+
+.head-type p {
+    margin: 0;
+    font-size: 7em;
+    line-height: .9;
+    opacity: .9;
+}
+
+.col-1 {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-self: flex-start;
+    flex: 1;
+}
+
+.type-name{
+    padding: 0px;
+    margin: 0px;
+    
+}
+
+.type-extra {
+    align-self: flex-end;
+    transition: .5s all;
+    text-align: right;
+    
+}
+
+#intro {
+    transition: .5s all;
+
+
+}
+
+.tester {
+    color: goldenrod;
+   text-align: left;
+   -webkit-animation: moveLeft 1s ease-out;
+   -moz-animation: moveLeft 1s ease-out;
+   -o-animation:  moveLeft 1s ease-out;
+    animation: moveLeft 1s ease-out;
+    -webkit-animation-fill-mode: forwards;
+}
+
+
+
+@-webkit-keyframes moveLeft {
+    from {
+        text-align: right;
+    }
+
+
+    to {
+        text-align: left;
+    }
+}
+
+@-moz-keyframes moveLeft {
+    from {
+        text-align: right;
+    }
+
+
+    to {
+        text-align: left;
+    }
+}
+
+@-o-keyframes moveLeft {
+    from {
+        text-align: right;
+    }
+
+
+    to {
+        text-align: left;
+    }
+}
+
+@keyframes moveLeft {
+    from {
+        text-align: right;
+    }
+
+
+    to {        text-align: left;
+    }
+}
+
+.switch {
+    display: inline-block;
+    height: .6em;
+    width: .6em; 
+    background-color: coral;
+    border-radius: 100%;
+    transition: 1s all; 
+    z-index: 10;
+}
+
+
+/* FOOTER */ 
+
+
+.footer {
+    position: absolute;
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .5em;
+    margin-left: 1em;
+    margin-right: 1em;
+    bottom: 0;
+    padding: 0px;
+    z-index: 6;
+    
+}
+
+.footer img {
+    height: .7em;
+    margin-right: .2em;
+    margin-left: .2em;
+    padding: 0px;
+    transition: .2s;
+}
+
+.footer img:hover {
+    opacity: 40%;
+    
+}
+
+.footer p {
+    font-size: .5em;
+    opacity: 50%;
+    letter-spacing: 1px;
+    margin-bottom: 0px;
+}
+
+/*BUTTONS*/
+
+.button-circle {
+    position: relative;
+    padding: .3em;
+    box-sizing: border-box;
+    float: right;
+    clear: none;
+    margin-top: 1.5%;
+    margin-right: 1.5%;
+    z-index: 10;
+    transition: .5s all;
+    opacity: .5;
+    
+}
+
+.button-circle img {
+    width: 4.5em;
+}
+
+.button-circle p {
+    font-family: formaMicro-Light; !important;
+    position: absolute;
+    margin: 0;
+    left: 34%;
+    top: 21%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.7em;
+    letter-spacing: 1px;
+}
+
+.star-about {
+    transition: .5s all;
+}
+
+.button-circle:hover .star-about {
+   transform: rotate(30deg);
+
+}
+
+.button-circle:hover {
+    opacity: 1;
+}
+
+
+
+.button-star {
+    position: absolute;
+    float: right;
+    bottom: 0;
+    margin-bottom: 1.5%;
+    margin-right: 1.5%;
+    left: 94%;
+    clear: none;
+    z-index: 10;
+    transition: .5s all;
+    opacity: .5;
+    
+}
+
+.star {
+    transition: 1s all;
+}
+
+.button-star img {
+    width: 4.5em;
+    
+}
+
+.button-star p {
+    position: absolute;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    left: 45%;
+    top: 30%;
+}
+
+.button-star:hover .star {
+   transform: rotate(-30deg);
+
+}
+
+.button-star:hover {
+    opacity: 1;
+}
+
+
+
+@media screen and (max-height: 650px)
+    {
+    body {
+      /*  background-color: rosybrown; */
+    }
+        
+    .card {
+        height: 50%;        
+    }
+        
+    .card-head p {
+        font-size: 1.9vh;
+    }
+    
+    .card h3 {
+        font-size: 6vh;
+    }
+    
+    .description {
+        font-size: 1.9vh;
+    }
+        
+    .category {
+        font-size: 1.2vh;
+        }
+}
+
+@media screen and (max-width: 1210px) {
+    .head-type p {
+        font-size: 8.6vw;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    
+    .head-type {
+        width: 95%;
+        
+    }
+    
+    .footer {
+        width: 95%;
+    }
+    
+    .card {
+        margin-left: 5%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .head-type p {
+        letter-spacing: .3px;
+    }
+    
+    .footer p {
+        letter-spacing: 1.2px;
+        transition: .2s;
+    }
+}
+
+#card1 {
+    transform: rotate(-45deg);
+    background-color: #ffffff;
 }
 
 
 #card2 {
-    transform: rotate(0deg);
+    transform: rotate(-45deg);
     background-color: rgba(255,255,255,1);
 }
 
 #card3 {
-    transform: rotate(0deg);
+    transform: rotate(-45deg);
     background-color: rgba(255,255,255,1);
 }
 
 #card4 {
-    transform: rotate(0deg);
+    transform: rotate(-45deg);
     background-color: rgba(255,255,255,1);
 }
 
 #card5 {
-    transform: rotate(0deg);
+    transform: rotate(-45deg);
     background-color: rgba(255,255,255,1);
 }
 
 #card6 {
-    transform: rotate(0deg);
+    transform: rotate(-45deg);
     background-color: rgba(255,255,255,1);
+}
+
+#card7 {
+    transform: rotate(-45deg);
+    background-color: rgba(255,255,255,1);
+}
+
+#card8 {
+    transform: rotate(-45deg);
+    background-color: rgba(255,255,255,1);
+}
+
+/*
+.bg {
+    z-index: 10;
+    width: 50%;
+    height: 50%;
+    background-position: center;
+    background-image: url(images/bg.png); 
+}
+
+*/
+
+.bg-2 {
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-position: center center;
+    background-image: url("images/Parkway.jpg");
+    background-size: cover;
+    transition: all 1s;
+    -webkit-animation: fadeInFromNone 0.5s ease-out;
+    -moz-animation: fadeInFromNone 0.5s ease-out;
+    -o-animation: fadeInFromNone 0.5s ease-out;
+    animation: fadeInFromNone 0.5s ease-out;
+}
+
+.bg-3 {
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url("images/theTreatment.gif");
+    background-position: center center;
+    background-size: cover;
+    transition: all 1s;
+    -webkit-animation: fadeInFromNone 0.5s ease-out;
+    -moz-animation: fadeInFromNone 0.5s ease-out;
+    -o-animation: fadeInFromNone 0.5s ease-out;
+    animation: fadeInFromNone 0.5s ease-out;
+}
+
+.bg-4 {
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url("images/worldsFair.png");
+    background-position: center center;
+    background-size: cover;
+    transition: all 1s;
+    -webkit-animation: fadeInFromNone 0.5s ease-out;
+    -moz-animation: fadeInFromNone 0.5s ease-out;
+    -o-animation: fadeInFromNone 0.5s ease-out;
+    animation: fadeInFromNone 0.5s ease-out;
+}
+
+.bg-5 {
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url("images/solistaglia-test-small.gif");
+    background-position: center center;
+    background-size: cover;
+    transition: all 1s;
+    -webkit-animation: fadeInFromNone 0.5s ease-out;
+    -moz-animation: fadeInFromNone 0.5s ease-out;
+    -o-animation: fadeInFromNone 0.5s ease-out;
+    -o-animation: fadeInFromNone 0.5s ease-out;
+    animation: fadeInFromNone 0.5s ease-out;
+}
+
+.bg-6 {
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url("images/RadicalMedia-small.gif");
+    background-position: center center;
+    background-size: cover;
+    transition: all 1s;
+    -webkit-animation: fadeInFromNone 0.5s ease-out;
+    -moz-animation: fadeInFromNone 0.5s ease-out;
+    -o-animation: fadeInFromNone 0.5s ease-out;
+    animation: fadeInFromNone 0.5s ease-out;
+}
+
+.bg-7 {
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url("images/SpaceSymposium.png");
+    background-position: center center;
+    background-size: cover;
+    transition: all 1s;
+    -webkit-animation: fadeInFromNone 0.5s ease-out;
+    -moz-animation: fadeInFromNone 0.5s ease-out;
+    -o-animation: fadeInFromNone 0.5s ease-out;
+    animation: fadeInFromNone 0.5s ease-out;
+}
+
+.bg-8 {
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url("images/lettering-bw.png");
+    background-position: center center;
+    background-size: cover;
+    transition: all 1s;
+    -webkit-animation: fadeInFromNone 0.5s ease-out;
+    -moz-animation: fadeInFromNone 0.5s ease-out;
+    -o-animation: fadeInFromNone 0.5s ease-out;
+    animation: fadeInFromNone 0.5s ease-out;
+}
+
+@-webkit-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+
+
+/* MOBILE */
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait){ 
+    
+      body {
+        /*   background-color: pink; */
+          height: 100%;
+          width: 100%;
+          margin: 0;
+          overflow: hidden;
+      }
+      
+      .head-type {
+          position: absolute;
+          height: 92%;
+          width: 96%;
+      }
+      
+      .head-type p {
+          font-size: 6.8vh;
+          text-align: left;
+      }
+      
+      
+      .card {
+            position: absolute;
+            height: 47vh;
+            width: 30vh;
+            margin-left: -5%;
+            margin-right: 0%; 
+            top: 20%;
+            padding: 4%;
+      }
+      
+      .footer p {
+         font-size: 1.2vh;
+         letter-spacing: .7px;
+      }
+
+      .footer img {
+          height: 1.3vh;
+      }
+      
+      /*CARD STYLING */
+      
+      .flexbox {
+          width: 100%;
+          height: 100%;
+      }
+      
+      .breakLine {
+          height: .4%;
+      }
+      
+      .date {
+          font-size: 2vh;
+      }
+      
+      .num {
+          font-size: 2vh;
+      }
+      
+      .card h3 {
+          font-size: 5vh;
+          line-height: 110%;
+      }
+      
+      .description {
+         font-family: forma-djr-micro,sans-serif;
+         font-weight: 400;
+          font-size: 1.7vh;
+          letter-spacing: .8px;
+          line-height: 1.4;
+      }
+      
+      .bottomLine {
+            height: .3%;
+            margin-bottom: 0;
+      }
+      
+      .category {
+          font-size: 1.4vh;
+      }
+      
+      .button-circle {
+          display: none;
+          position: absolute;
+          float: left;
+          margin-top: 16%;
+          margin-left: 4%;
+
+      }
+      
+      .button-circle img {
+          width: 2em;     
+      }
+      
+      .button-star {
+          margin-bottom: 12%;
+      }
+      
+      .button-star img {
+          width: 3em;
+      }
+}
+
+/* IPHONE X */ 
+
+ @media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+      
+       body {
+          /* background-color: red; */
+
+       }
+       .head-type {
+          height: 100%;
+          width: 96%;
+      }
+      
+      .card { 
+          margin-left: 0%;
+      }
+      
+      .description {
+        font-family: forma-djr-micro,sans-serif;
+        font-weight: 400;
+          font-size: 1.8vh;
+        /*  letter-spacing: 2px; */
+          
+      }
+}
+
+/*LANDSCAPE*/
+
+/*PIXEL 2*/
+@media screen 
+  and (min-device-width: 412px) 
+  and (max-device-height: 823px) 
+  and (-webkit-min-device-pixel-ratio: 2.5) 
+  and (orientation: landscape) {
+      
+    /*  body {
+          background-color: darkred;
+      } */
+      
+      .card {
+        height: 60%;
+        width: 40vh;
+        margin-left: 18vh;
+        margin-top: 17vh;
+        top: 0vh;
+      }
+      
+      /*CARD STYLING */
+      
+      .card h3 {
+          font-size: 6vh;
+      }
+      
+      .description {
+          font-size: 2.6vh;
+      }
+}
+
+
+/*IPHONE 5*/
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 668px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+    /*  body {
+          background-color: rebeccapurple;
+      } */
+      
+      .card {
+        height: 60%;
+        width: 40vh;
+        margin-left: 18vh;
+        margin-top: 17vh;
+        top: 0vh;
+      }
+      
+      /*CARD STYLING */
+      
+      .card h3 {
+          font-size: 6vh;
+      }
+      
+      .description {
+          font-size: 2.5vh;
+      }
+      
+      
+}
+
+@media only screen 
+  and (min-device-width: 360px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+    
+     /*    body {
+             background-color: fuchsia;
+         } */
+      
+      .card {
+        height: 60%;
+        width: 40vh;
+        margin-left: 18vh;
+        margin-top: 17vh;
+        top: 0vh;
+      }
+      
+      /*CARD STYLING */
+      
+      .card h3 {
+          font-size: 6vh;
+      }
+      
+      .description {
+          font-size: 2.6vh;
+      }
+      
+     
 }
