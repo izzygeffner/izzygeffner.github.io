@@ -106,8 +106,12 @@ function bgShow (image, cardElement) {
     var bg = document.getElementById("bg");
     var card = document.getElementById(cardElement);
     var headType = document.getElementById("head-type");
+    var aboutButton = document.getElementById("about");
+    var qButton = document.getElementById("switch");
     //console.log(image);
     headType.style.zIndex = "0";
+    aboutButton.style.zIndex = "0";
+    qButton.style.zIndex = "0";
     bg.classList.add(image);
 
     if( (ifMobile == true) || window.innerWidth <= 900) {
@@ -119,11 +123,15 @@ function bgShow (image, cardElement) {
 
 function hide (image, cardElement) {
     var headType = document.getElementById("head-type");
+    var aboutButton = document.getElementById("about");
+    var qButton = document.getElementById("switch");
     var bg = document.getElementById("bg");
     var card = document.getElementById(cardElement);
 
     bg.classList.remove(image);
-   
+
+    aboutButton.style.zIndex = "10";
+    qButton.style.zIndex = "10";
     
     
     if (!(ifMobile)) {
@@ -211,13 +219,13 @@ function textSwap () {
 
        
        //makes HTML Changes
-        type.innerHTML = mainCopy[arrayNum] + "<span class='switch' id='switch' onclick='textSwap()'></span>";
+        type.innerHTML = mainCopy[arrayNum];
        type.style.textAlign = "left";
      //   type.classList.add("tester");
      
     //change back to original state    
     } else {
-        type.innerHTML = "Mutlidisciplinary Designer / Information Maniac <span class='switch' id='switch' onclick='textSwap()'></span>" 
+        type.innerHTML = "Mutlidisciplinary Designer / Information Maniac"; 
         type.style.textAlign = "right";
         type.classList.remove("tester");
         type.style.animation = "moveLeft 0.5s all";
@@ -264,6 +272,22 @@ function mobileFunction() {
             }
         
     
+    }
+
+    var c = 0;
+
+    function showAbout () {
+        c++;
+        var img1 = document.getElementById('face1');
+        var img2 = document.getElementById('face2');
+        if ((c % 2) != 0) {
+            console.log("cloooook")
+            img1.style.opacity = "1";
+            img2.style.opacity = "1";
+        } else {
+            img1.style.opacity = "0";
+            img2.style.opacity = "0";
+        }
     }
 
 
