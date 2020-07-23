@@ -386,9 +386,6 @@ body {
     z-index: 10;
 }
 
-#switch:hover {
-    background-color: darkblue;
-}
 
 /* FOOTER */ 
 
@@ -428,11 +425,104 @@ body {
     margin-bottom: 0px;
 }
 
+/*BUTTONS*/
+
+.button-circle {
+    position: relative;
+    padding: .3em;
+    box-sizing: border-box;
+    float: right;
+    clear: none;
+    margin-top: 1.5%;
+    margin-right: 1.5%;
+    z-index: 10;
+    transition: .5s all;
+    opacity: .5;
+    
+}
+
+.button-circle img {
+    width: 4.5em;
+}
+
+.button-circle p {
+    font-family: formaMicro-Light; !important;
+    position: absolute;
+    margin: 0;
+    left: 34%;
+    top: 21%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.7em;
+    letter-spacing: 1px;
+}
+
+.star-about {
+    transition: .5s all;
+}
+
+.button-circle:hover .star-about {
+   transform: rotate(30deg);
+
+}
+
+.button-circle:hover {
+    opacity: 1;
+}
+
+
+
+.button-star {
+    position: absolute;
+    float: right;
+    bottom: 0;
+    margin-bottom: 1.5%;
+    margin-right: 1.5%;
+    left: 94%;
+    clear: none;
+    z-index: 10;
+    transition: .5s all;
+    opacity: .5;
+    
+}
+
+.star {
+    transition: 1s all;
+}
+
+.button-star img {
+    width: 4.5em;
+    
+}
+
+.button-star p {
+    position: absolute;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    left: 45%;
+    top: 30%;
+}
+
+.button-star:hover .star {
+   transform: rotate(-30deg);
+
+}
+
+.button-star:hover {
+    opacity: 1;
+}
+
+
 
 @media screen and (max-height: 650px)
     {
     body {
       /*  background-color: rosybrown; */
+    }
+        
+    .card {
+        height: 50%;        
     }
         
     .card-head p {
@@ -448,7 +538,7 @@ body {
     }
         
     .category {
-        font-size: 1.3vh;
+        font-size: 1.2vh;
         }
 }
 
@@ -799,6 +889,27 @@ body {
       
       .category {
           font-size: 1.4vh;
+      }
+      
+      .button-circle {
+          display: none;
+          position: absolute;
+          float: left;
+          margin-top: 16%;
+          margin-left: 4%;
+
+      }
+      
+      .button-circle img {
+          width: 2em;     
+      }
+      
+      .button-star {
+          margin-bottom: 12%;
+      }
+      
+      .button-star img {
+          width: 3em;
       }
 }
 
