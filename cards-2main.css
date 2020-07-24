@@ -35,6 +35,25 @@ url('type/GooperSemiCondensed5-Regular.otf') format("opentype");
     font-weight: 500;
 }
 
+@font-face {
+    font-family: "Gooper";  
+    src: 
+    url('type/Gooper5-Regular.woff') format("woff"),
+    url('type/Gooper5-Regular.woff2') format("woff2"),
+    url('type/Gooper5-Regular.otf') format("opentype");
+    }
+
+    @font-face {
+        font-family: "Gooper Light";  
+        src: 
+        url('type/Gooper5-Light.woff') format("woff"),
+        url('type/Gooper5-Light.woff2') format("woff2"),
+        url('type/Gooper5-Light.otf') format("opentype");
+        }
+
+.gooper {
+    font-family:  Gooper;
+}
 
 /* FORMA */
 
@@ -272,9 +291,11 @@ body {
 
 .face1 {
     position: absolute;
+    margin-top: 2%;
     height: 60%;
     margin-left: 40%;
     opacity: 0;
+    transition: .2s all;
 }
 
 .face2 {
@@ -283,6 +304,7 @@ body {
     margin-top: 50%;
     margin-left: 7%;
     opacity: 0;
+    transition: .2s all;
 }
 
 
