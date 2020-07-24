@@ -16,18 +16,29 @@ function cardArray () {
     }
 }
 
-function backgroundColor() {
+function bgOnLoad() {
     for (i = 0; i < 8; i++) {
+        var card = allCards[i];
+
+        card.style.backgroundColor = "#000000";
+        card.style.border = "1px solid white";
+    }
+}
+
+function backgroundColor(cardElement) {
         var r = Math.floor((Math.random() * 255));
         var g = Math.floor((Math.random() * 255));
         var b = Math.floor((Math.random() * 255));
 
-        var card = allCards[i];
+        console.log(cardElement);
+
+        var card = document.getElementById(cardElement);
+     
 
         var randomNum = Math.floor((Math.random() * 4));
         //RANDOM COLOR
         var randomColor = "rgba(" + r + "," + g + "," + b + ", 1)";
-
+            
         //F&A FEST
         let cFestival = ["#CA4E4E", "#D8687D", "#EC7E51", "#EEB63E"];
         let cTreatment = ["#0E3443", "#06587E", "#DB7F4C", "#8E7540"];
@@ -39,39 +50,39 @@ function backgroundColor() {
      
         
 
-        switch(i) {
+        switch(cardElement) {
             case 0: 
                 console.log("skipped card 1");
                 card.style.backgroundColor = randomColor;
                 break;
-            case 1: 
+            case 'card2': 
                 console.log("card 2 = " + randomNum);
                 card.style.backgroundColor = cFestival[randomNum];
                 break;
-            case 2:
+            case 'card3':
                 console.log("card 3 = " + randomNum);
                 card.style.backgroundColor = cTreatment[randomNum];
                 break;
-            case 3: 
+            case 'card4': 
                 card.style.backgroundColor = cFair[randomNum];
                 break;
-            case 4: 
+            case 'card5': 
                 card.style.backgroundColor = cSolistalgia[randomNum];
                 break;
-            case 5:
+            case 'card6':
                 card.style.backgroundColor = cRadical[randomNum];
                 break;
-            case 6: 
+            case 'card7': 
                 card.style.backgroundColor = cSpace[randomNum];
                 break;
-            case 7: 
+            case 'card8': 
                 card.style.backgroundColor = randomColor;
                 break;
         }
         //console.log(card);
         //card.style.backgroundColor = randomColor;
     }
-}
+
 
 function makeStack() {
     for (i = 0; i < 8; i++) {
@@ -119,6 +130,9 @@ function bgShow (image, cardElement) {
         card.style.zIndex = "";
         headType.zIndex = "-1";
        }
+
+    //card.style.border = "";
+    backgroundColor(cardElement);
 }
 
 function hide (image, cardElement) {
@@ -133,6 +147,12 @@ function hide (image, cardElement) {
     aboutButton.style.zIndex = "10";
     qButton.style.zIndex = "10";
     
+
+    card.style.border = "1px solid white";
+
+    setTimeout(function blackBG(){
+        card.style.backgroundColor = "#000000";
+    }, 10000);
     
     if (!(ifMobile)) {
         headType.style.zIndex = "5";
@@ -292,12 +312,12 @@ function mobileFunction() {
 
 
 
-
 cardArray();
-backgroundColor();
+//backgroundColor();
 window.onload = makeStack();
 mobileType();
 mobileFunction();
+bgOnLoad();
 
 window.addEventListener("resize", mobileType);
 
