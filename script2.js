@@ -154,7 +154,7 @@ function hide (image, cardElement) {
         card.style.backgroundColor = "#000000";
     }, 10000);
     
-    if (!(ifMobile)) {
+    if (ifMobile == false) {
         headType.style.zIndex = "5";
     }
    
@@ -267,7 +267,7 @@ function mobileFunction() {
         window.onload = console.log("mobileFunction running");
 
         var headType = document.getElementById("head-type");
-        //headType.style.zIndex = "2";
+        headType.style.zIndex = "0";
 
         
         //For non-touch devices
