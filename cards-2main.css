@@ -574,7 +574,8 @@ body {
     width: 40%;
     height: 100%;
     margin-left: 55%;
-    overflow: scroll;
+    overflow-y: auto;
+    overflow-x: hidden;
     padding: 1em;
     padding-top: 5.6em;
     display: flex;
@@ -1264,6 +1265,8 @@ body {
       
       .head-type {
           position: absolute;
+          padding-left: 6%;
+          padding-top: 6%;
           height: 99%;
           width: 96%;
       }
@@ -1366,7 +1369,97 @@ body {
         top: 43%;
         left: 43%;
       }
-}
+      
+      .about-container {
+          flex-direction: row;
+          width: 92%;
+          padding-top: 8vh;
+      }
+      
+      .about-row2 {
+          width: 100%;
+      }
+      
+      .about-container h2 {
+          font-size: 4vh;
+          margin-bottom: 2vh;
+      }
+      
+      .about-row4 h5 {
+          font-size: 1.5vh;
+          width: 40%;
+          text-align: left;
+          line-height: 1.2;
+          letter-spacing: .8px;
+      }
+      
+      .about-row5 {
+          margin-left: 43%;
+      }
+      
+      .face1 {
+          top: 40vh;
+          
+      }
+      
+      .experience {
+          grid-template-columns: 1fr;
+          
+      }
+      
+      .exp-1 {
+          display: grid;
+          grid-template-columns: 1fr auto;
+          grid-column-gap: 2vh;
+          margin-left: 30%;
+      }
+      
+      .exp-1 h6 {
+          grid-column: 2/3
+      }
+      
+      .exp-2 {
+          display: grid;
+          grid-template-columns: 1fr auto;
+          grid-column-gap: 2vh;
+          margin-left: 30%; 
+      }
+      
+      .exp-2 h6 {
+          grid-column: 2/3
+      }
+      
+      .exp-3 {
+          display: grid;
+          grid-template-columns: 1fr auto;
+          grid-column-gap: 2vh;
+          margin-left: 30%; 
+          margin-bottom: 3vh;
+      }
+      
+      .exp-3 h6 {
+          grid-column: 2/3
+      }
+      
+      .exp-4 {
+        display: grid;
+          grid-template-columns: 1fr auto;
+          grid-column-gap: 2vh;
+          margin-left: 30%; 
+      }
+      
+      .exp-4 h6 {
+          grid-column: 2/3
+      }
+      
+      .small-headtype p {
+          font-size: 3.4vh;
+      }
+      
+
+    
+      
+
 
 /* IPHONE X */ 
 
@@ -1401,6 +1494,15 @@ body {
         /*  letter-spacing: 2px; */
           
       }
+      
+      .about-container h2 {
+          font-size: 3.3vh;
+      }
+      
+       .small-headtype p {
+          font-size: 3.4vh;
+      }
+      
 }
 
 /*LANDSCAPE*/
