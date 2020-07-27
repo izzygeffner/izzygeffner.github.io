@@ -245,8 +245,7 @@ function textSwap () {
      
     //change back to original state    
     } else {
-        type.innerHTML = "Mutlidisciplinary Designer / Information Maniac"; 
-        type.style.textAlign = "right";
+        type.innerHTML = "Mutlidisciplinary designer fueled by curiosity, process &amp; discovery"; 
         type.classList.remove("tester");
         type.style.animation = "moveLeft 0.5s all";
         
@@ -260,6 +259,7 @@ function mobileFunction() {
 
     var cardsDiv = document.getElementsByClassName("card");
     var interactType = document.getElementById("intro");
+    var footer = document.getElementById("footer");
     
 
     if( (ifMobile == true) || window.innerWidth <= 900) {
@@ -267,7 +267,7 @@ function mobileFunction() {
         window.onload = console.log("mobileFunction running");
 
         var headType = document.getElementById("head-type");
-        headType.style.zIndex = "2";
+        //headType.style.zIndex = "2";
 
         
         //For non-touch devices
@@ -286,8 +286,9 @@ function mobileFunction() {
             console.log("on mobile");
 
             
-            interactType.innerHTML = "Mutlidisciplinary Designer / Information Maniac";
-
+            interactType.innerHTML = "Mutlidisciplinary designer fueled by curiosity, process &amp; discovery";
+            
+            footer.style.display = "none";
 
             }
         
@@ -300,13 +301,39 @@ function mobileFunction() {
         c++;
         var img1 = document.getElementById('face1');
         var img2 = document.getElementById('face2');
+        var cards = document.getElementById("scroll");
+        var about = document.getElementById("aboutContainer");
+        var headType = document.getElementById("head-type");
+
+        var width = window.innerWidth;
+    
         if ((c % 2) != 0) {
-            console.log("cloooook")
             img1.style.opacity = "1";
             img2.style.opacity = "1";
+
+            cards.classList.remove("showCards");
+            about.classList.remove("hideAbout");
+
+            cards.classList.add("hideCards");
+            about.classList.add("showAbout");
+
+            if (width <= 900) {
+                headType.classList.add("small-headtype");
+                console.log("test tes t")
+            }
+            
+
         } else {
             img1.style.opacity = "0";
             img2.style.opacity = "0";
+
+            cards.classList.remove("hideCards");
+            cards.classList.add("showCards");
+            about.classList.add("hideAbout");
+
+            if (width <= 900) {
+                headType.classList.remove("small-headtype");
+            }
         }
     }
 
