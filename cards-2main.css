@@ -1269,23 +1269,24 @@ body {
           position: absolute;
           padding-left: 6%;
           padding-top: 6%;
-          height: 94%;
-          width: 89%;
+          padding-bottom: 6%;
+          height: 97.3%;
+          width: 90%;
       }
       
       .head-type p {
-          font-size: 6.8vh;
+          font-size: 6.4vh;
           text-align: left;
       }
       
       
       .card {
             position: absolute;
-            height: 47vh;
-            width: 30vh;
+            height: 44vh;
+            width: 29vh;
             margin-left: -5%;
             margin-right: 0%; 
-            top: 14%;
+            top: 19%;
             padding: 4%;
       }
       
@@ -1320,7 +1321,7 @@ body {
       
       .card h3 {
           font-size: 5vh;
-          line-height: 110%;
+          line-height: 1--%;
       }
       
       .description {
@@ -1328,7 +1329,7 @@ body {
          font-weight: 400;
           font-size: 1.7vh;
           letter-spacing: .8px;
-          line-height: 1.4;
+          line-height: 1.3;
           margin-bottom: 0;
       }
       
@@ -1343,35 +1344,42 @@ body {
       
       .button-circle {
           position: absolute;
-          top: 93%;
-          left: 88%;
+          top: 93.8%;
+          left: 86%;
 
       }
       
       .button-circle p {
-        font-size: 1.3em;
-        top: 42%;
+        font-size: 1.1em;
+        top: 45%;
         left: 33%;
       }
       
       .button-circle img {
-          width: 3em;     
+          width: 2.5em;     
+      }
+      
+      .button-star {
+          top: 95.5%;
+          left: 74%;
       }
       
       .button-star img {
-          width: 3em;
+          width: 2.5em;
       }
       
       .button-star p {
-  font-size: 1.2em;
-        top: 43%;
-        left: 43%;
+      font-size: .9em;
+        top: 60%;
+        left: 42%;
       }
       
       .about-container {
           flex-direction: row;
-          width: 92%;
-          padding-top: 8vh;
+          width: 86.5%;
+          height: 80%;
+          padding-top: 0;
+          margin-top: 8vh;
       }
       
       .about-row2 {
@@ -1379,7 +1387,7 @@ body {
       }
       
       .about-container h2 {
-          font-size: 4vh;
+          font-size: 3.7vh;
           margin-bottom: 2vh;
       }
       
@@ -1455,6 +1463,7 @@ body {
       }
       
 
+
     
       
 
@@ -1523,13 +1532,17 @@ body {
       
 }
     
-/*IPHONE 6/7/8 PLUS */
+/*IPHONE 6/7/8 */
 @media only screen 
     and (min-device-width : 375px) 
     and (max-device-width : 667px) { 
         
         body {
         /*    background-color: green; */
+        }
+        
+        .head-type {
+            height: 93%;
         }
         
         .card {
@@ -1586,8 +1599,9 @@ body {
         
         .about-container {
             width: 83%;
+            height 78%;
         }
-        
+
         }
 
 /*LANDSCAPE*/
