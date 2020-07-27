@@ -260,6 +260,7 @@ function mobileFunction() {
     var cardsDiv = document.getElementsByClassName("card");
     var interactType = document.getElementById("intro");
     var footer = document.getElementById("footer");
+    var about = document.getElementById("aboutContainer");
     
 
     if( (ifMobile == true) || window.innerWidth <= 900) {
@@ -268,6 +269,7 @@ function mobileFunction() {
 
         var headType = document.getElementById("head-type");
         headType.style.zIndex = "0";
+        
 
         
         //For non-touch devices
@@ -289,6 +291,8 @@ function mobileFunction() {
             interactType.innerHTML = "Mutlidisciplinary designer fueled by curiosity, process &amp; discovery";
             
             footer.style.display = "none";
+            
+            about.style.zIndex = "0";
 
             }
         
@@ -320,6 +324,10 @@ function mobileFunction() {
             if (width <= 900) {
                 headType.classList.add("small-headtype");
                 console.log("test tes t")
+            }
+            
+            if (ifMobile == true) {
+                
             }
             
 
