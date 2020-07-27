@@ -908,9 +908,13 @@ body {
         height: 50%;        
     }
         
-    .card-head p {
-        font-size: 1.9vh;
-    }
+    .num {
+        font-size: 1.9vh
+        }
+    
+    .date {
+        font-size: 1.9vh
+        }
     
     .card h3 {
         font-size: 6vh;
@@ -1257,9 +1261,7 @@ body {
   and (orientation: portrait){ 
     
       body {
-        /*   background-color: pink; */
-          height: 100%;
-          width: 100%;
+       /*    background-color: pink;  */
           margin: 0;
       }
       
@@ -1267,8 +1269,8 @@ body {
           position: absolute;
           padding-left: 6%;
           padding-top: 6%;
-          height: 99%;
-          width: 96%;
+          height: 94%;
+          width: 89%;
       }
       
       .head-type p {
@@ -1283,7 +1285,7 @@ body {
             width: 30vh;
             margin-left: -5%;
             margin-right: 0%; 
-            top: 20%;
+            top: 14%;
             padding: 4%;
       }
       
@@ -1308,11 +1310,12 @@ body {
       }
       
       .date {
-          font-size: 2vh;
+          font-size: 1.5vh;
+          margin-bottom: .7vh;
       }
       
       .num {
-          font-size: 2vh;
+          font-size: 1.5vh;
       }
       
       .card h3 {
@@ -1353,11 +1356,6 @@ body {
       
       .button-circle img {
           width: 3em;     
-      }
-      
-      .button-star {
-          top: 94.6%;
-          left: 74%;
       }
       
       .button-star img {
@@ -1470,30 +1468,50 @@ body {
   and (orientation: portrait) { 
       
        body {
-          /* background-color: red; */
+       /*    background-color: red;  */
 
        }
        .head-type {
-          height: 100%;
-          width: 96%;
+          height: 95%;
+          width: 89.5%;
       }
       
       .head-type p {
           font-size: 6vh;
       }
       .card { 
-          margin-left: 0%;
-          height: 48vh;
+          margin-left: -2%;
+          height: 38vh;
+          width: 22vh;
+      }
+      
+      
+      
+      .card h3 {
+          font-size: 3.7vh;
       }
       
       .description {
         font-family: forma-djr-micro,sans-serif;
         font-weight: 400;
-          font-size: 1.8vh;
+          font-size: 1.4vh;
         margin-bottom: 0;
         /*  letter-spacing: 2px; */
           
       }
+      
+      .date {
+          font-size: 1.4vh;
+          margin-bottom: .4vh;
+      }
+      
+      .num {
+          font-size: 1.4vh;
+      }
+.category {
+          font-size: 1.2vh;
+      }
+      
       
       .about-container h2 {
           font-size: 3.3vh;
@@ -1504,6 +1522,73 @@ body {
       }
       
 }
+    
+/*IPHONE 6/7/8 PLUS */
+@media only screen 
+    and (min-device-width : 375px) 
+    and (max-device-width : 667px) { 
+        
+        body {
+        /*    background-color: green; */
+        }
+        
+        .card {
+            position: absolute;
+            height: 43vh;
+            width: 27vh;
+            margin-left: -5%;
+            margin-right: 0%; 
+            top: 20%;
+            padding: 4%;
+      }
+        
+        .description {
+        font-size: 1.6vh;
+        letter-spacing: .8px;
+        line-height: 1.4;
+        margin-bottom: 0;
+        }
+        
+        .card h3 {
+          font-size: 4.6vh;
+          line-height: 110%;
+      }
+        
+        .date {
+            font-size: 1.5vh;
+        }
+        
+        .num {
+            font-size: 1.5vh:
+        }
+        
+        .category {
+            font-size: 1.25vh;
+        }
+        
+        .button-circle {
+            top: 89%;
+            left: 80%;
+        }
+        
+        .button-circle p {
+            top: 21%;
+        }
+        
+        .button-star {
+            top: 90.5%;
+            left: 67%;
+        }
+        
+        .button-star p {
+            top: 23.5%;
+        }
+        
+        .about-container {
+            width: 83%;
+        }
+        
+        }
 
 /*LANDSCAPE*/
 
@@ -1514,9 +1599,9 @@ body {
   and (-webkit-min-device-pixel-ratio: 2.5) 
   and (orientation: landscape) {
       
-    /*  body {
+      body {
           background-color: darkred;
-      } */
+      } 
       
       .card {
         height: 60%;
@@ -1535,19 +1620,21 @@ body {
       .description {
           font-size: 2.6vh;
       }
+      
+    
 }
 
 
 /*IPHONE 5*/
-@media only screen 
+@media screen 
   and (min-device-width: 320px) 
   and (max-device-width: 668px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) {
 
-    /*  body {
+      body {
           background-color: rebeccapurple;
-      } */
+      } 
       
       .card {
         height: 60%;
@@ -1568,17 +1655,18 @@ body {
       }
       
       
+      
 }
 
-@media only screen 
+@media screen 
   and (min-device-width: 360px) 
   and (max-device-width: 812px) 
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: landscape) { 
     
-     /*    body {
+         body {
              background-color: fuchsia;
-         } */
+         } 
       
       .card {
         height: 60%;
@@ -1596,6 +1684,10 @@ body {
       
       .description {
           font-size: 2.6vh;
+      }
+      
+        .about-row2 {
+          width: 30%;
       }
       
      
