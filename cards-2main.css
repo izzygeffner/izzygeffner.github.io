@@ -1323,12 +1323,12 @@ body {
       }
       
       .date {
-          font-size: 1.8vh;
+          font-size: 1.9vh;
           margin-bottom: .7vh;
       }
       
       .num {
-          font-size: 1.8vh; 
+          font-size: 1.9vh; 
       }
       
       .card h3 {
@@ -1426,6 +1426,8 @@ body {
           width: 100%;
       }
       
+
+      
       .about-container h2 {
           font-size: 3.7vh;
           margin-bottom: 2vh;
@@ -1437,6 +1439,7 @@ body {
           text-align: left;
           line-height: 1.2;
           letter-spacing: .8px;
+          margin-bottom: 14vh;
       }
       
       .about-row5 {
@@ -1444,9 +1447,9 @@ body {
       }
       
       .face1 {
-          height: 27vh;
-          top: 28vh;
-          right: 7vw;
+          height: 29vh;
+          top: 39vh;
+          right: 10vw;
           
       }
       
@@ -1505,7 +1508,11 @@ body {
       }
       
 
-
+      .about-row6 h6 {
+          width: 70%;
+          font-size: 1.5vh;
+          border:
+      }
     
       
 
@@ -1587,13 +1594,17 @@ body {
             height: 93%;
         }
         
+        .head-type p {
+            font-size: 6.1vh;
+        }
+        
         .card {
             position: absolute;
             height: 43vh;
             width: 27vh;
             margin-left: -5%;
             margin-right: 0%; 
-            top: 20%;
+            top: 18%;
             padding: 4%;
       }
         
@@ -1611,11 +1622,11 @@ body {
       }
         
         .date {
-            font-size: 1.8vh;
+            font-size: 1.9vh;
         }
         
         .num {
-            font-size: 1.8vh;
+            font-size: 1.9vh;
         }
         
         .category {
@@ -1644,6 +1655,10 @@ body {
             width: 83%;
             height: 78% ;
         }
+        
+          .small-headtype p {
+          font-size: 3.4vh;
+      }
 
         }
 
