@@ -757,6 +757,14 @@ body {
     animation-fill-mode: forwards;
 }
 
+.top-grad {
+    display: none;
+}
+
+.bottom-grad {
+    display: none;
+}
+
 
 
 
@@ -903,6 +911,10 @@ body {
     body {
       /*  background-color: rosybrown; */
     }
+        
+    .head-type p {
+         font-size: 5.5em;
+        }
         
     .card {
         height: 50%;        
@@ -1311,20 +1323,21 @@ body {
       }
       
       .date {
-          font-size: 1.5vh;
+          font-size: 1.8vh;
           margin-bottom: .7vh;
       }
       
       .num {
-          font-size: 1.5vh;
+          font-size: 1.8vh; 
       }
       
       .card h3 {
-          font-size: 5vh;
-          line-height: 1--%;
+          font-size: 4.5vh;
+          line-height: 1.1;
       }
       
       .description {
+          width: 100%;
          font-family: forma-djr-micro,sans-serif;
          font-weight: 400;
           font-size: 1.7vh;
@@ -1374,13 +1387,40 @@ body {
         left: 42%;
       }
       
+      .top-grad {
+          position: absolute;
+          top: 7%;
+          width: 97%;
+          height: 5%;
+          background-image: linear-gradient(#000 30%, transparent 90%);
+          z-index: 1;
+
+      }
+      
+      .bottom-grad {
+          position: absolute;
+          margin-top: 149%;
+          width: 97%;
+          height: 6%;
+          background-image: linear-gradient(transparent 30%, #000 90%);
+          z-index: 1;
+          
+      }
+      
+      .show {
+          display: block;
+      }
+      
       .about-container {
           flex-direction: row;
           width: 86.5%;
-          height: 80%;
+          height: 79%;
           padding-top: 0;
           margin-top: 8vh;
+ 
       }
+      
+
       
       .about-row2 {
           width: 100%;
@@ -1404,7 +1444,9 @@ body {
       }
       
       .face1 {
-          top: 40vh;
+          height: 27vh;
+          top: 28vh;
+          right: 7vw;
           
       }
       
@@ -1556,23 +1598,24 @@ body {
       }
         
         .description {
-        font-size: 1.6vh;
+
+        font-size: 1.7vh;
         letter-spacing: .8px;
-        line-height: 1.2;
+        line-height: 1.35;
         margin-bottom: 0;
         }
         
         .card h3 {
-          font-size: 4.6vh;
-          line-height: 110%;
+          font-size: 4.3vh;
+          line-height: 1.1;
       }
         
         .date {
-            font-size: 1.5vh;
+            font-size: 1.8vh;
         }
         
         .num {
-            font-size: 1.5vh:
+            font-size: 1.8vh;
         }
         
         .category {
@@ -1599,10 +1642,12 @@ body {
         
         .about-container {
             width: 83%;
-            height 78%;
+            height: 78% ;
         }
 
         }
+
+}
 
 /*LANDSCAPE*/
 
