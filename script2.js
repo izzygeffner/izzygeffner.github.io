@@ -308,6 +308,9 @@ function mobileFunction() {
         var cards = document.getElementById("scroll");
         var about = document.getElementById("aboutContainer");
         var headType = document.getElementById("head-type");
+        var topGrad = document.getElementById("topGrad");
+        var bottomGrad = document.getElementById("bottomGrad");
+
 
         var width = window.innerWidth;
     
@@ -320,16 +323,33 @@ function mobileFunction() {
 
             cards.classList.add("hideCards");
             about.classList.add("showAbout");
+            
+            setTimeout(function showGrad () {
+                topGrad.classList.add("show");
+                bottomGrad.classList.add("show"); 
+            }, 1500); 
+
+            about.onscroll = function () {
+                var xMin = 0;
+                var xMax = 1;
+
+                var yMin = 0;
+                var yMax = 160;
+
+                var inputY = about.scrollTop;
+                
+                percent = (inputY - yMin) / (yMax - yMin);
+                outputX = percent * (xMax - xMin);
+
+                img1.style.opacity = 1 - outputX;
+                console.log(outputX);
+            }
 
             if (width <= 900) {
                 headType.classList.add("small-headtype");
                 console.log("test tes t")
             }
-            
-            if (ifMobile == true) {
-                
-            }
-            
+
 
         } else {
             img1.style.opacity = "0";
@@ -338,6 +358,11 @@ function mobileFunction() {
             cards.classList.remove("hideCards");
             cards.classList.add("showCards");
             about.classList.add("hideAbout");
+           
+        
+            topGrad.classList.remove("show");
+            bottomGrad.classList.remove("show");
+          
 
             if (width <= 900) {
                 headType.classList.remove("small-headtype");
