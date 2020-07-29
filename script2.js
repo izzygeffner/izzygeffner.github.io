@@ -329,18 +329,20 @@ function mobileFunction() {
                 bottomGrad.classList.add("show"); 
             }, 1500); 
 
+
+            var xMin = 0;
+            var xMax = 1;
+
+            var yMin = 0;
+            var yMax = 160;
+
+            var inputY = about.scrollTop;
+            
+            percent = (inputY - yMin) / (yMax - yMin);
+            outputX = percent * (xMax - xMin);
+
+
             about.onscroll = function () {
-                var xMin = 0;
-                var xMax = 1;
-
-                var yMin = 0;
-                var yMax = 160;
-
-                var inputY = about.scrollTop;
-                
-                percent = (inputY - yMin) / (yMax - yMin);
-                outputX = percent * (xMax - xMin);
-
                 img1.style.opacity = 1 - outputX;
                 console.log(outputX);
             }
