@@ -329,8 +329,11 @@ function mobileFunction() {
                 bottomGrad.classList.add("show"); 
             }, 1500); 
 
+           
+            if(ifMobile == true) {
             about.onscroll = function () {
                 
+              
                 var xMin = 0;
                 var xMax = 1;
 
@@ -344,6 +347,8 @@ function mobileFunction() {
 
                 img1.style.opacity = 1 - outputX;
                 console.log(outputX);
+            }
+            
             }
 
             if (width <= 900) {
