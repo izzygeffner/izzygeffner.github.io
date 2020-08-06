@@ -21,7 +21,7 @@ function bgOnLoad() {
         var card = allCards[i];
 
         card.style.backgroundColor = "#000000";
-        card.style.border = "1px solid white";
+        card.style.border = "1px solid rgba(255,255,255, .85)";
     }
 }
 
@@ -286,7 +286,15 @@ function mobileFunction() {
         //Mobile devices only
         if (ifMobile) {
             console.log("on mobile");
+            
+            
+            let formaBold = document.getElementsByClassName('formaBold');
+            console.log(formaBold);
 
+            for(i = 0; i < formaBold.length; i++) {
+                formaBold[i].classList.add('formaMicroBold')
+                formaBold[i].classList.remove('formaBold');
+            }
             
             interactType.innerHTML = "Mutlidisciplinary designer fueled by curiosity, process &amp; discovery";
             
