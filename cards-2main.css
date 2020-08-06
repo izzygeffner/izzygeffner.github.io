@@ -202,7 +202,7 @@ body {
 }
 
 .breakLine {
-    background-color: rgba(255,255,255,1);
+    background-color: rgba(255,255,255,.9);
     width: 100%;
     height: .3%;
 
@@ -410,6 +410,7 @@ body {
     line-height: 1;
     margin-top: 5%;
     margin-bottom: 6%;
+    opacity: .9;
 }
 
 .description {
@@ -419,6 +420,7 @@ body {
     line-height: 1.3;
     flex-grow: 3;
     letter-spacing: .9px;
+    opacity: .9;
 }
 
 .description a {
@@ -432,7 +434,7 @@ body {
     justify-self: flex-end;
     text-transform: uppercase;
     margin-bottom: 0;
-    font-size: .2em;
+    font-size: .4em;
     letter-spacing: .5px;
 }
 
@@ -606,10 +608,10 @@ body {
     font-size: 1.7em;
     letter-spacing: .7px;
     margin-top: 0;
-    line-height: 1.25
+    line-height: 1.25;
     margin-bottom: 1.2em;
     opacity: .9;
-}
+} 
 
 .about-container h3 {
     font-size: 1.3em;
@@ -931,7 +933,7 @@ body {
     }
         
     .head-type p {
-         font-size: 5.5em;
+         font-size: 5.3em;
         }
         
     .card {
@@ -947,7 +949,7 @@ body {
         }
     
     .card h3 {
-        font-size: 6vh;
+        font-size: 4.5vh;
     }
     
     .description {
@@ -963,6 +965,10 @@ body {
     
     .head-type p {
         font-size: 8vw;
+    }
+
+    .description {
+        font-size: .85em;
     }
 }
 
@@ -1300,7 +1306,7 @@ body {
           padding-left: 6%;
           padding-top: 6%;
           padding-bottom: 6%;
-          height: 97.3%;
+          height: 93%;
           width: 90%;
       }
       
@@ -1520,6 +1526,17 @@ body {
       .exp-4 h6 {
           grid-column: 2/3
       }
+
+      .exp-5 {
+          display: grid;
+          grid-template-columns: 1fr auto;
+          grid-column-gap: 2vh;
+          margin-left: 30%;
+      }
+
+      .exp-5 h6 {
+          grid-column: 2/3;
+      }
       
       .small-headtype p {
           font-size: 3.4vh;
@@ -1527,9 +1544,10 @@ body {
       
 
       .about-row6 h6 {
+          margin-top: 1vh;
           width: 70%;
           font-size: 1.5vh;
-          border:
+
       }
     
       
@@ -1671,7 +1689,7 @@ body {
         
         .about-container {
             width: 83%;
-            height: 78% ;
+            height: 80% ;
         }
         
           .small-headtype p {
