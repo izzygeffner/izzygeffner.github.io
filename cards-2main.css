@@ -1631,15 +1631,19 @@ body {
         
         .about-container {
             width: 83%;
-            height: 80% ;
+            height: 75% ;
         }
         
           .small-headtype p {
           font-size: 3.4vh;
       }
 
+      .small-headtype #intro {
+          width: 56%;
+      }
+
       .top-grad {
-          top: 8%;
+          top: 7%;
       }
 
         }
@@ -1661,6 +1665,7 @@ body {
        .head-type {
           height: 93%;
           width: 87%;
+          line-height: 1.1;
       }
       
       .head-type p {
@@ -1709,7 +1714,7 @@ body {
       }
       
       .about-container {
-          height: 81%;
+          height: 75%;
       }
       
       .about-container h2 {
