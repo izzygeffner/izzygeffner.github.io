@@ -269,8 +269,7 @@ function mobileFunction() {
 
         var headType = document.getElementById("head-type");
         headType.style.zIndex = "0";
-        
-
+ 
         
         //For non-touch devices
         if (!(ifMobile)) {
@@ -331,6 +330,8 @@ function mobileFunction() {
 
             cards.classList.add("hideCards");
             about.classList.add("showAbout");
+
+
             
             setTimeout(function showGrad () {
                 topGrad.classList.add("show");
@@ -354,7 +355,6 @@ function mobileFunction() {
                 outputX = percent * (xMax - xMin);
 
                 img1.style.opacity = 1 - outputX;
-                console.log(outputX);
             }
             
             }
@@ -362,7 +362,43 @@ function mobileFunction() {
             if (width <= 900) {
                 headType.classList.add("small-headtype");
                 console.log("test tes t")
+
+
+            //Align bottomGrad to top of bottom type
+            var intro = document.getElementById("intro");
+            var introRect = intro.getBoundingClientRect();
+            var top = introRect.top;
+            var height = window.innerHeight;
+            var position = Math.floor((top / height) * 100);
+            console.log("position is " + position);
+
+            bottomGrad.style.marginTop = (position * 2)+ "%";
             }
+
+            console.log("height " + height);
+
+            //pixel 2 xl
+            if (height >= 820 && height < 850) {
+             console.log("pixel");
+              bottomGrad.style.marginTop = ((position * 2) + 13)+ "%";
+            }
+
+            //iphone x
+            if (height > 823 && height < 860 ) {
+                
+                console.log("iphone x");
+                bottomGrad.style.marginTop = ((position * 2) + 35)+ "%";
+            }
+
+            if (height == 736) {
+                bottomGrad.style.marginTop = ((position * 2) - 6)+ "%";
+            }
+
+           
+
+           
+
+         
 
 
         } else {
