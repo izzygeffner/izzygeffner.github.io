@@ -424,10 +424,13 @@ body {
 }
 
 .description a {
-    text-decoration: none;
-    font-weight: 400;
-    opacity: 50%;    
-    
+    color: #fff;
+    transition: .3s all;
+}
+
+.description a:hover {
+    color: #E5758C;
+
 }
 
 .category {
@@ -671,6 +674,7 @@ body {
     letter-spacing: .9px;
     line-height: 1.4;
     opacity: .4;
+    transition: .8s ease-out;
 }
 
 .exp-3 .client {
@@ -683,8 +687,19 @@ body {
 }
 
 .client a:hover {
-    color: pink;
+    color: #E5758C;
+    transition: .3s ease-out;
     opacity: 1;
+}
+
+.about-container a {
+    color: rgba(255,255,255, 1);
+    transition: .3s ease-out;
+
+}
+
+.about-container a:hover {
+    color: #E5758C;
 }
 
 
