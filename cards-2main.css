@@ -1306,15 +1306,20 @@ body {
           padding-left: 6%;
           padding-top: 6%;
           padding-bottom: 6%;
-          height: 93%;
+          height: 95%;
           width: 90%;
       }
       
       .head-type p {
-          font-size: 6.2vh;
+          font-size: 5.8vh;
+          line-height: 1.05;
           text-align: left;
       }
       
+
+      #intro {
+          width: 90%;
+      }
       
       .card {
             position: absolute;
@@ -1381,14 +1386,14 @@ body {
       
       .button-circle {
           position: absolute;
-          top: 93.8%;
+          top: 73%;
           left: 86%;
 
       }
       
       .button-circle p {
         font-size: 1.1em;
-        top: 45%;
+        top: 6%;
         left: 33%;
       }
       
@@ -1397,8 +1402,8 @@ body {
       }
       
       .button-star {
-          top: 95.5%;
-          left: 74%;
+          top: 93%;
+          left: 87%;
       }
       
       .button-star img {
@@ -1407,7 +1412,7 @@ body {
       
       .button-star p {
       font-size: .9em;
-        top: 60%;
+        top: 35%;
         left: 42%;
       }
       
@@ -1480,6 +1485,7 @@ body {
       
       .experience {
           grid-template-columns: 1fr;
+          row-gap: 2vh;
           
       }
       
@@ -1687,6 +1693,14 @@ body {
       }
 .category {
           font-size: 1.2vh;
+      }
+
+      .button-circle p {
+          top: 14%;
+      }
+
+      .button-star p {
+          top: 16%;
       }
       
       .about-container {
