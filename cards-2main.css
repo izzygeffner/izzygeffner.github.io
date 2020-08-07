@@ -1312,7 +1312,7 @@ body {
       
       .head-type p {
           font-size: 5.8vh;
-          line-height: 1.05;
+          line-height: 1;
           text-align: left;
       }
       
@@ -1386,15 +1386,15 @@ body {
       
       .button-circle {
           position: absolute;
-          top: 73%;
+          top: 74%;
           left: 86%;
 
       }
       
       .button-circle p {
         font-size: 1.1em;
-        top: 6%;
-        left: 33%;
+        top: 7%;
+        left: 32%;
       }
       
       .button-circle img {
@@ -1573,6 +1573,7 @@ body {
         
         .head-type p {
             font-size: 6.1vh;
+            line-height: .9;
         }
         
         .card {
@@ -1616,7 +1617,7 @@ body {
         }
         
         .button-circle p {
-            top: 21%;
+            top: 19%;
         }
         
         .button-star {
@@ -1625,7 +1626,7 @@ body {
         }
         
         .button-star p {
-            top: 23.5%;
+            top: 23%;
         }
         
         .about-container {
@@ -1635,6 +1636,10 @@ body {
         
           .small-headtype p {
           font-size: 3.4vh;
+      }
+
+      .top-grad {
+          top: 8%;
       }
 
         }
