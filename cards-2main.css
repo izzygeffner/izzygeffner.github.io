@@ -1423,7 +1423,6 @@ body {
       
       .bottom-grad {
           position: absolute;
-          margin-top: 149%;
           width: 97%;
           height: 6%;
           background-image: linear-gradient(transparent 30%, #000 90%);
@@ -1435,7 +1434,7 @@ body {
       .about-container {
           flex-direction: row;
           width: 86.5%;
-          height: 79%;
+          height: 80%;
           padding-top: 0;
           margin-top: 7vh;
  
@@ -1454,16 +1453,18 @@ body {
       
       .about-container h2 {
           font-size: 3.7vh;
-          margin-bottom: 2vh;
+          margin-bottom: .05vh;
       }
+
       
       .about-row4 h5 {
           font-size: 1.5vh;
-          width: 40%;
+          width: 30%;
+          margin-left: 75%;
           text-align: left;
           line-height: 1.2;
           letter-spacing: .8px;
-          margin-bottom: 14vh;
+          margin-bottom: 16vh;
       }
       
       .about-row5 {
@@ -1472,7 +1473,7 @@ body {
       
       .face1 {
           height: 29vh;
-          top: 39vh;
+          top: 43vh;
           right: 10vw;
           
       }
@@ -1551,72 +1552,6 @@ body {
       }
     
       
-
-
-/* IPHONE X */ 
-
- @media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: portrait) { 
-      
-       body {
-       /*    background-color: red;  */
-
-       }
-       .head-type {
-          height: 95%;
-          width: 89.5%;
-      }
-      
-      .head-type p {
-          font-size: 6vh;
-      }
-      .card { 
-          margin-left: -2%;
-          height: 38vh;
-          width: 22vh;
-      }
-      
-      
-      
-      .card h3 {
-          font-size: 3.7vh;
-      }
-      
-      .description {
-        font-family: forma-djr-micro,sans-serif;
-        font-weight: 400;
-          font-size: 1.4vh;
-        margin-bottom: 0;
-        /*  letter-spacing: 2px; */
-          
-      }
-      
-      .date {
-          font-size: 1.4vh;
-          margin-bottom: .4vh;
-      }
-      
-      .num {
-          font-size: 1.4vh;
-      }
-.category {
-          font-size: 1.2vh;
-      }
-      
-      
-      .about-container h2 {
-          font-size: 3.3vh;
-      }
-      
-       .small-headtype p {
-          font-size: 3.4vh;
-      }
-      
-}
-    
 /*IPHONE 6/7/8 */
 @media only screen 
     and (min-device-width : 375px) 
@@ -1653,7 +1588,7 @@ body {
         }
         
         .card h3 {
-          font-size: 4.3vh;
+          font-size: 3.7vh;
           line-height: 1.1;
       }
         
@@ -1699,6 +1634,92 @@ body {
         }
 
 }
+
+/* IPHONE X */ 
+
+ @media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+      
+       body {
+       /*    background-color: red;  */
+
+       }
+       .head-type {
+          height: 93%;
+          width: 87%;
+      }
+      
+      .head-type p {
+          font-size: 5vh;
+      }
+      
+      .card { 
+        height: 40vh;
+        width: 24vh;
+        margin-left: -5%;
+      }
+      
+      
+      
+      .card h3 {
+          font-size: 3.7vh;
+      }
+      
+      .description {
+        font-family: forma-djr-micro,sans-serif;
+        font-weight: 400;
+          font-size: 1.4vh;
+        margin-bottom: 0;
+        /*  letter-spacing: 2px; */
+          
+      }
+      
+      .date {
+          font-size: 1.4vh;
+          margin-bottom: .4vh;
+      }
+      
+      .num {
+          font-size: 1.4vh;
+      }
+.category {
+          font-size: 1.2vh;
+      }
+      
+      .about-container {
+          height: 81%;
+      }
+      
+      .about-container h2 {
+          font-size: 3.3vh;
+          margin-bottom: 4%;
+      }
+
+      .about-row4 h5 {
+          width: 40%;
+          margin-left: 60%;
+      }
+      
+       .small-headtype p {
+          font-size: 2.8vh;
+      }
+
+      .top-grad {
+          top: 6%;
+          height: 4%;
+      }
+
+
+      .experience {
+        grid-row-gap: 2vh;
+      }
+      
+}
+    
+
 
 /*LANDSCAPE*/
 
@@ -1784,7 +1805,6 @@ body {
           position: absolute;
           width: 96%;
           height: 3.5vw;
-          margin-top: 46%;
           background-image: linear-gradient(transparent 5%, #000 95%);
           z-index: 1;
       }
@@ -1862,7 +1882,6 @@ body {
           position: absolute;
           width: 97%;
           height: 7%;
-          margin-top: 47%;
         background-image: linear-gradient(transparent 5%, #000 95%);
           z-index: 1;
       }
@@ -1905,7 +1924,6 @@ body {
       }
 
       .bottom-grad {
-          margin-top: 47%;
       }
      
 }
