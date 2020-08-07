@@ -204,12 +204,16 @@ function mobileType () {
 
 var num = 0;
 let checkNumbers = [-1, -1];
-let mainCopy = ["Should be asleep ", 
-                "Sucker for pinball ",
+let mainCopy = ["Unapologetic soup apologist ", 
+                "Gashapon of information you didn't ask for ",
                 "Person who cares about the things other people don’t care about  ",
                 "Buffy the Vampire Slayer fan ",
                 "Wannabe architectural preservationist ",
-                "quick brown fox who jumps over the lazy dog "]
+                "Rusty ol' Commodore 64 you salvaged from a garbge bin",
+                "quick brown fox who jumps over the lazy dog ",
+                "Pinball wizard",
+                "Fun fact machine",
+            ]
 
 function textSwap () {
     //click counter
