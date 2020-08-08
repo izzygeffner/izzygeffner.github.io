@@ -1,442 +1,1968 @@
-let allCards = [];
-var degree = -40;
-var ifMobile = ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) ; 
-
-
-function cardArray () {
-    for (i = 1; i < 9; i++) {
-        
-        var idTag = "card" + i;
-        var card = document.getElementById(idTag);
-         // testing
-        var cardNum = card.innerHTML;
-        //console.log(cardNum); 
-
-        allCards.push(card);
-    }
+.test {
+    border: 1px solid white;
 }
 
-function bgOnLoad() {
-    for (i = 0; i < 8; i++) {
-        var card = allCards[i];
-
-        card.style.backgroundColor = "#000000";
-        card.style.border = "1px solid rgba(255,255,255, .85)";
-    }
+html {
+    height: 100%;
+    width: 100%;
 }
 
-function backgroundColor(cardElement) {
-        var r = Math.floor((Math.random() * 255));
-        var g = Math.floor((Math.random() * 255));
-        var b = Math.floor((Math.random() * 255));
+/* SHOW SCROLLBAR 
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+  }
 
-        console.log(cardElement);
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+*/
 
-        var card = document.getElementById(cardElement);
-     
+/*TYPOGRAPHY*/
 
-        var randomNum = Math.floor((Math.random() * 4));
-        //RANDOM COLOR
-        var randomColor = "rgba(" + r + "," + g + "," + b + ", 1)";
-            
-        //F&A FEST
-        let cFestival = ["#CA4E4E", "#D8687D", "#EC7E51", "#EEB63E"];
-        let cTreatment = ["#0E3443", "#06587E", "#DB7F4C", "#8E7540"];
-        let cFair = ["#1D2642", "#7BA25D", "#9FA677", "#056286"];
-        let cSolistalgia = ["#5F82C1", "#62AAD6", "#2778B6", "#FBAA27"];
-        let cRadical = ["#CD4234", "#132B49", "#CB6699", "#136495"];
-        let cSpace = ["#522455", "#334862", "#DF85B3", "#8D5A9C"];
+/*GOOPER*/
 
-     
-        
+@font-face {
+font-family: "Gooper SemiCondensed";  
+src: 
+url('type/GooperSemiCondensed5-Regular.woff') format("woff"),
+url('type/GooperSemiCondensed5-Regular.woff2') format("woff2"),
+url('type/GooperSemiCondensed5-Regular.otf') format("opentype");
+}
 
-        switch(cardElement) {
-            case 0: 
-                console.log("skipped card 1");
-                card.style.backgroundColor = randomColor;
-                break;
-            case 'card2': 
-                console.log("card 2 = " + randomNum);
-                card.style.backgroundColor = cFestival[randomNum];
-                break;
-            case 'card3':
-                console.log("card 3 = " + randomNum);
-                card.style.backgroundColor = cTreatment[randomNum];
-                break;
-            case 'card4': 
-                card.style.backgroundColor = cFair[randomNum];
-                break;
-            case 'card5': 
-                card.style.backgroundColor = cSolistalgia[randomNum];
-                break;
-            case 'card6':
-                card.style.backgroundColor = cRadical[randomNum];
-                break;
-            case 'card7': 
-                card.style.backgroundColor = cSpace[randomNum];
-                break;
-            case 'card8': 
-                card.style.backgroundColor = randomColor;
-                break;
+.gooper-semiLight {
+    font-family: Gooper SemiCondensed;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Gooper";  
+    src: 
+    url('type/Gooper5-Regular.woff') format("woff"),
+    url('type/Gooper5-Regular.woff2') format("woff2"),
+    url('type/Gooper5-Regular.otf') format("opentype");
+    }
+
+    @font-face {
+        font-family: "Gooper Light";  
+        src: 
+        url('type/Gooper5-Light.woff') format("woff"),
+        url('type/Gooper5-Light.woff2') format("woff2"),
+        url('type/Gooper5-Light.otf') format("opentype");
         }
-        //console.log(card);
-        //card.style.backgroundColor = randomColor;
-    }
 
-
-function makeStack() {
-    for (i = 0; i < 8; i++) {
-        var card = allCards[i];
-
-        //Align in a stack 
-        card.classList.add("onLoad");
-
-        //Rotate
-        degree = degree + 10;
-        //console.log(degree);
-        card.style.transform = "rotate("+ degree + "deg)";
-    }
+.gooper {
+    font-family:  Gooper;
 }
 
-//unfurl
-/* var button = document.getElementById("unfurl")
-button.onclick = function() {
-    for (i = 0; i < 5; i++) {
-        var card = allCards[i];
+/* FORMA */
 
-        console.log("clicked");
-        card.style.transform = "rotate(0deg)";
-        card.classList.remove("onLoad");''
-    }
-    var scrollbar = document.getElementById("scroll");
-    scrollbar.scrollLeft = 100;
+@import url("https://use.typekit.net/qam0qyv.css");
+
+.formaLight-i {
+    font-family: forma-djr-text,sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.formaLight {
+    font-family: forma-djr-text,sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.formaMed {
+    font-family: forma-djr-text,sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.formaReg {
+    font-family: forma-djr-micro,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.formaBold {
+    font-family: forma-djr-text, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* FORMA MICRO */
+
+@import url("https://use.typekit.net/qam0qyv.css");
+
+.formaMicroLight {
+    font-family: forma-djr-micro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+.formaMicro {
+    font-family: forma-djr-micro,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.formaMicro-i {
+    font-family: forma-djr-micro,sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.formaMicroMed {
+    font-family: forma-djr-micro,sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.formaMicroMed-i {
+    font-family: forma-djr-micro,sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.formaMicroBold {
+    font-family: forma-djr-micro,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.formaMicroBold-i {
+    font-family: forma-djr-micro,sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.white {
+    color: rgba(255,255,255,1);
+}
+
+body {
+    background-color: rgba(0,0,0,5);
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+.cards {
+    position: absolute;
+/*    justify-content: space-evenly; 
+    overflow: scroll; 
+    white-space: nowrap; */
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+/* 
+.scroll-block {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 45%;
+    top: 28vh;
+   justify-content: space-between;
+    background-color: rgba(0,0,0,0);
 } */
 
-function bgShow (image, cardElement) {
-    console.log(cardElement);
-    var bg = document.getElementById("bg");
-    var card = document.getElementById(cardElement);
-    var headType = document.getElementById("head-type");
-    var aboutButton = document.getElementById("about");
-    var qButton = document.getElementById("switch");
-    //console.log(image);
-    headType.style.zIndex = "0";
-    aboutButton.style.zIndex = "0";
-    qButton.style.zIndex = "0";
-    bg.classList.add(image);
-
-    if( (ifMobile == true) || window.innerWidth <= 900) {
-        //console.log('true');
-        card.style.zIndex = "";
-        headType.zIndex = "-1";
-       }
-
-    //card.style.border = "";
-    backgroundColor(cardElement);
+.card {
+    background-color: white;
+    position: relative;
+    top: 25vh;
+    height: 46%;
+    width: 34vh;
+    margin-left: 38%;
+    transition: all 1s;
+    padding: 1em;
+    
 }
 
-function hide (image, cardElement) {
-    var headType = document.getElementById("head-type");
-    var aboutButton = document.getElementById("about");
-    var qButton = document.getElementById("switch");
-    var bg = document.getElementById("bg");
-    var card = document.getElementById(cardElement);
+.flexbox {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
 
-    bg.classList.remove(image);
+}
 
-    aboutButton.style.zIndex = "10";
-    qButton.style.zIndex = "10";
-    
+.card-head {
+    margin-top: 0;
+    margin-bottom: 3%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
-    card.style.border = "1px solid white";
+.breakLine {
+    background-color: rgba(255,255,255,.9);
+    width: 100%;
+    height: .3%;
 
-    setTimeout(function blackBG(){
-        card.style.backgroundColor = "#000000";
-    }, 10000);
-    
-    if (ifMobile == false) {
-        headType.style.zIndex = "5";
+}
+
+
+.hover-top:hover {
+    transition: all 1s;
+    z-index: 5;
+}
+
+
+.card.onLoad {
+    position: absolute;
+    left: 26%;
+}
+
+.bottomLine {
+    background-color: rgba(255,255,255,1);
+    width: 100%;
+    height: .1%;
+    margin-bottom: 3%
+}
+
+.hideCards {
+    -webkit-animation: fadeOut 0.2s ease-out;
+    -moz-animation: fadeOut 0.2s ease-out;
+    -o-animation: fadeOut 0.2s ease-out;
+    animation: fadeOut 0.2s ease-out;
+    animation-fill-mode: forwards;
+    pointer-events: none;
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        display: block;
+        opacity: 1;
     }
-   
-   
-   if(ifMobile == true) {
-    console.log('registed');
-    card.style.zIndex = "";
-    headType.style.zIndex = "-1";
 
-   }
-}
+    1% {
+        display: block;
+        opacity: 1;
 
-var c = 0;
-
-function cardShowHide(image, cardElement) {
-    var bg = document.getElementById("bg");
-    var card = document.getElementById(cardElement);
-
-    console.log('cardshowhide is running');
-    
-    c++;
-    if ((c % 2) == true) {
-
-        bg.classList.add(image);
-
-    } else {
-        bg.classList.remove(image);
-        card.style.zIndex = "0";
     }
 
+    100% {
+        display: none;
+        opacity: 0;
 
-}
-
-function mobileType () {
-    var width = window.innerWidth;
-
-    console.log(width);
-
-    if (width <= 585) {
-        var name = document.getElementById("izzy");
-        name.innerHTML = "Izzy Geffner"
-    } else {
-        var name = document.getElementById("izzy");
-        name.innerHTML = "Izzy<br>Geffner"
     }
 }
 
-var num = 0;
-let checkNumbers = [-1, -1];
-let mainCopy = ["Unapologetic soup apologist ", 
-                "Gashapon of information you didn't know you wanted ",
-                "Proud NYT Crossword enthusiast ",
-                "Buffy the Vampire Slayer fan ",
-                "Wannabe architectural preservationist ",
-                "Rusty ol' Commodore 64 you salvaged from a garbge bin",
-                "quick brown fox who jumps over the lazy dog ",
-                "Pinball wizard",
-                "Fun fact machine",
-                "Real person. According to some sources",
-                
-            ]
+@-moz-keyframes fadeOut {
+    0% {
+        display: block;
+        opacity: 1;
+    }
 
-function textSwap () {
-    //click counter
-    num++; 
-    console.log("click # " + num);
+    1% {
+        display: block;
+        opacity: 1;
+    }
 
-    //get type from DOM
-    var type = document.getElementById("intro");
+    100% {
+        display: none;
+        opacity: 0;
+    }
+}
 
-    //every other click 
-    if (num % 2 == true) {
-       // console.log("count odd");
-        var arrayNum = Math.floor(Math.random() * mainCopy.length);
+@-o-keyframes fadeOut {
+    0% {
+        display: block;
+        opacity: 1;
+    }
 
-        //make sure items don't repeat immediately
-        checkNumbers[1] = arrayNum;
-        //testing
-        //console.log('initial: ' + checkNumbers);
-        //console.log("displaying " + arrayNum);
-        if (checkNumbers[1] == checkNumbers[0]) {
-            arrayNum = Math.floor(Math.random() * mainCopy.length);
+    1% {
+        display: block;
+        opacity: 1;
+    }
+
+    100% {
+        display: none;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+        0% {
+            display: block;
+            opacity: 1;
+            top: auto;
         }
-        checkNumbers[0] = arrayNum;
-       //testing
-       // console.log('following: ' + checkNumbers);
+    
+        1% {
+            display: block;
+            opacity: 1;
+            top: 5%;
+        }
+    
+        100% {
+            display: none;
+            opacity: 0;
+            top: 15%;
+        }
+}
 
-
-       
-       //makes HTML Changes
-        type.innerHTML = mainCopy[arrayNum];
-       type.style.textAlign = "left";
-     //   type.classList.add("tester");
-     
-    //change back to original state    
-    } else {
-        type.innerHTML = "Mutlidisciplinary designer fueled by curiosity, process &amp; discovery"; 
-        type.classList.remove("tester");
-        type.style.animation = "moveLeft 0.5s all";
-        
+.showCards {
+    -webkit-animation: fadeIn 0.5s ease-out;
+    -moz-animation: fadeIn 0.5s ease-out;
+    -o-animation: fadeIn 0.5s ease-out;
+    animation: fadeIn 0.5s ease-out;
+    animation-fill-mode: forwards;
+}
+    
+@-webkit-keyframes fadeIn {
+    0% {
+        display: none;
+        opacity: 0;
     }
-     
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+
+/*CARD TYPE*/
+
+
+.date {
+    font-size: .8em;
+    letter-spacing: .6px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.num {
+    font-size: .8em;
+    letter-spacing: .6px;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: inline;
+}
+
+.card h3 {
+    font-size: 2.2em;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-top: 5%;
+    margin-bottom: 6%;
+    opacity: .9;
+}
+
+.description {
+    font-size: .9em;
+    margin-top: 4%;
+    margin-right: 5%;
+    line-height: 1.3;
+    flex-grow: 3;
+    letter-spacing: .9px;
+    opacity: .9;
+}
+
+.description a {
+    color: #fff;
+    transition: .3s all;
+}
+
+.description a:hover {
+    color: #E5758C;
+
+}
+
+.category {
+    justify-self: flex-end;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    font-size: .4em;
+    letter-spacing: .5px;
+}
+
+/*HEAD TYPE*/
+
+
+.head-type {
+    position: absolute;
+    margin-left: 2;
+    height: 87%;
+    width: 50%;
+    display: inline-flex;
+    flex-direction: column;
+    align-content: flex-end;
+    justify-content: flex-end;
+    padding: 2.5em;
+    padding-right: 4em;
+    padding-bottom: 0em;
+    transition: 1s;
+    z-index: 5;
+    opacity: .9;
+}
+
+
+.face1 {
+    position: absolute;
+    margin-top: 13.5vh;
+    height: 30vw;
+    margin-left: 24vw;
+    opacity: 0;
+    transition: .2s all;
+}
+
+.face2 {
+    position: absolute;
+    height: 15vw;
+    margin-top: 55%;
+    margin-left: 23%;
+    opacity: 0;
+    transition: .2s all; 
+    display: none;
+}
+
+
+
+.head-type p {
+    margin: 0;
+    font-size: 6em;
+    line-height: .9;
+    opacity: .9;
+    transition: 1s ease-in-out;
+}
+
+.col-1 {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-self: flex-start;
+    flex: 1;
+}
+
+.type-name{
+    padding: 0px;
+    margin: 0px;
+    
+}
+
+.type-extra {
+    align-self: flex-end;
+    text-align: left;
     
 }
 
 
-function mobileFunction() {
 
-    var cardsDiv = document.getElementsByClassName("card");
-    var interactType = document.getElementById("intro");
-    var footer = document.getElementById("footer");
-    var about = document.getElementById("aboutContainer");
-    
 
-    if( (ifMobile == true) || window.innerWidth <= 900) {
-        
-        window.onload = console.log("mobileFunction running");
+.tester {
+    color: goldenrod;
+   text-align: left;
+   -webkit-animation: moveLeft 1s ease-out;
+   -moz-animation: moveLeft 1s ease-out;
+   -o-animation:  moveLeft 1s ease-out;
+    animation: moveLeft 1s ease-out;
+    -webkit-animation-fill-mode: forwards;
+}
 
-        var headType = document.getElementById("head-type");
-        headType.style.zIndex = "0";
- 
-        
-        //For non-touch devices
-        if (!(ifMobile)) {
-            console.log("not mobile");
 
-        
 
-            
-
-            }
-        }
-
-        //Mobile devices only
-        if (ifMobile) {
-            console.log("on mobile");
-            
-            
-            let formaBold = document.getElementsByClassName('formaBold');
-            console.log(formaBold);
-
-            for(i = 0; i < formaBold.length; i++) {
-                formaBold[i].classList.add('formaMicroBold')
-                formaBold[i].classList.remove('formaBold');
-            }
-            
-            interactType.innerHTML = "Mutlidisciplinary designer fueled by curiosity, process &amp; discovery";
-            
-            footer.style.display = "none";
-            
-            about.style.zIndex = "0";
-
-            }
-        
-    
+@-webkit-keyframes moveLeft {
+    from {
+        text-align: right;
     }
 
-    var c = 0;
 
-    function showAbout () {
-        c++;
-        var img1 = document.getElementById('face1');
-        var img2 = document.getElementById('face2');
-        var cards = document.getElementById("scroll");
-        var about = document.getElementById("aboutContainer");
-        var headType = document.getElementById("head-type");
-        var topGrad = document.getElementById("topGrad");
-        var bottomGrad = document.getElementById("bottomGrad");
+    to {
+        text-align: left;
+    }
+}
+
+@-moz-keyframes moveLeft {
+    from {
+        text-align: right;
+    }
 
 
-        var width = window.innerWidth;
+    to {
+        text-align: left;
+    }
+}
+
+@-o-keyframes moveLeft {
+    from {
+        text-align: right;
+    }
+
+
+    to {
+        text-align: left;
+    }
+}
+
+@keyframes moveLeft {
+    from {
+        text-align: right;
+    }
+
+
+    to {        text-align: left;
+    }
+}
+
+.switch {
+    display: inline-block;
+    height: .6em;
+    width: .6em; 
+    background-color: coral;
+    border-radius: 100%;
+    transition: 1s all; 
+    z-index: 10;
+}
+
+/*ABOUT*/
+
+.about-container {
+    position: absolute;
+    width: 40%;
+    height: 85%;
+    margin-left: 55%;
+    overflow: scroll;
+    padding: 1em;
+    padding-top: 5.6em;
+   /* display: flex;
+    flex-direction: column; */
+    opacity: 0;
+   
+}
+
+.about-row1 {
+   width: 100%;
+}
+
+.about-container h4 {
+    text-transform: uppercase;
+    font-size: .6em;
+    letter-spacing: .9px;
+    opacity: .6;
+    margin-bottom: 3.5vh;
+}
+
+.about-container h2 {
+    font-size: 1.7em;
+    letter-spacing: .7px;
+    margin-top: 0;
+    line-height: 1.25;
+    margin-bottom: 1.2em;
+    opacity: .9;
+} 
+
+.about-container h3 {
+    font-size: 1.3em;
+    letter-spacing: .9px;
+    margin-top: 0;
+    line-height: 1.27;
+}
+
+.about-row4 {
+    width: 100%;
+}
+
+.about-container h5 {
+    font-size: .7em;
+    width: 25%;
+    margin-left: 75%;
+    letter-spacing: .6px;
+    margin-top: 0;
+    margin-bottom: .6vh;
+    opacity: .8;
+}
+
+.about-row6 h6 {
+    font-size: .6vw;
+    margin-top: -2vh;
+    margin-bottom: 0;
+    letter-spacing: .9px;
+    opacity: .3;
+}
+
+.experience {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2.5vw;
+    grid-row-gap: 4vh;
+}
+
+.exp-1 .date {
+    margin-bottom: .5vh;
+}
+
+.date {
+    margin-bottom: .5vh;
+}
+
+.blurb {
+    font-size: .8em;
+    margin-top: 0;
+    margin-bottom: 1vh;
+    letter-spacing: .7px;
+}
+
+.client {
+    font-size: .5em;
+    margin-top: 0;
+    text-transform: uppercase;
+    letter-spacing: .9px;
+    line-height: 1.4;
+    opacity: .4;
+    transition: .8s ease-out;
+}
+
+.exp-3 .client {
+    margin-bottom: .5vh;
+}
+
+.client a {
+    text-decoration: none;
+    color: white;
+}
+
+.client a:hover {
+    color: #E5758C;
+    transition: .3s ease-out;
+    opacity: 1;
+}
+
+.about-container a {
+    color: rgba(255,255,255, 1);
+    transition: .3s ease-out;
+
+}
+
+.about-container a:hover {
+    color: #E5758C;
+}
+
+
+
+.showAbout {
+    opacity: .87;
+    -webkit-animation: aboutFadeIn 0.8s ease-out;
+    -moz-animation: aboutFadeIn 0.8s ease-out;
+    -o-animation: aboutFadeIn 0.8s ease-out;
+    animation: aboutFadeIn 0.8s ease-out;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes aboutFadeIn {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes aboutFadeIn {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-o-keyframes aboutFadeIn {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@keyframes aboutFadeIn {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+.hideAbout {
+    opacity: 0;
+    -webkit-animation: aboutFadeOut 0.5s ease-out;
+    -moz-animation: aboutFadeOut 0.5s ease-out;
+    -o-animation: aboutFadeOut 0.5s ease-out;
+    animation: aboutFadeOut 0.5s ease-out;
+    animation-fill-mode: forwards;
+}
+
+.top-grad {
+    display: none;
+}
+
+.bottom-grad {
+    display: none;
+}
+
+
+
+
+/* FOOTER */ 
+
+
+.footer {
+    position: absolute;
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .5em;
+    margin-left: 1em;
+    margin-right: 1em;
+    bottom: 0;
+    padding: 0px;
+    z-index: 6;
     
-        if ((c % 2) != 0) {
-            img1.style.opacity = "1";
-            img2.style.opacity = "1";
+}
 
-            cards.classList.remove("showCards");
-            about.classList.remove("hideAbout");
+.footer img {
+    height: .7em;
+    margin-right: .2em;
+    margin-left: .2em;
+    padding: 0px;
+    transition: .2s;
+}
 
-            cards.classList.add("hideCards");
-            about.classList.add("showAbout");
+.footer img:hover {
+    opacity: 40%;
+    
+}
 
+.footer p {
+    font-size: .5em;
+    opacity: 50%;
+    letter-spacing: 1px;
+    margin-bottom: 0px;
+}
 
-            
-            setTimeout(function showGrad () {
-                topGrad.classList.add("show");
-                bottomGrad.classList.add("show"); 
-            }, 1500); 
+/*BUTTONS*/
 
-           
-            if(ifMobile == true) {
-            about.onscroll = function () {
-                
-              
-                var xMin = 0;
-                var xMax = 1;
-
-                var yMin = 0;
-                var yMax = 160;
-
-                var inputY = about.scrollTop;
-                
-                percent = (inputY - yMin) / (yMax - yMin);
-                outputX = percent * (xMax - xMin);
-
-                img1.style.opacity = 1 - outputX;
-            }
-            
-            }
-
-            if (width <= 900) {
-                headType.classList.add("small-headtype");
-                console.log("test tes t")
+.button-circle {
+    position: relative;
+    padding: .3em;
+    box-sizing: border-box;
+    float: right;
+    clear: none;
+    margin-top: 1.5%;
+    margin-right: 1.5%;
+    z-index: 10;
+    transition: .5s all;
+    opacity: .5;
+    
+}
 
 
-            //Align bottomGrad to top of bottom type
-            var intro = document.getElementById("intro");
-            var introRect = intro.getBoundingClientRect();
-            var top = introRect.top;
-            var height = window.innerHeight;
-            var position = Math.floor((top / height) * 100);
-            console.log("position is " + position);
+.button-circle img {
+    width: 4.5em;
+}
 
-            bottomGrad.style.marginTop = (position * 2)+ "%";
-            }
+.button-circle p {
+    font-family: formaMicro-Light !important;
+    position: absolute;
+    margin: 0;
+    left: 34%;
+    top: 21%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.7em;
+    letter-spacing: 1px;
+}
 
-            console.log("height " + height);
+.star-about {
+    transition: .5s all;
+}
 
-            //pixel 2 xl
-            if (height >= 820 && height < 850) {
-             console.log("pixel");
-              bottomGrad.style.marginTop = ((position * 2) + 13)+ "%";
-            }
+.button-circle:hover .star-about {
+   transform: rotate(30deg);
 
-            //iphone x
-            if (height > 823 && height < 860 ) {
-                
-                console.log("iphone x");
-                bottomGrad.style.marginTop = ((position * 2) + 35)+ "%";
-            }
+}
 
-            if (height == 736) {
-                bottomGrad.style.marginTop = ((position * 2) - 6)+ "%";
-            }
+.button-circle:hover {
+    opacity: 1;
+}
 
-           
-
-           
-
-         
+.button-circle:active {
+    opacity: .1;
+}
 
 
-        } else {
-            img1.style.opacity = "0";
-            img2.style.opacity = "0";
 
-            cards.classList.remove("hideCards");
-            cards.classList.add("showCards");
-            about.classList.add("hideAbout");
-           
+.button-star {
+    position: absolute;
+    float: right;
+    bottom: 0;
+    margin-bottom: 2%;
+    margin-right: 1.5%;
+    left: 93%;
+    clear: none;
+    z-index: 10;
+    transition: .5s all;
+    opacity: .5;
+    
+}
+
+
+.star {
+    transition: 1s all;
+}
+
+.button-star img {
+    width: 4.5em;
+    
+}
+
+.button-star p {
+    position: absolute;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    left: 45%;
+    top: 30%;
+}
+
+.button-star:hover .star {
+   transform: rotate(-30deg);
+
+}
+
+.button-star:hover {
+    opacity: 1;
+}
+
+.button-star:active {
+    opacity: .1;
+}
+
+.show {
+          display: block;
+      }
+
+@media screen and (max-height: 720px)
+    {
+    body {
+      /*  background-color: rosybrown; */
+    }
         
-            topGrad.classList.remove("show");
-            bottomGrad.classList.remove("show");
+    .head-type p {
+         font-size: 5.3em;
+        }
+        
+    .card {
+        height: 50%;        
+    }
+        
+    .num {
+        font-size: 1.9vh
+        }
+    
+    .date {
+        font-size: 1.9vh
+        }
+    
+    .card h3 {
+        font-size: 4.5vh;
+    }
+    
+    .description {
+        font-size: 1.9vh;
+    }
+        
+    .category {
+        font-size: 1.2vh;
+        }
+}
+
+@media screen and (max-width: 1210px) {
+    
+    .head-type p {
+        font-size: 8vw;
+    }
+
+    .description {
+        font-size: .85em;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    
+    .head-type {
+        width: 95%;
+        height: 95%;
+        padding: 1em;
+        
+    }
+    
+    .footer {
+        width: 95%;
+    }
+    
+    .card {
+        margin-left: 5%;
+        top: 19.5vh;
+    }
+    
+    .button-circle {
+        position: absolute;
+        bottom: 2.1%;
+        left: 90.5%;
+    }
+    
+    .button-circle p {
+        font-size: 2.5vw;
+    }
+    
+    .button-circle img {
+        width: 3.1em;
+    }
+    
+    .button-star {
+        left: 83.5%;
+        bottom: .9%;
+    }
+    
+    .button-star img {
+        width: 3.1em;
+    }
+    
+    .about-container {
+        width: 80%;
+        z-index: 7;
+        padding-left: 8vw;
+        padding-right: 8vw;
+        margin-left: 0;
+    }
+    
+    .small-headtype p {
+        font-size: 3vw;
+        text-align: left;
+        
+    }
+    
+    .type-extra {
+        align-self: flex-start;
+    }
+    
+    .face1 {
+        margin-top: 15vh;
+        margin-left: 68vw;
+    }
+    
+    .face2 {
+        display: none;
+    }
+    
+    .about-row2 {
+        width: 90%;
+    }
+    
+    .about-row6 h6 {
+        font-size: 1vw;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .head-type p {
+        letter-spacing: .3px;
+    }
+    
+    .footer p {
+        letter-spacing: 1.2px;
+        transition: .2s;
+    }
+}
+
+#card1 {
+    transform: rotate(-45deg);
+    background-color: #ffffff;
+}
+
+
+#card2 {
+    transform: rotate(-45deg);
+    background-color: rgba(255,255,255,1);
+}
+
+#card3 {
+    transform: rotate(-45deg);
+    background-color: rgba(255,255,255,1);
+}
+
+#card4 {
+    transform: rotate(-45deg);
+    background-color: rgba(255,255,255,1);
+}
+
+#card5 {
+    transform: rotate(-45deg);
+    background-color: rgba(255,255,255,1);
+}
+
+#card6 {
+    transform: rotate(-45deg);
+    background-color: rgba(255,255,255,1);
+}
+
+#card7 {
+    transform: rotate(-45deg);
+    background-color: rgba(255,255,255,1);
+}
+
+#card8 {
+    transform: rotate(-45deg);
+    background-color: rgba(255,255,255,1);
+}
+
+/*
+.bg {
+    z-index: 10;
+    width: 50%;
+    height: 50%;
+    background-position: center;
+    background-image: url(images/bg.png); 
+}
+
+*/
+
+.bg-2 {
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-position: center center;
+    background-image: url("images/Parkway.jpg");
+    background-size: cover;
+    transition: all 1s;
+    -webkit-animation: fadeInFromNone 0.5s ease-out;
+    -moz-animation: fadeInFromNone 0.5s ease-out;
+    -o-animation: fadeInFromNone 0.5s ease-out;
+    animation: fadeInFromNone 0.5s ease-out;
+}
+
+.bg-3 {
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url("images/theTreatment.gif");
+    background-position: center center;
+    background-size: cover;
+    transition: all 1s;
+    -webkit-animation: fadeInFromNone 0.5s ease-out;
+    -moz-animation: fadeInFromNone 0.5s ease-out;
+    -o-animation: fadeInFromNone 0.5s ease-out;
+    animation: fadeInFromNone 0.5s ease-out;
+}
+
+.bg-4 {
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url("images/worldsFair.png");
+    background-position: center center;
+    background-size: cover;
+    transition: all 1s;
+    -webkit-animation: fadeInFromNone 0.5s ease-out;
+    -moz-animation: fadeInFromNone 0.5s ease-out;
+    -o-animation: fadeInFromNone 0.5s ease-out;
+    animation: fadeInFromNone 0.5s ease-out;
+}
+
+.bg-5 {
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url("images/solistaglia-test-small.gif");
+    background-position: center center;
+    background-size: cover;
+    transition: all 1s;
+    -webkit-animation: fadeInFromNone 0.5s ease-out;
+    -moz-animation: fadeInFromNone 0.5s ease-out;
+    -o-animation: fadeInFromNone 0.5s ease-out;
+    -o-animation: fadeInFromNone 0.5s ease-out;
+    animation: fadeInFromNone 0.5s ease-out;
+}
+
+.bg-6 {
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url("images/RadicalMedia-small.gif");
+    background-position: center center;
+    background-size: cover;
+    transition: all 1s;
+    -webkit-animation: fadeInFromNone 0.5s ease-out;
+    -moz-animation: fadeInFromNone 0.5s ease-out;
+    -o-animation: fadeInFromNone 0.5s ease-out;
+    animation: fadeInFromNone 0.5s ease-out;
+}
+
+.bg-7 {
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url("images/SpaceSymposium.png");
+    background-position: center center;
+    background-size: cover;
+    transition: all 1s;
+    -webkit-animation: fadeInFromNone 0.5s ease-out;
+    -moz-animation: fadeInFromNone 0.5s ease-out;
+    -o-animation: fadeInFromNone 0.5s ease-out;
+    animation: fadeInFromNone 0.5s ease-out;
+}
+
+.bg-8 {
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url("images/lettering-bw.png");
+    background-position: center center;
+    background-size: cover;
+    transition: all 1s;
+    -webkit-animation: fadeInFromNone 0.5s ease-out;
+    -moz-animation: fadeInFromNone 0.5s ease-out;
+    -o-animation: fadeInFromNone 0.5s ease-out;
+    animation: fadeInFromNone 0.5s ease-out;
+}
+
+@-webkit-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+
+
+/* MOBILE */
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait){ 
+    
+      body {
+       /*    background-color: pink;  */
+          margin: 0;
+      }
+      
+      .head-type {
+          position: absolute;
+          padding-left: 6%;
+          padding-top: 6%;
+          padding-bottom: 6%;
+          height: 95%;
+          width: 87%;
+      }
+      
+      .head-type p {
+          font-size: 5.8vh;
+          line-height: 1;
+          text-align: left;
+      }
+      
+
+      #intro {
+          width: 90%;
+      }
+      
+      .card {
+            position: absolute;
+            height: 44vh;
+            width: 29vh;
+            margin-left: -5%;
+            margin-right: 0%; 
+            top: 19%;
+            padding: 4%;
+      }
+      
+      .footer p {
+         font-size: 1.2vh;
+         letter-spacing: .7px;
+      }
+
+      .footer img {
+          height: 1.3vh;
+      }
+      
+      /*CARD STYLING */
+      
+      .flexbox {
+          width: 100%;
+          height: 100%;
+      }
+      
+      .breakLine {
+          height: .4%;
+      }
+      
+      .date {
+          font-size: 1.9vh;
+          margin-bottom: .7vh;
+      }
+      
+      .num {
+          font-size: 1.9vh; 
+      }
+      
+      .card h3 {
+          font-size: 4vh;
+          line-height: 1.1;
+      }
+      
+      .description {
+          width: 100%;
+         font-family: forma-djr-micro,sans-serif;
+         font-weight: 400;
+          font-size: 1.7vh;
+          letter-spacing: .8px;
+          line-height: 1.3;
+          margin-bottom: 0;
+      }
+      
+      .bottomLine {
+            height: .3%;
+            margin-bottom: 0;
+      }
+      
+      .category {
+          font-size: 1.4vh;
+      }
+      
+      .button-circle {
+          position: absolute;
+          top: 74%;
+          left: 86%;
+
+      }
+      
+      .button-circle p {
+        font-size: 1.1em;
+        top: 7%;
+        left: 32%;
+      }
+      
+      .button-circle img {
+          width: 2.5em;     
+      }
+      
+      .button-star {
+          top: 93%;
+          left: 87%;
+      }
+      
+      .button-star img {
+          width: 2.5em;
+      }
+      
+      .button-star p {
+      font-size: .9em;
+        top: 35%;
+        left: 42%;
+      }
+      
+      .top-grad {
+          position: absolute;
+          top: 7%;
+          width: 97%;
+          height: 5%;
+          background-image: linear-gradient(#000 30%, transparent 90%);
+          z-index: 1;
+
+      }
+      
+      .bottom-grad {
+          position: absolute;
+          width: 97%;
+          height: 6%;
+          background-image: linear-gradient(transparent 30%, #000 90%);
+          z-index: 1;
           
+      }
+      
+      
+      .about-container {
+          flex-direction: row;
+          width: 86.5%;
+          height: 80%;
+          padding-top: 0;
+          margin-top: 7vh;
+ 
+      }
+      
+      .about-row1 {
+          margin-top: 3vh;
+      }
 
-            if (width <= 900) {
-                headType.classList.remove("small-headtype");
-            }
+      
+      .about-row2 {
+          width: 100%;
+      }
+      
+
+      
+      .about-container h2 {
+          font-size: 3.7vh;
+          margin-bottom: .05vh;
+      }
+
+      
+      .about-row4 h5 {
+          font-size: 1.5vh;
+          width: 30%;
+          margin-left: 75%;
+          text-align: left;
+          line-height: 1.2;
+          letter-spacing: .8px;
+          margin-bottom: 16vh;
+      }
+      
+      .about-row5 {
+          margin-left: 43%;
+      }
+      
+      .face1 {
+          height: 29vh;
+          top: 43vh;
+          right: 10vw;
+          
+      }
+      
+      .experience {
+          grid-template-columns: 1fr;
+          row-gap: 2vh;
+          
+      }
+      
+      .exp-1 {
+          display: grid;
+          grid-template-columns: 1fr auto;
+          grid-column-gap: 2vh;
+          margin-left: 30%;
+      }
+      
+      .exp-1 h6 {
+          grid-column: 2/3
+      }
+      
+      .exp-2 {
+          display: grid;
+          grid-template-columns: 1fr auto;
+          grid-column-gap: 2vh;
+          margin-left: 30%; 
+      }
+      
+      .exp-2 h6 {
+          grid-column: 2/3
+      }
+      
+      .exp-3 {
+          display: grid;
+          grid-template-columns: 1fr auto;
+          grid-column-gap: 2vh;
+          margin-left: 30%; 
+          margin-bottom: 3vh;
+      }
+      
+      .exp-3 h6 {
+          grid-column: 2/3
+      }
+      
+      .exp-4 {
+        display: grid;
+          grid-template-columns: 1fr auto;
+          grid-column-gap: 2vh;
+          margin-left: 30%; 
+      }
+      
+      .exp-4 h6 {
+          grid-column: 2/3
+      }
+
+      .exp-5 {
+          display: grid;
+          grid-template-columns: 1fr auto;
+          grid-column-gap: 2vh;
+          margin-left: 30%;
+      }
+
+      .exp-5 h6 {
+          grid-column: 2/3;
+      }
+      
+      .small-headtype p {
+          font-size: 3.4vh;
+      }
+      
+
+      .about-row6 h6 {
+          margin-top: 1vh;
+          width: 70%;
+          font-size: 1.5vh;
+
+      }
+    
+      
+/*IPHONE 6/7/8 */
+@media only screen 
+    and (min-device-width : 375px) 
+    and (max-device-width : 667px) { 
+        
+        body {
+        /*    background-color: green; */
         }
-    }
+        
+        .head-type {
+            height: 93%;
+        }
+        
+        .head-type p {
+            font-size: 5.8vh;
+            line-height: .9;
+        }
+        
+        .card {
+            position: absolute;
+            height: 43vh;
+            width: 27vh;
+            margin-left: -5%;
+            margin-right: 0%; 
+            top: 18%;
+            padding: 4%;
+      }
+        
+        .description {
+
+        font-size: 1.7vh;
+        letter-spacing: .8px;
+        line-height: 1.35;
+        margin-bottom: 0;
+        }
+        
+        .card h3 {
+          font-size: 3.7vh;
+          line-height: 1.1;
+      }
+        
+        .date {
+            font-size: 1.9vh;
+        }
+        
+        .num {
+            font-size: 1.9vh;
+        }
+        
+        .category {
+            font-size: 1.25vh;
+        }
+        
+        .button-circle {
+            top: 89%;
+            left: 80%;
+        }
+        
+        .button-circle p {
+            top: 19%;
+        }
+        
+        .button-star {
+            top: 90.5%;
+            left: 67%;
+        }
+        
+        .button-star p {
+            top: 23%;
+        }
+        
+        .about-container {
+            width: 83%;
+            height: 75% ;
+        }
+        
+          .small-headtype p {
+          font-size: 3.4vh;
+      }
+
+      .small-headtype #intro {
+          width: 56%;
+      }
+
+      .top-grad {
+          top: 7%;
+      }
+
+        }
+
+}
+
+/* IPHONE X */ 
+
+ @media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+      
+       body {
+       /*    background-color: red;  */
+
+       }
+       .head-type {
+          height: 93%;
+          width: 87%;
+          line-height: 1.1;
+      }
+      
+      .head-type p {
+          font-size: 5vh;
+      }
+      
+      .card { 
+        height: 40vh;
+        width: 24vh;
+        margin-left: -5%;
+      }
+      
+      
+      
+      .card h3 {
+          font-size: 3.7vh;
+      }
+      
+      .description {
+        font-family: forma-djr-micro,sans-serif;
+        font-weight: 400;
+          font-size: 1.4vh;
+        margin-bottom: 0;
+        /*  letter-spacing: 2px; */
+          
+      }
+      
+      .date {
+          font-size: 1.4vh;
+          margin-bottom: .4vh;
+      }
+      
+      .num {
+          font-size: 1.4vh;
+      }
+.category {
+          font-size: 1.2vh;
+      }
+
+      .button-circle p {
+          top: 14%;
+      }
+
+      .button-star p {
+          top: 16%;
+      }
+      
+      .about-container {
+          height: 75%;
+      }
+      
+      .about-container h2 {
+          font-size: 3.3vh;
+          margin-bottom: 4%;
+      }
+
+      .about-row4 h5 {
+          width: 40%;
+          margin-left: 60%;
+      }
+      
+       .small-headtype p {
+          font-size: 2.8vh;
+      }
+
+      .top-grad {
+          top: 6%;
+          height: 4%;
+      }
 
 
+      .experience {
+        grid-row-gap: 2vh;
+      }
+      
+}
+    
 
 
+/*LANDSCAPE*/
 
-cardArray();
-//backgroundColor();
-window.onload = makeStack();
-mobileType();
-mobileFunction();
-bgOnLoad();
+/*PIXEL 2*/
+@media screen 
+  and (min-device-width: 412px) 
+  and (max-device-height: 823px) 
+  and (-webkit-min-device-pixel-ratio: 2.5) 
+  and (orientation: landscape) {
+      
+      body {
+    /*      background-color: darkred; */
+      } 
+      
+      .head-type {
+          height: 91%;
+      }
+      
+      .head-type p {
+          font-size: 6vw;
+      }
+      
+      .card {
+        height: 60%;
+        width: 40vh;
+        margin-left: 18vh;
+        margin-top: 17vh;
+        top: 0vh;
+      }
+      
+      .num {
+          font-size: 1.3vw;
+      } 
+      
+      .date {
+          font-size: 1.3vw;
+      }
+      
+      /*CARD STYLING */
+      
+      .card h3 {
+          font-size: 6vh;
+      }
+      
+      .description {
+          font-size: 2.6vh;
+      }
+      
+      .category {
+          font-size: 1vw;
+      }
+      
+    .small-headtype p {
+          font-size: 5.2vh;
+      }
+      
+      .about-container {
+            flex-direction: row;
+            margin-top: 13.5vh;
+          padding-top: 3vh;
+          height: 67%;
+      }
 
-window.addEventListener("resize", mobileType);
+      .about-row4{
+          margin-left: none;
+          
+      }
+      
+      .about-row4 h3 {
+          text-align: left;
+      }
+      
+      .top-grad {
+          position: absolute;
+          width: 96%;
+          height: 3.5vw;
+          margin-top: 13vh;
+          background-image: linear-gradient(#000 30%, transparent 95%);
+          z-index: 1;
+      }
+      
+      .bottom-grad {
+          position: absolute;
+          width: 96%;
+          height: 3.5vw;
+          background-image: linear-gradient(transparent 5%, #000 95%);
+          z-index: 1;
+      }
+}
 
 
+/*IPHONE 5*/
+@media screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 668px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+      body {
+      /*    background-color: rebeccapurple; */
+      } 
+      
+      .head-type {
+          height: 91%;
+      }
+      
+      .card {
+        height: 60%;
+        width: 40vh;
+        margin-left: 18vh;
+        margin-top: 17vh;
+        top: 0vh;
+      }
+      
+      /*CARD STYLING */
+      
+      .card h3 {
+          font-size: 6vh;
+      }
+      
+      .description {
+          font-size: 2.5vh;
+      }
+      
+      .about-container {
+          flex-direction: row;
+          margin-top: 7.5%;
+          height: 67%;
+          padding-top: 3vw;
+      }
+      
+      
+      .about-row2 h2 {
+          font-size: 3.5vw;
+      }
+      
+      .about-row4 {
+          font-size: 2.3vw;
+          margin-left: none;
+      }
+      
+      .about-container .date {
+          font-size: 2.2vw;
+      }
+      
+      .blurb {
+          font-size: 2vw;
+      }
+      
+      .top-grad {
+          position: absolute;
+          margin-top: 7.5%;
+          width: 97%;
+          height: 7%;
+          background-image: linear-gradient(#000 30%, transparent 95%);
+          z-index: 1;
+      }
+      
+      .bottom-grad {
+          position: absolute;
+          width: 97%;
+          height: 7%;
+        background-image: linear-gradient(transparent 5%, #000 95%);
+          z-index: 1;
+      }
+}
+
+@media screen 
+  and (min-device-width: 360px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+    
+         body {
+           /*  background-color: fuchsia; */
+         } 
+      
+      .card {
+        height: 60%;
+        width: 40vh;
+        margin-left: 18vh;
+        margin-top: 17vh;
+        top: 0vh;
+      }
+      
+      /*CARD STYLING */
+      
+      .card h3 {
+          font-size: 6vh;
+      }
+      
+      .description {
+          font-size: 2.6vh;
+      }
+      
+      .about-container {
+          height: 69%;
+      }
+      
+      .about-container .date {
+          font-size: 2vw;
+      }
+
+      .bottom-grad {
+      }
+     
+}
