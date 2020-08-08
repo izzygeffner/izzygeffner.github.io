@@ -214,7 +214,7 @@ let mainCopy = ["Unapologetic soup apologist ",
                 "Pinball wizard",
                 "Fun fact machine",
                 "Real person. According to some sources",
-                
+                "woman on the run. but don’t tell anybody. ",
             ]
 
 function textSwap () {
