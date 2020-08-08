@@ -205,14 +205,16 @@ function mobileType () {
 var num = 0;
 let checkNumbers = [-1, -1];
 let mainCopy = ["Unapologetic soup apologist ", 
-                "Gashapon of information you didn't ask for ",
-                "Person who cares about the things other people don’t care about  ",
+                "Gashapon of information you didn't know you wanted ",
+                "Proud NYT Crossword enthusiast ",
                 "Buffy the Vampire Slayer fan ",
                 "Wannabe architectural preservationist ",
                 "Rusty ol' Commodore 64 you salvaged from a garbge bin",
                 "quick brown fox who jumps over the lazy dog ",
                 "Pinball wizard",
                 "Fun fact machine",
+                "Real person. According to some sources",
+                
             ]
 
 function textSwap () {
@@ -423,6 +425,8 @@ function mobileFunction() {
             }
         }
     }
+
+
 
 
 
