@@ -59,6 +59,12 @@ url('type/GooperSemiCondensed5-Regular.otf') format("opentype");
 
 @import url("https://use.typekit.net/qam0qyv.css");
 
+.formaXtraLight {
+    font-family: forma-djr-text, sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
 .formaLight-i {
     font-family: forma-djr-text,sans-serif;
     font-weight: 300;
@@ -856,6 +862,7 @@ body {
     z-index: 10;
     transition: .5s all;
     opacity: .5;
+    cursor: pointer;
     
 }
 
@@ -906,6 +913,7 @@ body {
     z-index: 10;
     transition: .5s all;
     opacity: .5;
+    cursor: pointer;
     
 }
 
@@ -1407,6 +1415,7 @@ body {
           position: absolute;
           top: 74%;
           left: 86%;
+    
 
       }
       
@@ -1423,6 +1432,7 @@ body {
       .button-star {
           top: 93%;
           left: 87%;
+
       }
       
       .button-star img {
