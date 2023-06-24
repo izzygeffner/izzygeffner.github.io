@@ -1,4 +1,12 @@
+/*TESTING*/
 
+.border-1 {
+    border: 1px solid red;
+}
+
+.border-2 {
+    border: 1px dashed pink; 
+}
 
 /* BACKGROUNDS */ 
 .landingBox {
@@ -93,7 +101,7 @@
 }
 
 .txt-description {
-    font-size: 1em;
+    font-size: 1.3em;
     width: 50%;
     letter-spacing: .6px;
     line-height: 1.3;
@@ -161,8 +169,57 @@
 .questions p {
         box-shadow:
              0em .02em white,
-             0 -0.0em #000;
+             0 -0.0em rgb(134, 131, 131);
         display: inline;
+}
+
+
+/*CONTENT BOOK*/
+
+/*CONTAINERS*/
+
+.book {
+/*    border: 1px solid red; */
+}
+
+.intro-book {
+    /* border: 1px dashed pink; */
+    display: flex;
+    margin-top: 5%;
+
+
+}
+
+.intro-book-text-container {
+    width: 30%;
+    padding-right: 5%;
+    /*border: 2px solid fuchsia;*/
+}
+
+.bookEmbed {
+    flex-grow: 2;
+ /*   border: 1px solid green; */
+}
+
+/*TYPE*/
+
+.txt-kicker {
+    font-size: 1.4em;    
+    letter-spacing: .8px;
+    margin: 0;
+    width: 80%;
+
+}
+
+.txt-kicker2 {
+    font-size: .9em;
+    width: 50%;
+    letter-spacing: .6px;
+    line-height: 1.3;
+    margin-top: 3%;
+    opacity: .9;
+    width: 80%;
+    margin-top: 8%;
 }
 
 /*FADE IN ON SCROLL*/
@@ -178,6 +235,15 @@
   opacity: 1;
   transform: none;
   visibility: visible;
+}
+
+/*VIDEO*/
+
+.video {
+    width: 95%;
+    margin-top: 3%;
+    padding-bottom: 3%;
+
 }
 
 
@@ -198,7 +264,7 @@
     .switches {
         font-size: 2vh;
     }
-    1
+    
     .txt-description {
       font-size: 2vh;  
     }
@@ -206,6 +272,8 @@
 }
 
 @media screen and (max-width: 1260px) {
+
+
     
      .introBox {
       /*  background-color: forestgreen; */
@@ -231,7 +299,10 @@
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait){ 
 
-      .introBox {
+    #noMobile {
+        display: none;
+    }
+    .introBox {
           height: 60%;
       }
       
@@ -246,44 +317,58 @@
           width: 85%;
           z-index: 0;
           margin-top: 20%;
-          margin-bottom: 15%;
+          margin-bottom: 10%;
           margin-left: auto;
           margin-right: auto;
           height: .05vh;
           background-color: rgba(255,255,255,.8);
           
       }
+
+      .intro-text p {
+          font-size: 1.3vh;
+          margin-top: 5%;
+      }
       
       .txt-title {
           font-size: 9.3vh;
           width: 100%;
           margin-top: 10%;
+          margin-bottom: 3%;
       }
-      
+
       
       .switches h3 {
-          font-size: 1.3vh;
+          font-size: 1.2vh;
           margin-top: 8%;
-          margin-right: 3%;
-          width: 33%;
-          
-      }
+          margin-right: 0%;
+          width: 36%;
+          }
+
       
       .txt-description {
+          font-size: 1em;
           width: 100%;
-          margin-top: 8%;
+          margin-top: 10%;
+          border: .5 dashed salmon;
+
+      }
+
+      .header-2 {
+          margin-top: 3%;
       }
       
       .txt-section {
-          font-size: 2.5vh;
+          font-size: 2vh;
           width: 50%;
       }
       
       
       .txt-info {
-          font-size: 1.5vh;
+          font-size: 1vh;
           width: 50%;
       }
+
       
       .questions {
           margin-top: 15%;
@@ -294,6 +379,20 @@
           margin-bottom: 13%;
       }
 
+      
+      .intro-book-text-container {
+          width: 100%;
+      }
+
+      .txt-kicker {
+          width: 100%;
+      }
+
+      .txt-kicker2 {
+          width: 100%;  
+      }
+
+    
 }
 
 
@@ -315,6 +414,8 @@
   and (orientation: portrait) { 
       
       
+
+
       .txt-title {
           font-size: 7.4vh;
       }
